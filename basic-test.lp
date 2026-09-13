@@ -47,6 +47,9 @@ in_room(3,1,b).
 in_room(3,2,b).
 in_room(3,3,b).
 
+%Cells can only have one room
+-in_room(R,C,RR) := not in_room(R,C,RR)
+
 % place persons in grid
 {at(P,R,C) : cell(R,C)}=1 :- person(P).
 
@@ -62,6 +65,13 @@ adjacent((R1,C1), (R2,C2)) :- C1=C2, |R1-R2| = 1, same_room((R1,C1),(R2,C2)).
 
 next_to_object((R1,C1), O) :- contains(R2,C2,O), object(O), adjacent((R1,C1), (R2,C2)).
 % achieved: a cell is next to an object if it is next to a cell that contains the object.
+
+against_vertical_wall(R,C) :- in_room(R,C,RR), in_room(R,C-1,RR2), RR != RR2.
+against_vertical_wall(R,C) :- in_room(R,C,RR), in_room(R,C+1,RR2), RR != RR2.
+against_horizontal_wall(R,C) :- in_room(R,C,RR), in_room(R-1,C,RR2), RR != RR2.
+against_horizontal_wall(R,C) :- in_room(R,C,RR), in_room(R+1,C,RR2), RR != RR2.
+corner_cell(R,C) :- against_vertical_wall(R,C), against_horizontal_wall(R,C).
+
 
 satisfies(P,next_to,O) :- at(P,R,C), next_to_object((R,C),O).
 % achieved: satisfies a clue with the next_to_object rule (a person must be next to an object).
@@ -87,6 +97,14 @@ satisfies(P,in,RR) :- at(P,R,C), in_room(R,C,RR).
 
 satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
 % achieved: person is not in room
+% CHECK: als we geen info hebben, wordt het dan ook niet not_in? Of maakt dat niet uit omdat 
+
+
+satisfies(P,in_corner) :- at(P,R,C), corner_cell(R,C).
+% achieved: person is in corner
+
+satisfies(P,not_in_corner) :- at(P,R,C), not corner_cell(R,C).
+% achieved: person is not in corner
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %      constraints      %
