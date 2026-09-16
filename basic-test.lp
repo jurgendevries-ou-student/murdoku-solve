@@ -12,6 +12,11 @@ person(alice).
 person(bob).
 person(charlie).
 
+% genders
+female(alice).
+female(charlie).
+male(bob).
+
 % clues
 clue(bob,next_to,plant).
 clue(bob,alone).
@@ -68,10 +73,14 @@ next_to_object((R1,C1), O) :- contains(R2,C2,O), object(O), adjacent((R1,C1), (R
 
 against_vertical_wall(R,C) :- in_room(R,C,RR), in_room(R,C-1,RR2), RR != RR2.
 against_vertical_wall(R,C) :- in_room(R,C,RR), in_room(R,C+1,RR2), RR != RR2.
+against_vertical_wall(R,C) :- C = 1.
+against_vertical_wall(R,C) :- C = n.
 against_horizontal_wall(R,C) :- in_room(R,C,RR), in_room(R-1,C,RR2), RR != RR2.
 against_horizontal_wall(R,C) :- in_room(R,C,RR), in_room(R+1,C,RR2), RR != RR2.
+against_vertical_wall(R,C) :- R = 1.
+against_vertical_wall(R,C) :- R = n.
 corner_cell(R,C) :- against_vertical_wall(R,C), against_horizontal_wall(R,C).
-
+% achieved: decide when a cell is in the corner of a room
 
 satisfies(P,next_to,O) :- at(P,R,C), next_to_object((R,C),O).
 % achieved: satisfies a clue with the next_to_object rule (a person must be next to an object).
@@ -95,9 +104,30 @@ satisfies(P,not_alone) :- at(P,R,C), #count{P1 : at(P1,R1,C1), P1 != P, same_roo
 satisfies(P,in,RR) :- at(P,R,C), in_room(R,C,RR).
 % achieved: person is in room
 
-satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
+satisfies(P,not_in,RR) :- at(P,R,C), in_room(R,C,RR2), RR!=RR2.
 % achieved: person is not in room
-% CHECK: als we geen info hebben, wordt het dan ook niet not_in? Of maakt dat niet uit omdat 
+
+
+satisfies(P1, in_room_with, P2)     := person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)).
+satisfies(P1, not_in_room_with, P2) := person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), in_room(R1, C1, RR1), in_room(R2, C2, RR2), RR1 != RR2.
+% achieved: person is / is not in the same room as another person
+
+satisfies(P1, in_room_with_female)  := person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)), P1 != P2, female(P2).
+satisfies(P1, in_room_with_male)    := person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)), P1 != P2, male(P2).
+% achieved: person is in the same room as a male / female
+
+
+satisfies(P1, east_of, P2)  := at(P1, R1, C1), at(P2, R2, C2), C1 > C2.
+satisfies(P1, west_of, P2)  := at(P1, R1, C1), at(P2, R2, C2), C1 < C2.
+satisfies(P1, north_of, P2) := at(P1, R1, C1), at(P2, R2, C2), R1 < R2.
+satisfies(P1, south_of, P2) := at(P1, R1, C1), at(P2, R2, C2), R1 > R2.
+% achieved: person is east/west/north/south of another person
+
+satisfies(P,in_row,R) :- at(P,R,_).
+% achieved: person is in row R
+
+satisfies(P,in_column,C) :- at(P,_,C).
+% achieved: person is in row C
 
 
 satisfies(P,in_corner) :- at(P,R,C), corner_cell(R,C).
@@ -110,8 +140,8 @@ satisfies(P,not_in_corner) :- at(P,R,C), not corner_cell(R,C).
 %      constraints      %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- at(P,R,C), at(P1,R1,C1), R=R1, P!=P1.
-:- at(P,R,C), at(P1,R1,C1), C=C1, P!=P1.
+:- person(P), person(P1), at(P,R,C), at(P1,R1,C1), R=R1, P!=P1.
+:- person(P), person(P1), at(P,R,C), at(P1,R1,C1), C=C1, P!=P1.
 % achieved: no two persons may be in the same row or col.
 
 :- clue(P,T,O), not satisfies(P,T,O).
