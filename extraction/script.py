@@ -41,11 +41,11 @@ def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
 
 def convert_to_asp(puzzle_num):
     # get puzzle in json format
-    with open(f'./extraction/puzzle{puzzle_num}.json', 'r') as f:
+    with open(f'./extraction/puzzles.json', 'r') as f:
         data = json.load(f)
 
     # extract puzzle data
-    puzzle = data['puzzles']['1']['state']
+    puzzle = data['puzzles'][f'{puzzle_num}']['state']
     cols = puzzle['cols']
 
     # extract rooms
@@ -56,7 +56,12 @@ def convert_to_asp(puzzle_num):
     # extract objects
     objects = {}
     for k,v in puzzle['furniture'].items():
-        objects.setdefault(v['type'], []).append(k)
+        obj = v['type']
+        if obj == 'sofa':
+            obj = 'chair'
+        if obj == 'vase':
+            obj = 'plant'
+        objects.setdefault(obj, []).append(k)
 
     for k in puzzle['windows'].keys():
         objects.setdefault('window', []).append(k)

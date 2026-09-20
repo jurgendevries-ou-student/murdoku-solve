@@ -1,6 +1,6 @@
 % clues
-clue(axel,on,window).
-clue(bella,in,hallway).
-clue(cora,on,carpet).
-clue(douglas,on,bed).
-clue(ella,next_to,vase).
+clue(a,on,window).
+clue(b,in,hallway).
+clue(c,on,carpet).
+clue(d,on,bed).
+clue(e,next_to,plant).

@@ -1,0 +1,261 @@
+{
+    "current": 2,
+    "puzzles": {
+        "1": {
+            "status": "wip",
+            "state": {
+                "version": 2,
+                "cols": 6,
+                "rows": 6,
+                "cells": {
+                    "0,1": "A",
+                    "1,2": "C",
+                    "4,0": "B",
+                    "2,4": "D",
+                    "5,5": "E",
+                    "3,3": "V"
+                },
+                "furniture": {
+                    "4,2": {
+                        "type": "vase",
+                        "primary": true
+                    },
+                    "4,5": {
+                        "type": "vase",
+                        "primary": true
+                    },
+                    "3,0": {
+                        "type": "table",
+                        "primary": true
+                    },
+                    "5,0": {
+                        "type": "table",
+                        "primary": true
+                    },
+                    "3,5": {
+                        "type": "table",
+                        "primary": true
+                    },
+                    "1,4": {
+                        "type": "bed",
+                        "primary": true,
+                        "orientation": 0,
+                        "partnerKey": "1,5"
+                    },
+                    "2,4": {
+                        "type": "bed",
+                        "primary": false,
+                        "orientation": 0,
+                        "partnerKey": "1,4"
+                    },
+                    "1,2": {
+                        "type": "carpet",
+                        "primary": true
+                    }
+                },
+                "rooms": {
+                    "0,1": "living",
+                    "1,0": "living",
+                    "0,0": "living",
+                    "1,1": "living",
+                    "0,2": "living",
+                    "1,2": "living",
+                    "2,2": "living",
+                    "2,1": "living",
+                    "2,0": "living",
+                    "0,3": "bedroom",
+                    "1,3": "bedroom",
+                    "2,3": "bedroom",
+                    "2,4": "bedroom",
+                    "2,5": "bedroom",
+                    "1,5": "bedroom",
+                    "0,5": "bedroom",
+                    "0,4": "bedroom",
+                    "1,4": "bedroom",
+                    "3,0": "hallway",
+                    "3,1": "hallway",
+                    "3,2": "hallway",
+                    "4,2": "hallway",
+                    "5,2": "hallway",
+                    "5,1": "hallway",
+                    "5,0": "hallway",
+                    "4,0": "hallway",
+                    "4,1": "hallway",
+                    "3,3": "dining",
+                    "3,4": "dining",
+                    "3,5": "dining",
+                    "4,5": "dining",
+                    "5,5": "dining",
+                    "5,4": "dining",
+                    "5,3": "dining",
+                    "4,3": "dining",
+                    "4,4": "dining"
+                },
+                "windows": {
+                    "0,1": [
+                        "top"
+                    ],
+                    "0,4": [
+                        "top"
+                    ]
+                },
+                "persons": {
+                    "a": {
+                        "type": "suspect",
+                        "gender": "male"
+                    },
+                    "b": {
+                        "type": "suspect",
+                        "gender": "female"
+                    },
+                    "c": {
+                        "type": "suspect",
+                        "gender": "female"
+                    },
+                    "d": {
+                        "type": "suspect",
+                        "gender": "male"
+                    },
+                    "e": {
+                        "type": "suspect",
+                        "gender": "female"
+                    },
+                    "v": {
+                        "type": "victim",
+                        "gender": "male"
+                    }
+                }
+            },
+            "updated": 1789894194539
+        },
+        "2": {
+            "status": "wip",
+            "state": {
+                "version": 2,
+                "cols": 6,
+                "rows": 6,
+                "cells": {},
+                "furniture": {
+                    "1,0": {
+                        "type": "sofa",
+                        "primary": true
+                    },
+                    "2,0": {
+                        "type": "bed",
+                        "primary": true,
+                        "orientation": 0,
+                        "partnerKey": "2,1"
+                    },
+                    "2,1": {
+                        "type": "bed",
+                        "primary": false,
+                        "orientation": 0,
+                        "partnerKey": "2,0"
+                    },
+                    "2,4": {
+                        "type": "bed",
+                        "primary": true,
+                        "orientation": 0,
+                        "partnerKey": "2,5"
+                    },
+                    "2,5": {
+                        "type": "bed",
+                        "primary": false,
+                        "orientation": 0,
+                        "partnerKey": "2,4"
+                    },
+                    "0,2": {
+                        "type": "table",
+                        "primary": true
+                    },
+                    "5,3": {
+                        "type": "table",
+                        "primary": true
+                    },
+                    "4,0": {
+                        "type": "vase",
+                        "primary": true
+                    },
+                    "1,5": {
+                        "type": "vase",
+                        "primary": true
+                    },
+                    "0,4": {
+                        "type": "tv",
+                        "primary": true
+                    },
+                    "5,0": {
+                        "type": "tv",
+                        "primary": true
+                    }
+                },
+                "rooms": {
+                    "0,0": "bedroom",
+                    "1,0": "bedroom",
+                    "2,0": "bedroom",
+                    "2,1": "bedroom",
+                    "1,1": "bedroom",
+                    "0,1": "bedroom",
+                    "3,0": "bedroom",
+                    "3,1": "bedroom",
+                    "0,2": "bathroom",
+                    "1,2": "bathroom",
+                    "2,2": "bathroom",
+                    "3,2": "bathroom",
+                    "3,3": "bathroom",
+                    "2,3": "bathroom",
+                    "1,3": "bathroom",
+                    "0,3": "bathroom",
+                    "4,0": "living",
+                    "5,0": "living",
+                    "4,1": "living",
+                    "5,1": "living",
+                    "4,2": "living",
+                    "5,2": "living",
+                    "4,3": "living",
+                    "5,3": "living",
+                    "4,4": "living",
+                    "5,4": "living",
+                    "4,5": "living",
+                    "5,5": "living",
+                    "0,4": "closet",
+                    "0,5": "closet",
+                    "1,4": "closet",
+                    "1,5": "closet",
+                    "2,4": "closet",
+                    "2,5": "closet",
+                    "3,4": "closet",
+                    "3,5": "closet"
+                },
+                "windows": {},
+                "persons": {
+                    "a": {
+                        "type": "suspect",
+                        "gender": "female"
+                    },
+                    "b": {
+                        "type": "suspect",
+                        "gender": "male"
+                    },
+                    "c": {
+                        "type": "suspect",
+                        "gender": "female"
+                    },
+                    "d": {
+                        "type": "suspect",
+                        "gender": "male"
+                    },
+                    "e": {
+                        "type": "suspect",
+                        "gender": "male"
+                    },
+                    "v": {
+                        "type": "victim",
+                        "gender": "male"
+                    }
+                }
+            },
+            "updated": 1789911479748
+        }
+    }
+}

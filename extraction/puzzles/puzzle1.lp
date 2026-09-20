@@ -47,15 +47,15 @@ in_room(4,3,dining).
 in_room(4,4,dining).
 
 %% objects
-object(vase).
+object(plant).
 object(table).
 object(bed).
 object(carpet).
 object(window).
 
 %% object locations
-contains(4,2,vase).
-contains(4,5,vase).
+contains(4,2,plant).
+contains(4,5,plant).
 contains(3,0,table).
 contains(5,0,table).
 contains(3,5,table).
@@ -66,15 +66,15 @@ contains(0,1,window).
 contains(0,4,window).
 
 %% persons
-suspect(axel).
-male(axel).
-suspect(bella).
-female(bella).
-suspect(cora).
-female(cora).
-suspect(douglas).
-male(douglas).
-suspect(ella).
-female(ella).
-victim(vincent).
-male(vincent).
+suspect(a).
+male(a).
+suspect(b).
+female(b).
+suspect(c).
+female(c).
+suspect(d).
+male(d).
+suspect(e).
+female(e).
+victim(v).
+male(v).

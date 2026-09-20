@@ -3,7 +3,6 @@ person(X) :- victim(X).
 
 can_not_be_occupied(tv).
 can_not_be_occupied(plant).
-can_not_be_occupied(vase).
 can_not_be_occupied(table).
 
 %Cells can only have one room
