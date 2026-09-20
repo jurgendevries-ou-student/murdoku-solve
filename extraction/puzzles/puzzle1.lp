@@ -1,6 +1,6 @@
 %% Grid
-#const n = cols.
-cell(R,C) :- R = 1..n, C = 1..n.
+#const n = 5.
+cell(R,C) :- R = 0..n, C = 0..n.
 
 %% Rooms
 room(living).
@@ -51,6 +51,7 @@ object(vase).
 object(table).
 object(bed).
 object(carpet).
+object(window).
 
 %% object locations
 contains(4,2,vase).
@@ -61,6 +62,8 @@ contains(3,5,table).
 contains(1,4,bed).
 contains(2,4,bed).
 contains(1,2,carpet).
+contains(0,1,window).
+contains(0,4,window).
 
 %% persons
 suspect(axel).

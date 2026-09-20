@@ -4,8 +4,8 @@ def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
     ''' Generate ASP .lp file from puzzle instructions '''
     lp = []
     lp.append('%% Grid')
-    lp.append('#const n = cols.')
-    lp.append(f'cell(R,C) :- R = 1..n, C = 1..n.') 
+    lp.append(f'#const n = {cols-1}.')
+    lp.append(f'cell(R,C) :- R = 0..n, C = 0..n.') 
     lp.append('')
 
     lp.append('%% Rooms')
@@ -57,6 +57,9 @@ def convert_to_asp(puzzle_num):
     objects = {}
     for k,v in puzzle['furniture'].items():
         objects.setdefault(v['type'], []).append(k)
+
+    for k in puzzle['windows'].keys():
+        objects.setdefault('window', []).append(k)
 
     lp = generate_murdoku_world_asp(puzzle, cols, rooms, objects)
 
