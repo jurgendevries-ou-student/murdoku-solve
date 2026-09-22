@@ -68,7 +68,7 @@ satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
 
 %% Deze kan denk ik simpeler door ook gebruik te maken van person is not alone, at(P,R,C) is alleen voor personen in gebruik, zolang de rules safe zijn zou ik niet overal person(P) aan toevoegen
 % satisfies(P1, in_room_with_female)  :- at(P1, R1, C1), #count{P2 : at(P2,R2,C2), P1!=P2, female(P2), same_room((R1, C1), (R2, C2))} > 0.
-% satisfies(P1, in_room_with_female)  :- at(P1, R1, C1), #count{P2 : at(P2,R2,C2), P1!=P2, male(P2), same_room((R1, C1), (R2, C2))} > 0.
+% satisfies(P1, in_room_with_male)    :- at(P1, R1, C1), #count{P2 : at(P2,R2,C2), P1!=P2, male(P2), same_room((R1, C1), (R2, C2))} > 0.
 % satisfies(P1, in_room_with_female)  :- person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)), P1 != P2, female(P2).
 % satisfies(P1, in_room_with_male)    :- person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)), P1 != P2, male(P2).
 % achieved: person is in the same room as a male / female
