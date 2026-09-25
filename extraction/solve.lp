@@ -1,6 +1,6 @@
 #include "base-rules.lp".
-#include "puzzles/puzzle8.lp".
-#include "clues/clues8.lp".
+#include "puzzles/puzzle45.lp".
+#include "clues/clues45.lp".
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %         output        %

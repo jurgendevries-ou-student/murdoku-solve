@@ -46,11 +46,17 @@ satisfies(P,next_to,O) :- at(P,R,C), next_to_object((R,C),O).
 satisfies(P,not_next_to,O) :- at(P,R,C), object(O), not next_to_object((R,C),O).
 % achieved: satisfies a clue with the not_next_to_object rule (a person must be next to an object).
 
+satisfies(P,next_to_with_someone_else) :- at(P,R,C), next_to_object((R,C),O), at(P1,R1,C1), next_to_object((R1,C1),O), P != P1.
+% achieved: satisfies a clue with next to object, but someone else was next to the same object.
+
 satisfies(P,on,O) :- at(P,R,C), contains(R,C,O).
 % achieved: satisfies a clue with on context (a person is on an object).
 
 satisfies(P,not_on,O) :- at(P,R,C), object(O), not contains(R,C,O).
 % achieved: satisfies a clue with not on context (a person is not on an object).
+
+satisfies(P,only_one_on,O) :- at(P,R,C), contains(R,C,O), #count{P : at(P,R1,C1), contains(R1,C1,O)} = 1.
+% achieved: satisfies a clue with only person on an object
 
 satisfies(P,in,RR) :- at(P,R,C), in_room(R,C,RR).
 % achieved: person is in room

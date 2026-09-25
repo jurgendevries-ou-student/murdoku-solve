@@ -74,4 +74,4 @@ def convert_to_asp(puzzle_num):
     with open(f'./extraction/puzzles/puzzle{puzzle_num}.lp', 'w') as f:
         f.write("\n".join(lp))
 
-convert_to_asp(8)
+convert_to_asp(45)
