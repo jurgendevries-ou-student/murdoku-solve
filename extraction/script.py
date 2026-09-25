@@ -32,14 +32,11 @@ def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
 
     lp.append('')
     lp.append('%% persons')
-    for i in range(cols - 1):
+    for i in range(cols):
         suspect = True if i < (cols-1) else False
         p = ascii_lowercase[i] if suspect else 'v'
-        lp.append(f'{'suspect' if suspect else 'victim'}({p})')
-        lp.append(f'male({p})'    
-    # for k,v in puzzle['persons'].items():
-    #     lp.append(f'{v['type']}({k}).')
-    #     lp.append(f'{v['gender']}({k}).')
+        lp.append(f'{'suspect' if suspect else 'victim'}({p}).')
+        lp.append(f'male({p}).')
 
     print(lp)
     return lp
@@ -77,4 +74,4 @@ def convert_to_asp(puzzle_num):
     with open(f'./extraction/puzzles/puzzle{puzzle_num}.lp', 'w') as f:
         f.write("\n".join(lp))
 
-convert_to_asp(1)
+convert_to_asp(8)

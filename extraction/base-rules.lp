@@ -99,7 +99,7 @@ satisfies(P1,in_row,R) :- at(P1,R,_).
 % achieved: person is in row R
 
 satisfies(P1,in_column,C) :- at(P1,_,C).
-% achieved: person is in row C
+% achieved: person is in col C
 
 satisfies(P1,in_corner) :- at(P1,R,C), corner_cell(R,C).
 % achieved: person is in corner
