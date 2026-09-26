@@ -109,7 +109,7 @@ satisfies(no_empty_room) :- #count{RR : empty_room(RR)} = 0.
 %% achieved: there are no empty rooms (empty room is a person where 0 persons are. No empty rooms is zero empty rooms).
 
 
-satisfies(n_persons_on, O, N) :- object(O), #count{P : at(P,R,C), contains(R,C,O) = N.
+satisfies(n_persons_on, O, N) :- object(O), #count{P : at(P,R,C), contains(R,C,O)} = N.
 %% exactly N persons on object (example: "there is exactly one person on a chair") 
 %% TODO: test this general clue in a puzzle
 

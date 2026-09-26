@@ -1,6 +1,6 @@
 % clues
-clue(a,on,window).
-clue(b,in,hallway).
-clue(c,on,carpet).
-clue(d,on,bed).
-clue(e,next_to,plant).
+clue(alphonse,on,window).
+clue(bonnie,in,hallway).
+clue(carol,on,carpet).
+clue(daniel,on,bed).
+clue(emily,next_to,plant).

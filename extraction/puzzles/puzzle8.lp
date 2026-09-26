@@ -89,17 +89,17 @@ contains(6,1,bed).
 contains(4,4,tv).
 
 %% persons
-suspect(a).
-male(a).
-suspect(b).
-male(b).
-suspect(c).
-female(c).
-suspect(d).
-female(d).
-suspect(e).
-female(e).
-suspect(f).
-male(f).
-victim(v).
-female(v).
+suspect(alphonse).
+male(alphonse).
+suspect(bernard).
+male(bernard).
+suspect(carol).
+female(carol).
+suspect(daisy).
+female(daisy).
+suspect(emily).
+female(emily).
+suspect(frank).
+male(frank).
+victim(victoria).
+female(victoria).

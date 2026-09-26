@@ -1,5 +1,6 @@
 import json
-from string import ascii_lowercase
+
+male_names = ['alphonse', 'bernard', 'charlie', 'daniel', 'edward', 'frank', 'george', 'henry', 'ivan', 'james', 'keith', 'louis', 'mike', 'victor']
 
 def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
     ''' Generate ASP .lp file from puzzle instructions '''
@@ -34,7 +35,7 @@ def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
     lp.append('%% persons')
     for i in range(cols):
         suspect = True if i < (cols-1) else False
-        p = ascii_lowercase[i] if suspect else 'v'
+        p = male_names[i] if suspect else male_names[-1]
         lp.append(f'{'suspect' if suspect else 'victim'}({p}).')
         lp.append(f'male({p}).')
 

@@ -67,15 +67,15 @@ contains(0,4,tv).
 contains(5,0,tv).
 
 %% persons
-suspect(a).
-female(a).
-suspect(b).
-male(b).
-suspect(c).
-female(c).
-suspect(d).
-male(d).
-suspect(e).
-male(e).
-victim(v).
-male(v).
+suspect(alice).
+female(alice).
+suspect(bernard).
+male(bernard).
+suspect(carol).
+female(carol).
+suspect(daniel).
+male(daniel).
+suspect(edward).
+male(edward).
+victim(victor).
+male(victor).

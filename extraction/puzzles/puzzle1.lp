@@ -66,15 +66,15 @@ contains(0,1,window).
 contains(0,4,window).
 
 %% persons
-suspect(a).
-male(a).
-suspect(b).
-female(b).
-suspect(c).
-female(c).
-suspect(d).
-male(d).
-suspect(e).
-female(e).
-victim(v).
-male(v).
+suspect(alphonse).
+male(alphonse).
+suspect(bonnie).
+female(bonnie).
+suspect(carol).
+female(carol).
+suspect(daniel).
+male(daniel).
+suspect(emily).
+female(emily).
+victim(victor).
+male(victor).
