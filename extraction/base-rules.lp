@@ -1,15 +1,15 @@
 person(X) :- suspect(X).
 person(X) :- victim(X).
+% achieved: every suspect and victim is also a person.
 
 can_not_be_occupied(tv).
 can_not_be_occupied(plant).
 can_not_be_occupied(table).
+% achieved: objects that cannot be occupied
 
-%Cells can only have one room
 -in_room(R,C,RR) :- room(RR), R=0..n, C=0..n, not in_room(R,C,RR).
 % achieved: every cell is in only one room
 
-% place persons in grid
 {at(P,R,C) : cell(R,C)}=1 :- person(P).
 % achieved: every person is on a cell in the grid.
 
@@ -46,7 +46,9 @@ satisfies(P,next_to,O) :- at(P,R,C), next_to_object((R,C),O).
 satisfies(P,not_next_to,O) :- at(P,R,C), object(O), not next_to_object((R,C),O).
 % achieved: satisfies a clue with the not_next_to_object rule (a person must be next to an object).
 
-satisfies(P,next_to_with_someone_else) :- at(P,R,C), next_to_object((R,C),O), at(P1,R1,C1), next_to_object((R1,C1),O), P != P1.
+%satisfies(P1,next_to_with_someone_else,O) :- at(P1,R1,C1), next_to_object((R1,C1),O), at(P2,R2,C2), next_to_object((R2,C2),O), P1 != P2.
+satisfies(P1,next_to_with_someone_else,O) :- at(P1,R1,C1), contains(R0,C0,O), adjacent((R1,C1), (R0,C0)), at(P2,R2,C2), adjacent((R2,C2), (R0,C0)), P1 != P2.
+%satisfies(P1,next_to_with_someone_else,O) :- at(P1,R1,C1), contains(R0,C0,O), next_to_object((R1,C1),O), at(P2,R2,C2), next_to_object((R2,C2),O), P1 != P2.
 % achieved: satisfies a clue with next to object, but someone else was next to the same object.
 
 satisfies(P,on,O) :- at(P,R,C), contains(R,C,O).
@@ -55,7 +57,7 @@ satisfies(P,on,O) :- at(P,R,C), contains(R,C,O).
 satisfies(P,not_on,O) :- at(P,R,C), object(O), not contains(R,C,O).
 % achieved: satisfies a clue with not on context (a person is not on an object).
 
-satisfies(P,only_one_on,O) :- at(P,R,C), contains(R,C,O), #count{P : at(P,R1,C1), contains(R1,C1,O)} = 1.
+satisfies(P,only_one_on,O) :- at(P,R,C), contains(R,C,O), #count{P1 : at(P1,R1,C1), contains(R1,C1,O), P1 != P} = 0.
 % achieved: satisfies a clue with only person on an object
 
 satisfies(P,in,RR) :- at(P,R,C), in_room(R,C,RR).
@@ -64,20 +66,6 @@ satisfies(P,in,RR) :- at(P,R,C), in_room(R,C,RR).
 satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
 % Als we geen info hebben (wat misschien zou kunnen als de kamers niet een vierkant vormen), dan klopt het toch ook dat persoon P niet in kamer RR is?
 % satisfies(P,not_in,RR) :- at(P,R,C), in_room(R,C,RR2), RR!=RR2.
-% achieved: person is not in room
-
-%% dit is eigenlijk al opgelost met alone/not_alone? denk dat we deze niet nodig hebben
-% satisfies(P1, in_room_with, P2)     :- person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)).
-% satisfies(P1, not_in_room_with, P2) :- person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), in_room(R1, C1, RR1), in_room(R2, C2, RR2), RR1 != RR2.
-% achieved: person is / is not in the same room as another person
-
-
-%% Deze kan denk ik simpeler door ook gebruik te maken van person is not alone, at(P,R,C) is alleen voor personen in gebruik, zolang de rules safe zijn zou ik niet overal person(P) aan toevoegen
-% satisfies(P1, in_room_with_female)  :- at(P1, R1, C1), #count{P2 : at(P2,R2,C2), P1!=P2, female(P2), same_room((R1, C1), (R2, C2))} > 0.
-% satisfies(P1, in_room_with_male)    :- at(P1, R1, C1), #count{P2 : at(P2,R2,C2), P1!=P2, male(P2), same_room((R1, C1), (R2, C2))} > 0.
-% satisfies(P1, in_room_with_female)  :- person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)), P1 != P2, female(P2).
-% satisfies(P1, in_room_with_male)    :- person(P1), person(P2), at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)), P1 != P2, male(P2).
-% achieved: person is in the same room as a male / female
 
 %% maar misschien is het mooier om samen met een persoon apart te bepalen, zodat we het her kunnen gebruiken
 with_person(P1,P2) :- at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)), P1 != P2.
@@ -92,7 +80,7 @@ satisfies(P1, not_in_room_with_female) :- not with_person(P1,P2), person(P1), fe
 satisfies(P1, not_in_room_with_male) :- not with_person(P1,P2), person(P1), male(P2).
 satisfies(P1, in_room_with_multiple_females,N) :- person(P1), number(N), #count{P2: with_person(P1,P2), female(P2)} >= N.
 satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), number(N), #count{P2: with_person(P1,P2), male(P2)} >= N.
-% person is (not) in same room as male/female
+% person is (not) in same room as n males/females
 
 
 satisfies(P1, east_of, P2)  :- at(P1, R1, C1), at(P2, R2, C2), C1 > C2.
@@ -114,6 +102,18 @@ satisfies(P1,not_in_corner) :- at(P1,R,C), not corner_cell(R,C).
 % achieved: person is not in corner
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
+%      General clues    %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+empty_room(RR) :- room(RR), #count{P : person(P), at(P,R,C), in_room(R,C,RR)} = 0.
+satisfies(no_empty_room) :- #count{RR : empty_room(RR)} = 0.
+%% achieved: there are no empty rooms (empty room is a person where 0 persons are. No empty rooms is zero empty rooms).
+
+
+satisfies(n_persons_on, O, N) :- object(O), #count{P : at(P,R,C), contains(R,C,O) = N.
+%% exactly N persons on object (example: "there is exactly one person on a chair") 
+%% TODO: test this general clue in a puzzle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
 %      constraints      %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -122,12 +122,16 @@ satisfies(P1,not_in_corner) :- at(P1,R,C), not corner_cell(R,C).
 % achieved: no two persons may be in the same row or col.
 
 :- clue(P,T,O), not satisfies(P,T,O).
-% achieved: al clues must be satisfied.
+% achieved: all clues containing Person, Type, Object/Person must be satisfied.
 
 :- clue(P,T), not satisfies(P,T).
+% achieved: all clues containing Person, Type must be satisfied.
+
+:- clue(T), not satisfies(T).
+% achieved: all general clues containing Type must be satisfied.
 
 :- at(P,R,C), contains(R,C,O), can_not_be_occupied(O).
 % achieved: objects that can not be occupied may not contain a person.
 
-:- victim(P1), person(P1), person(P2), #count{with_person(P1,P2), suspect(P2)} != 1.
+:- victim(P1), #count{P2 : with_person(P1,P2), suspect(P2)} != 1.
 % achieved: victim is always with exactly one suspect!
