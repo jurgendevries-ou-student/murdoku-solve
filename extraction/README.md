@@ -8,15 +8,19 @@ the script.py file than extracts the grid/room/object and necessary locations fr
 ### Limitations
 Not al objects and room names are available here. So we have to be a little creative with that. or edit the json files before processing it with a script. (carpet is not available as object for example).
 
-Persons can be added by hand in the puzzles state object:
+Suspect/victim genders can be added by hand in the puzzles state object:
 ```json
-    "persons": {
-        "a": {
-            "type": "suspect",
-            "gender": "male"
-        },
-    }
+    "persons": ['male','female','male','male','male','male','female']
 ```
-add them with a,b,c,d,etc instead of names, that saves some editing.
+The script translates to appropiate names for gender. (TODO)
 
-### Suspects can be added by hand
+### Experiment
+- The experiment notebook uses a separate solve-experiment.lp file to run the different puzzles. Python collects the necessary files for each puzzle.
+- TODO: distinguish between automated puzzles and manually inserted puzzles.
+- Some statistics are already extracted
+    - grounding time
+    - solving time
+    - total time
+    - size of the puzzle grid
+    - number of clues in the puzzle
+    - ...
