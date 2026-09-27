@@ -1,7 +1,7 @@
 import json
 
-male_names = ['alphonse', 'bernard', 'charlie', 'daniel', 'edward', 'frank', 'george', 'henry', 'ivan', 'james', 'keith', 'louis', 'mike', 'victor']
-
+names_male = ['alphonse', 'bernard', 'charlie', 'daniel', 'edward', 'frank', 'george', 'henry', 'ivan', 'james', 'keith', 'louis', 'mike', 'victor']
+names_female = ['alice', 'bonnie', 'carol', 'daisy', 'emily', 'florence', 'grace', 'hannah', 'isla', 'jane', 'kate', 'lily', 'mary', 'victoria']
 def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
     ''' Generate ASP .lp file from puzzle instructions '''
     lp = []
@@ -35,7 +35,10 @@ def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
     lp.append('%% persons')
     for i in range(cols):
         suspect = True if i < (cols-1) else False
-        p = male_names[i] if suspect else male_names[-1]
+        is_male = True # if gender == male else False TODO: put persons in puzzles json with gender [male,female,male,male,etc]
+        p = names_female[i] if suspect else names_female[-1]
+        if is_male:
+            p = names_male[i] if suspect else names_male[-1]
         lp.append(f'{'suspect' if suspect else 'victim'}({p}).')
         lp.append(f'male({p}).')
 
