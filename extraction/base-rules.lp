@@ -78,8 +78,8 @@ satisfies(P1, in_room_with_female) :- with_person(P1,P2), female(P2).
 satisfies(P1, in_room_with_male) :- with_person(P1,P2), male(P2).
 satisfies(P1, not_in_room_with_female) :- not with_person(P1,P2), person(P1), female(P2).
 satisfies(P1, not_in_room_with_male) :- not with_person(P1,P2), person(P1), male(P2).
-satisfies(P1, in_room_with_multiple_females,N) :- person(P1), number(N), #count{P2: with_person(P1,P2), female(P2)} >= N.
-satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), number(N), #count{P2: with_person(P1,P2), male(P2)} >= N.
+satisfies(P1, in_room_with_multiple_females,N) :- person(P1), number(N), #count{P2: with_person(P1,P2), female(P2)} = N.
+satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), number(N), #count{P2: with_person(P1,P2), male(P2)} = N.
 % person is (not) in same room as n males/females
 
 

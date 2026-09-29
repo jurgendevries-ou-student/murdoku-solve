@@ -2,7 +2,7 @@ import json
 
 names_male = ['alphonse', 'bernard', 'charlie', 'daniel', 'edward', 'frank', 'george', 'henry', 'ivan', 'james', 'keith', 'louis', 'mike', 'victor']
 names_female = ['alice', 'bonnie', 'carol', 'daisy', 'emily', 'florence', 'grace', 'hannah', 'isla', 'jane', 'kate', 'lily', 'mary', 'victoria']
-def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
+def generate_murdoku_world_asp(puzzle, cols, rooms, objects, persons):
     ''' Generate ASP .lp file from puzzle instructions '''
     lp = []
     lp.append('%% Grid')
@@ -33,18 +33,18 @@ def generate_murdoku_world_asp(puzzle, cols, rooms, objects):
 
     lp.append('')
     lp.append('%% persons')
-    for i in range(cols):
-        suspect = True if i < (cols-1) else False
-        is_male = True # if gender == male else False TODO: put persons in puzzles json with gender [male,female,male,male,etc]
-        p = names_female[i] if suspect else names_female[-1]
+    for i, person in enumerate(persons):
+        suspect = True if i < (len(persons)-1) else False
+        is_male = True if person == 'male' else False
+        name = names_female[i] if suspect else names_female[-1]
         if is_male:
-            p = names_male[i] if suspect else names_male[-1]
-        lp.append(f'{'suspect' if suspect else 'victim'}({p}).')
-        lp.append(f'male({p}).')
+            name = names_male[i] if suspect else names_male[-1]
+        lp.append(f'{'suspect' if suspect else 'victim'}({name}).')
+        lp.append(f'{'male' if is_male else 'female'}({name}).')
 
     print(lp)
     return lp
-#const n = 3.
+
 
 def convert_to_asp(puzzle_num):
     # get puzzle in json format
@@ -68,14 +68,18 @@ def convert_to_asp(puzzle_num):
             obj = 'chair'
         if obj == 'vase':
             obj = 'plant'
+        if obj == 'bookshelf':
+            obj = 'shelf'
         objects.setdefault(obj, []).append(k)
 
     for k in puzzle['windows'].keys():
         objects.setdefault('window', []).append(k)
 
-    lp = generate_murdoku_world_asp(puzzle, cols, rooms, objects)
+    persons = puzzle['persons']
 
-    with open(f'./extraction/puzzles/puzzle{puzzle_num}.lp', 'w') as f:
+    lp = generate_murdoku_world_asp(puzzle, cols, rooms, objects, persons)
+
+    with open(f'./extraction/puzzles/puzzleM{puzzle_num}.lp', 'w') as f:
         f.write("\n".join(lp))
 
-convert_to_asp(45)
+convert_to_asp(21)
