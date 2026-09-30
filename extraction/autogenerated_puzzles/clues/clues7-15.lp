@@ -1,0 +1,19 @@
+%%%% Clues
+clue(alice,n_persons_on,bed,0).
+clue(alice,not_in_same_room,daisy).
+clue(alice,in,bedroom).
+clue(bernard,in_same_room,carol).
+clue(bernard,not_in_corner).
+clue(bernard,on,carpet).
+clue(carol,not_in_room_with_female).
+clue(carol,next_to,carpet).
+clue(carol,east_of,bernard).
+clue(daisy,only_one_on,chair).
+clue(edward,in,livingroom).
+clue(edward,in_same_room,carol).
+clue(edward,on,carpet).
+clue(edward,in_corner).
+clue(frank,in_left_column).
+clue(frank,not_in_same_room,carol).
+clue(frank,not_alone).
+clue(frank,in_row,6).

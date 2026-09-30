@@ -1,0 +1,24 @@
+%%%% Clues
+clue(alphonse,not_in_same_room,charlie).
+clue(alphonse,next_to,closet).
+clue(alphonse,in_corner).
+clue(bonnie,next_to,closet).
+clue(bonnie,in_room_with_male).
+clue(charlie,in,bathroom).
+clue(charlie,next_to,bed).
+clue(daniel,alone).
+clue(daniel,in,hallway).
+clue(daniel,not_in_corner).
+clue(edward,not_alone).
+clue(edward,next_to,bed).
+clue(edward,in_room_with_multiple_females,2).
+clue(edward,next_to,sofa).
+clue(frank,not_in_room_with_male).
+clue(frank,not_in_same_room,bonnie).
+clue(frank,on,bed).
+clue(frank,in_column,0).
+clue(grace,in_same_room,alphonse).
+clue(grace,in_same_room,edward).
+clue(grace,in,livingroom).
+clue(grace,not_in_corner).
+clue(grace,only_one_on,sofa).

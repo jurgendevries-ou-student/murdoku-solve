@@ -1,0 +1,19 @@
+%%%% Clues
+clue(alice,in_corner).
+clue(alice,in_room_with_male).
+clue(alice,in_top_row).
+clue(bernard,in_same_room,carol).
+clue(bernard,east_of,carol).
+clue(bernard,in_row,4).
+clue(carol,in_room_with_male).
+clue(carol,in,livingroom).
+clue(carol,in_corner).
+clue(daniel,not_in_room_with_male).
+clue(daniel,in_same_room,florence).
+clue(daniel,next_to,statue).
+clue(edward,not_in_same_room,alice).
+clue(edward,next_to,closet).
+clue(edward,north_of,carol).
+clue(edward,in_column,3).
+clue(florence,in_row,1).
+clue(florence,on,carpet).

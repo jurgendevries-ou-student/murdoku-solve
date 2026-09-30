@@ -1,0 +1,21 @@
+%%%% Clues
+clue(alice,in_corner).
+clue(bonnie,in,garage).
+clue(bonnie,in_corner).
+clue(bonnie,in_top_row).
+clue(carol,in,hallway).
+clue(carol,not_in_same_room,daisy).
+clue(carol,in_corner).
+clue(carol,in_column,3).
+clue(daisy,not_in_same_room,grace).
+clue(daisy,not_in,livingroom).
+clue(daisy,in_same_room,frank).
+clue(emily,next_to,sofa).
+clue(emily,in_same_room,alice).
+clue(frank,in,kitchen).
+clue(frank,on,bed).
+clue(grace,not_in_room_with_male).
+clue(grace,not_in_room_with_female).
+clue(grace,n_persons_on,sofa,0).
+clue(grace,in,bathroom).
+clue(grace,not_in_corner).

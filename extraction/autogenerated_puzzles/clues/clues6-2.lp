@@ -1,0 +1,20 @@
+%%%% Clues
+clue(alice,no_empty_room).
+clue(alice,next_to,sofa).
+clue(alice,next_to,statue).
+clue(alice,next_to_with_someone_else,sofa).
+clue(bernard,not_alone).
+clue(bernard,in,kitchen).
+clue(bernard,not_in_same_room,edward).
+clue(bernard,only_one_on,sofa).
+clue(charlie,in_same_room,alice).
+clue(charlie,not_next_to,bed).
+clue(charlie,next_to,chair).
+clue(daisy,in_right_column).
+clue(daisy,in_top_row).
+clue(edward,not_next_to,sofa).
+clue(edward,not_in,livingroom).
+clue(edward,not_in_room_with_male).
+clue(edward,not_alone).
+clue(edward,in_row,2).
+clue(edward,in_corner).

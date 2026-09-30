@@ -1,0 +1,8 @@
+%%%% Clues
+clue(alphonse,in_column,4).
+clue(alphonse,in_row,3).
+clue(bonnie,in,bathroom).
+clue(bonnie,east_of,carol).
+clue(carol,not_next_to,bed).
+clue(daniel,in_top_row).
+clue(daniel,next_to,chair).

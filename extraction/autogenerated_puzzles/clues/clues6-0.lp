@@ -1,0 +1,21 @@
+%%%% Clues
+clue(alphonse,not_in_same_room,daniel).
+clue(alphonse,in_same_room,edward).
+clue(alphonse,west_of,bonnie).
+clue(alphonse,not_next_to,closet).
+clue(alphonse,south_of,bonnie).
+clue(bonnie,not_next_to,bed).
+clue(bonnie,not_in_same_room,daniel).
+clue(bonnie,not_in,bedroom).
+clue(bonnie,north_of,edward).
+clue(carol,not_in_room_with_female).
+clue(carol,n_persons_on,chair,1).
+clue(carol,alone).
+clue(carol,in,garage).
+clue(carol,north_of,alphonse).
+clue(daniel,not_alone).
+clue(daniel,next_to,bed).
+clue(daniel,in_top_row).
+clue(edward,not_in,bedroom).
+clue(edward,not_in_corner).
+clue(edward,not_next_to,closet).

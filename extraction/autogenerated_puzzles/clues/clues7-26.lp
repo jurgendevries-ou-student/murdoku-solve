@@ -1,0 +1,22 @@
+%%%% Clues
+clue(alice,not_in,kitchen).
+clue(alice,not_next_to,statue).
+clue(alice,in_same_room,carol).
+clue(alice,in_same_room,frank).
+clue(alice,east_of,edward).
+clue(bonnie,not_in,kitchen).
+clue(bonnie,not_in_room_with_female).
+clue(bonnie,south_of,daisy).
+clue(bonnie,north_of,edward).
+clue(carol,in_top_row).
+clue(carol,in_corner).
+clue(daisy,not_in_same_room,carol).
+clue(daisy,in_column,4).
+clue(daisy,next_to,bed).
+clue(daisy,not_alone).
+clue(edward,not_in_same_room,carol).
+clue(edward,alone).
+clue(edward,east_of,carol).
+clue(edward,in,bedroom).
+clue(frank,on,carpet).
+clue(frank,not_next_to,statue).
