@@ -1,0 +1,9 @@
+clue(alphonse,next_to,shelf).
+clue(bernard,next_to,bed).
+clue(carol,next_to,plant).
+clue(daisy,alone).
+clue(daisy,in,bedroom).
+clue(emily,on,chair).
+clue(frank,on,window).
+clue(george,in_corner).
+clue(n_persons_on,bed,1).

@@ -395,6 +395,507 @@
                 "windows": {}
             }
         },
+        "10": {
+            "state": {
+                "version": 2,
+                "cols": 8,
+                "rows": 8,
+                "cells": {},
+                "furniture": {
+                    "0,0": {
+                    "type": "bed",
+                    "primary": true,
+                    "orientation": 0,
+                    "partnerKey": "0,1"
+                    },
+                    "0,1": {
+                    "type": "bed",
+                    "primary": false,
+                    "orientation": 0,
+                    "partnerKey": "0,0"
+                    },
+                    "0,4": {
+                    "type": "bed",
+                    "primary": true,
+                    "orientation": 1,
+                    "partnerKey": "1,4"
+                    },
+                    "1,4": {
+                    "type": "bed",
+                    "primary": false,
+                    "orientation": 1,
+                    "partnerKey": "0,4"
+                    },
+                    "0,6": {
+                    "type": "bed",
+                    "primary": true,
+                    "orientation": 1,
+                    "partnerKey": "1,6"
+                    },
+                    "1,6": {
+                    "type": "bed",
+                    "primary": false,
+                    "orientation": 1,
+                    "partnerKey": "0,6"
+                    },
+                    "0,5": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "1,5": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "1,3": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "2,7": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "3,7": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "4,5": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "5,5": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "6,7": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "5,1": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "7,0": {
+                    "type": "bookshelf",
+                    "primary": true
+                    },
+                    "7,1": {
+                    "type": "bookshelf",
+                    "primary": true
+                    },
+                    "7,7": {
+                    "type": "bookshelf",
+                    "primary": true
+                    },
+                    "3,1": {
+                    "type": "bookshelf",
+                    "primary": true
+                    },
+                    "0,3": {
+                    "type": "bookshelf",
+                    "primary": true
+                    },
+                    "4,1": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "5,4": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "4,4": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "6,5": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "7,2": {
+                    "type": "vase",
+                    "primary": true
+                    },
+                    "5,3": {
+                    "type": "tv",
+                    "primary": true
+                    }
+                },
+                "rooms": {
+                    "3,0": "bedroom",
+                    "3,1": "bedroom",
+                    "2,1": "bedroom",
+                    "2,0": "bedroom",
+                    "1,0": "bedroom",
+                    "1,1": "bedroom",
+                    "0,0": "bedroom",
+                    "0,1": "bedroom",
+                    "0,2": "bedroom",
+                    "0,3": "bedroom",
+                    "4,0": "living",
+                    "5,0": "living",
+                    "6,0": "living",
+                    "7,0": "living",
+                    "7,1": "living",
+                    "7,2": "living",
+                    "6,2": "living",
+                    "6,3": "living",
+                    "5,3": "living",
+                    "4,3": "living",
+                    "4,2": "living",
+                    "4,1": "living",
+                    "5,1": "living",
+                    "5,2": "living",
+                    "6,1": "living",
+                    "7,3": "kitchen",
+                    "7,4": "kitchen",
+                    "7,5": "kitchen",
+                    "7,6": "kitchen",
+                    "7,7": "kitchen",
+                    "6,7": "kitchen",
+                    "6,6": "kitchen",
+                    "6,4": "dining",
+                    "6,5": "dining",
+                    "5,4": "dining",
+                    "4,4": "dining",
+                    "3,4": "dining",
+                    "3,5": "dining",
+                    "4,5": "dining",
+                    "5,5": "dining",
+                    "3,6": "dining",
+                    "4,6": "dining",
+                    "5,6": "dining",
+                    "5,7": "dining",
+                    "4,7": "dining",
+                    "3,7": "dining",
+                    "3,2": "bathroom",
+                    "2,2": "bathroom",
+                    "1,2": "bathroom",
+                    "1,3": "bathroom",
+                    "2,3": "bathroom",
+                    "3,3": "bathroom",
+                    "0,4": "guest",
+                    "1,4": "guest",
+                    "2,4": "guest",
+                    "2,5": "guest",
+                    "2,6": "guest",
+                    "2,7": "guest",
+                    "1,7": "guest",
+                    "0,7": "guest",
+                    "0,6": "guest",
+                    "1,6": "guest"
+                },
+                "windows": {
+                    "6,0": [
+                    "left"
+                    ],
+                    "5,0": [
+                    "left"
+                    ],
+                    "2,0": [
+                    "left"
+                    ],
+                    "1,0": [
+                    "left"
+                    ]
+                },
+                "persons": ["male","male","female", "female","female","male","male","male"]
+            }
+        },
+        "21": {
+            "state": {
+                "version": 2,
+                "cols": 6,
+                "rows": 6,
+                "cells": {},
+                "furniture": {
+                    "0,0": {
+                    "type": "bed",
+                    "primary": true,
+                    "orientation": 0,
+                    "partnerKey": "0,1"
+                    },
+                    "0,1": {
+                    "type": "bed",
+                    "primary": false,
+                    "orientation": 0,
+                    "partnerKey": "0,0"
+                    },
+                    "5,1": {
+                    "type": "bed",
+                    "primary": true,
+                    "orientation": 0,
+                    "partnerKey": "5,2"
+                    },
+                    "5,2": {
+                    "type": "bed",
+                    "primary": false,
+                    "orientation": 0,
+                    "partnerKey": "5,1"
+                    },
+                    "5,5": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "4,3": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "3,3": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "3,2": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "2,2": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "2,3": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "0,4": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "2,4": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "2,1": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "3,1": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "2,0": {
+                    "type": "vase",
+                    "primary": true
+                    },
+                    "3,4": {
+                    "type": "vase",
+                    "primary": true
+                    },
+                    "0,3": {
+                    "type": "vase",
+                    "primary": true
+                    }
+                },
+                "rooms": {
+                    "0,0": "guest",
+                    "0,1": "guest",
+                    "0,2": "guest",
+                    "1,2": "guest",
+                    "1,1": "guest",
+                    "1,0": "guest",
+                    "0,3": "bathroom",
+                    "1,3": "bathroom",
+                    "1,4": "bathroom",
+                    "0,4": "bathroom",
+                    "0,5": "bathroom",
+                    "1,5": "bathroom",
+                    "2,5": "bathroom",
+                    "3,5": "bathroom",
+                    "2,4": "living",
+                    "3,4": "living",
+                    "3,3": "living",
+                    "2,3": "living",
+                    "2,2": "living",
+                    "3,2": "living",
+                    "3,1": "living",
+                    "2,1": "living",
+                    "2,0": "bedroom",
+                    "3,0": "bedroom",
+                    "4,0": "bedroom",
+                    "5,0": "bedroom",
+                    "5,1": "bedroom",
+                    "4,1": "bedroom",
+                    "4,2": "bedroom",
+                    "5,2": "bedroom",
+                    "4,3": "kitchen",
+                    "5,3": "kitchen",
+                    "5,4": "kitchen",
+                    "4,4": "kitchen",
+                    "4,5": "kitchen",
+                    "5,5": "kitchen"
+                },
+                "windows": {},
+                "persons": ["male","female","female","male","male","female"]
+            }
+        },
+        "24": {
+            "state": {
+                "version": 2,
+                "cols": 8,
+                "rows": 8,
+                "cells": {},
+                "furniture": {
+                    "1,0": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "0,0": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "0,1": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "0,7": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "1,5": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "6,1": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "4,1": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "3,2": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "6,7": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "6,5": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "4,7": {
+                    "type": "tv",
+                    "primary": true
+                    },
+                    "4,2": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "6,3": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "6,4": {
+                    "type": "table",
+                    "primary": true
+                    },
+                    "3,1": {
+                    "type": "bookshelf",
+                    "primary": true
+                    },
+                    "5,4": {
+                    "type": "bookshelf",
+                    "primary": true
+                    },
+                    "1,7": {
+                    "type": "bookshelf",
+                    "primary": true
+                    },
+                    "1,6": {
+                    "type": "sofa",
+                    "primary": true
+                    },
+                    "4,3": {
+                    "type": "register",
+                    "primary": true
+                    },
+                    "4,4": {
+                    "type": "register",
+                    "primary": true
+                    },
+                    "2,0": {
+                    "type": "box",
+                    "primary": true
+                    },
+                    "0,2": {
+                    "type": "box",
+                    "primary": true
+                    },
+                    "3,7": {
+                    "type": "box",
+                    "primary": true
+                    }
+                },
+                "rooms": {
+                    "0,0": "storage",
+                    "1,0": "storage",
+                    "2,0": "storage",
+                    "2,1": "storage",
+                    "1,1": "storage",
+                    "0,1": "storage",
+                    "0,2": "storage",
+                    "1,2": "storage",
+                    "2,2": "storage",
+                    "2,3": "storage",
+                    "1,3": "storage",
+                    "0,3": "storage",
+                    "0,4": "repair",
+                    "1,4": "repair",
+                    "2,4": "repair",
+                    "2,5": "repair",
+                    "1,5": "repair",
+                    "0,5": "repair",
+                    "0,6": "repair",
+                    "1,6": "repair",
+                    "2,6": "repair",
+                    "2,7": "repair",
+                    "1,7": "repair",
+                    "0,7": "repair",
+                    "3,0": "computers",
+                    "4,0": "computers",
+                    "5,0": "computers",
+                    "6,0": "computers",
+                    "7,0": "computers",
+                    "7,1": "computers",
+                    "6,1": "computers",
+                    "5,2": "computers",
+                    "6,2": "computers",
+                    "7,2": "computers",
+                    "5,1": "computers",
+                    "4,1": "computers",
+                    "3,1": "computers",
+                    "3,2": "counter",
+                    "4,2": "counter",
+                    "4,3": "counter",
+                    "3,3": "counter",
+                    "3,4": "counter",
+                    "4,4": "counter",
+                    "4,5": "counter",
+                    "3,5": "counter",
+                    "5,3": "entertainment",
+                    "5,5": "entertainment",
+                    "5,4": "entertainment",
+                    "6,4": "entertainment",
+                    "6,3": "entertainment",
+                    "7,3": "entertainment",
+                    "7,4": "entertainment",
+                    "7,5": "entertainment",
+                    "6,5": "entertainment",
+                    "6,6": "entertainment",
+                    "7,6": "entertainment",
+                    "7,7": "entertainment",
+                    "6,7": "entertainment",
+                    "5,7": "entertainment",
+                    "5,6": "entertainment",
+                    "4,6": "entertainment",
+                    "3,6": "entertainment",
+                    "3,7": "entertainment",
+                    "4,7": "entertainment"
+                },
+                "windows": {},
+                "persons": ["male","male","female","male","male","male","male","male"]
+            }
+        },
         "45": {
             "state": {
                 "version": 2,

@@ -5,6 +5,8 @@ person(X) :- victim(X).
 can_not_be_occupied(tv).
 can_not_be_occupied(plant).
 can_not_be_occupied(table).
+can_not_be_occupied(register).
+can_not_be_occupied(box).
 % achieved: objects that cannot be occupied
 
 -in_room(R,C,RR) :- room(RR), R=0..n, C=0..n, not in_room(R,C,RR).
@@ -78,8 +80,8 @@ satisfies(P1, in_room_with_female) :- with_person(P1,P2), female(P2).
 satisfies(P1, in_room_with_male) :- with_person(P1,P2), male(P2).
 satisfies(P1, not_in_room_with_female) :- not with_person(P1,P2), person(P1), female(P2).
 satisfies(P1, not_in_room_with_male) :- not with_person(P1,P2), person(P1), male(P2).
-satisfies(P1, in_room_with_multiple_females,N) :- person(P1), number(N), #count{P2: with_person(P1,P2), female(P2)} >= N.
-satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), number(N), #count{P2: with_person(P1,P2), male(P2)} >= N.
+satisfies(P1, in_room_with_multiple_females,N) :- person(P1), number(N), #count{P2: with_person(P1,P2), female(P2)} = N.
+satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), number(N), #count{P2: with_person(P1,P2), male(P2)} = N.
 % person is (not) in same room as n males/females
 
 
@@ -95,11 +97,22 @@ satisfies(P1,in_row,R) :- at(P1,R,_).
 satisfies(P1,in_column,C) :- at(P1,_,C).
 % achieved: person is in col C
 
+satisfies(P1,object_in_col,O) :- at(P1,R,C), contains(_,C,O).
+satisfies(P1,object_in_row,O) :- at(P1,R,C), contains(R,_,O).
+% achieved: there is an object O in persons col/row
+
+satisfies(P1,no_object_in_col,O) :- object(O), at(P1,R,C), not contains(_,C,O).
+satisfies(P1,no_object_in_row,O) :- object(O), at(P1,R,C), not contains(R,_,O).
+% achieved: there is no object O in persons col/row
+
 satisfies(P1,in_corner) :- at(P1,R,C), corner_cell(R,C).
 % achieved: person is in corner
 
 satisfies(P1,not_in_corner) :- at(P1,R,C), not corner_cell(R,C).
 % achieved: person is not in corner
+
+satisfies(P1,someone_else_in_room_on,O): at(P1,R1,C1), at(P2,R2,C2), same_room((R1,C1),(R2,C2)), contains(R2,C2,O), P1 != P2.
+% achieved: someone else in persons room was on an object.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %      General clues    %
