@@ -1,0 +1,21 @@
+%%%% Clues
+clue(n_persons_on,chair,0).
+clue(n_persons_on,carpet,2).
+clue(alice,next_to,carpet).
+clue(alice,in_same_room,charlie).
+clue(bernard,in,garage).
+clue(bernard,next_to,statue).
+clue(bernard,west_of,charlie).
+clue(charlie,next_to,carpet).
+clue(charlie,not_in_room_with_male).
+clue(charlie,in_corner).
+clue(daniel,not_next_to,box).
+clue(daniel,not_in,bedroom).
+clue(daniel,in_corner).
+clue(daniel,south_of,frank).
+clue(emily,not_alone).
+clue(emily,not_in_room_with_female).
+clue(emily,next_to,box).
+clue(frank,in_right_column).
+clue(frank,not_in_same_room,emily).
+clue(frank,alone).

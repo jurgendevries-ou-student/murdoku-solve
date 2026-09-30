@@ -65,6 +65,9 @@ satisfies(P,only_one_on,O) :- at(P,R,C), contains(R,C,O), #count{P1 : at(P1,R1,C
 satisfies(P,in,RR) :- at(P,R,C), in_room(R,C,RR).
 % achieved: person is in room
 
+satisfies(P,in_same_room,P2) :- with_person(P, P2).
+% achieved: persons are in same room
+
 satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
 % Als we geen info hebben (wat misschien zou kunnen als de kamers niet een vierkant vormen), dan klopt het toch ook dat persoon P niet in kamer RR is?
 % satisfies(P,not_in,RR) :- at(P,R,C), in_room(R,C,RR2), RR!=RR2.
@@ -80,8 +83,8 @@ satisfies(P1, in_room_with_female) :- with_person(P1,P2), female(P2).
 satisfies(P1, in_room_with_male) :- with_person(P1,P2), male(P2).
 satisfies(P1, not_in_room_with_female) :- not with_person(P1,P2), person(P1), female(P2).
 satisfies(P1, not_in_room_with_male) :- not with_person(P1,P2), person(P1), male(P2).
-satisfies(P1, in_room_with_multiple_females,N) :- person(P1), number(N), #count{P2: with_person(P1,P2), female(P2)} = N.
-satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), number(N), #count{P2: with_person(P1,P2), male(P2)} = N.
+satisfies(P1, in_room_with_multiple_females,N) :- person(P1), #count{P2: with_person(P1,P2), female(P2)} = N.
+satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), #count{P2: with_person(P1,P2), male(P2)} = N.
 % person is (not) in same room as n males/females
 
 
@@ -96,6 +99,18 @@ satisfies(P1,in_row,R) :- at(P1,R,_).
 
 satisfies(P1,in_column,C) :- at(P1,_,C).
 % achieved: person is in col C
+
+satisfies(P1,in_top_row) :- at(P1,n,_).
+% achieved: person is in top row
+
+satisfies(P1,in_bottom_row) :- at(P1,0,_).
+% achieved: person is in bottom row
+
+satisfies(P1,in_right_column) :- at(P1,_,n).
+% achieved: person is in right column
+
+satisfies(P1,in_left_column) :- at(P1,_,0).
+% achieved: person is in left column
 
 satisfies(P1,object_in_col,O) :- at(P1,R,C), contains(_,C,O).
 satisfies(P1,object_in_row,O) :- at(P1,R,C), contains(R,_,O).

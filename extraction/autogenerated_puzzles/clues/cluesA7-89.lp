@@ -1,0 +1,22 @@
+%%%% Clues
+clue(no_empty_room).
+clue(n_persons_on,sofa,0).
+clue(alice,in_row,5).
+clue(alice,in_column,4).
+clue(bonnie,not_next_to,statue).
+clue(bonnie,not_next_to,carpet).
+clue(bonnie,not_next_to,sofa).
+clue(carol,in_same_room,alice).
+clue(carol,not_in_same_room,florence).
+clue(carol,in_corner).
+clue(carol,not_next_to,sofa).
+clue(daniel,in,bathroom).
+clue(daniel,in_column,0).
+clue(edward,not_in_same_room,bonnie).
+clue(edward,not_alone).
+clue(edward,in_row,3).
+clue(edward,in_column,5).
+clue(florence,in_room_with_female).
+clue(florence,in_top_row).
+clue(florence,in_column,2).
+clue(florence,east_of,carol).
