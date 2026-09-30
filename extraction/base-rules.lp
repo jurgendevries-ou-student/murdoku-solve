@@ -126,7 +126,7 @@ satisfies(P1,in_corner) :- at(P1,R,C), corner_cell(R,C).
 satisfies(P1,not_in_corner) :- at(P1,R,C), not corner_cell(R,C).
 % achieved: person is not in corner
 
-satisfies(P1,someone_else_in_room_on,O): at(P1,R1,C1), at(P2,R2,C2), same_room((R1,C1),(R2,C2)), contains(R2,C2,O), P1 != P2.
+satisfies(P1,someone_else_in_room_on,O) :- at(P1,R1,C1), at(P2,R2,C2), same_room((R1,C1),(R2,C2)), contains(R2,C2,O), P1 != P2.
 % achieved: someone else in persons room was on an object.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
