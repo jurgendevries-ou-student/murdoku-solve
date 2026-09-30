@@ -33,12 +33,12 @@ next_to_object((R1,C1), O) :- contains(R2,C2,O), object(O), adjacent((R1,C1), (R
 
 against_vertical_wall(R,C) :- in_room(R,C,RR), in_room(R,C-1,RR2), RR != RR2.
 against_vertical_wall(R,C) :- in_room(R,C,RR), in_room(R,C+1,RR2), RR != RR2.
-against_vertical_wall(R,C) :- C = 1, R=1..n.
-against_vertical_wall(R,C) :- C = n, R=1..n.
+against_vertical_wall(R,C) :- C = 0, R=0..n.
+against_vertical_wall(R,C) :- C = n, R=0..n.
 against_horizontal_wall(R,C) :- in_room(R,C,RR), in_room(R-1,C,RR2), RR != RR2.
 against_horizontal_wall(R,C) :- in_room(R,C,RR), in_room(R+1,C,RR2), RR != RR2.
-against_vertical_wall(R,C) :- R = 1, C=1..n.
-against_vertical_wall(R,C) :- R = n, C=1..n.
+against_horizontal_wall(R,C) :- R = 0, C=0..n.
+against_horizontal_wall(R,C) :- R = n, C=0..n.
 corner_cell(R,C) :- against_vertical_wall(R,C), against_horizontal_wall(R,C).
 % achieved: decide when a cell is in the corner of a room
 
@@ -67,6 +67,9 @@ satisfies(P,in,RR) :- at(P,R,C), in_room(R,C,RR).
 
 satisfies(P,in_same_room,P2) :- with_person(P, P2).
 % achieved: persons are in same room
+
+satisfies(P,not_in_same_room,P2) :- not with_person(P, P2), person(P), person(P2).
+% achieved: persons are not in same room
 
 satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
 % Als we geen info hebben (wat misschien zou kunnen als de kamers niet een vierkant vormen), dan klopt het toch ook dat persoon P niet in kamer RR is?
