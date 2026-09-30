@@ -100,10 +100,10 @@ satisfies(P1,in_row,R) :- at(P1,R,_).
 satisfies(P1,in_column,C) :- at(P1,_,C).
 % achieved: person is in col C
 
-satisfies(P1,in_top_row) :- at(P1,n,_).
+satisfies(P1,in_top_row) :- at(P1,0,_).
 % achieved: person is in top row
 
-satisfies(P1,in_bottom_row) :- at(P1,0,_).
+satisfies(P1,in_bottom_row) :- at(P1,n,_).
 % achieved: person is in bottom row
 
 satisfies(P1,in_right_column) :- at(P1,_,n).
