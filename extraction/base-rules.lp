@@ -1,5 +1,7 @@
 person(X) :- suspect(X).
 person(X) :- victim(X).
+person(X) :- male(X).
+person(X) :- female(X).
 % achieved: every suspect and victim is also a person.
 
 can_not_be_occupied(tv).
@@ -21,11 +23,11 @@ can_not_be_occupied(box).
 murderer(P1) :- with_person(P1,P2), suspect(P1), victim(P2).
 % achieved: the murderer is the suspect with the victim.
 
-same_room((R1,C1),(R2,C2)) :- in_room(R1,C1,R), in_room(R2,C2,R).
+cell_same_room((R1,C1),(R2,C2)) :- in_room(R1,C1,RR), in_room(R2,C2,RR).
 % achieved: cells are in the same room.
 
-adjacent((R1,C1), (R2,C2)) :- R1=R2, |C1-C2| = 1, same_room((R1,C1),(R2,C2)).
-adjacent((R1,C1), (R2,C2)) :- C1=C2, |R1-R2| = 1, same_room((R1,C1),(R2,C2)).
+adjacent((R1,C1), (R2,C2)) :- R1=R2, |C1-C2| = 1, cell_same_room((R1,C1),(R2,C2)).
+adjacent((R1,C1), (R2,C2)) :- C1=C2, |R1-R2| = 1, cell_same_room((R1,C1),(R2,C2)).
 % achieved: cells are adjecent, only if they are also in the same room.
 
 next_to_object((R1,C1), O) :- contains(R2,C2,O), object(O), adjacent((R1,C1), (R2,C2)).
@@ -48,9 +50,7 @@ satisfies(P,next_to,O) :- at(P,R,C), next_to_object((R,C),O).
 satisfies(P,not_next_to,O) :- at(P,R,C), object(O), not next_to_object((R,C),O).
 % achieved: satisfies a clue with the not_next_to_object rule (a person must be next to an object).
 
-%satisfies(P1,next_to_with_someone_else,O) :- at(P1,R1,C1), next_to_object((R1,C1),O), at(P2,R2,C2), next_to_object((R2,C2),O), P1 != P2.
 satisfies(P1,next_to_with_someone_else,O) :- at(P1,R1,C1), contains(R0,C0,O), adjacent((R1,C1), (R0,C0)), at(P2,R2,C2), adjacent((R2,C2), (R0,C0)), P1 != P2.
-%satisfies(P1,next_to_with_someone_else,O) :- at(P1,R1,C1), contains(R0,C0,O), next_to_object((R1,C1),O), at(P2,R2,C2), next_to_object((R2,C2),O), P1 != P2.
 % achieved: satisfies a clue with next to object, but someone else was next to the same object.
 
 satisfies(P,on,O) :- at(P,R,C), contains(R,C,O).
@@ -74,9 +74,10 @@ satisfies(P,not_in_same_room,P2) :- not with_person(P, P2), person(P), person(P2
 satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
 % Als we geen info hebben (wat misschien zou kunnen als de kamers niet een vierkant vormen), dan klopt het toch ook dat persoon P niet in kamer RR is?
 % satisfies(P,not_in,RR) :- at(P,R,C), in_room(R,C,RR2), RR!=RR2.
+% achieved: person is not in room.
 
-%% maar misschien is het mooier om samen met een persoon apart te bepalen, zodat we het her kunnen gebruiken
-with_person(P1,P2) :- at(P1, R1, C1), at(P2, R2, C2), same_room((R1, C1), (R2, C2)), P1 != P2.
+with_person(P1,P2) :- at(P1, R1, C1), at(P2, R2, C2), cell_same_room((R1, C1), (R2, C2)), P1 != P2.
+% achieved: 2 person are in the same room if both cells are in the same room.
 
 satisfies(P1,alone) :- person(P1), not with_person(P1,_).
 satisfies(P1,not_alone) :- with_person(P1,_).
@@ -84,12 +85,11 @@ satisfies(P1,not_alone) :- with_person(P1,_).
 
 satisfies(P1, in_room_with_female) :- with_person(P1,P2), female(P2).
 satisfies(P1, in_room_with_male) :- with_person(P1,P2), male(P2).
-satisfies(P1, not_in_room_with_female) :- not with_person(P1,P2), person(P1), female(P2).
-satisfies(P1, not_in_room_with_male) :- not with_person(P1,P2), person(P1), male(P2).
+satisfies(P1, not_in_room_with_female) :- person(P1), #count{P2: with_person(P1,P2), female(P2)} = 0.
+satisfies(P1, not_in_room_with_male) :- person(P1), #count{P2: with_person(P1,P2), male(P2)} = 0.
 satisfies(P1, in_room_with_multiple_females,N) :- person(P1), #count{P2: with_person(P1,P2), female(P2)} = N.
 satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), #count{P2: with_person(P1,P2), male(P2)} = N.
 % person is (not) in same room as n males/females
-
 
 satisfies(P1, east_of, P2)  :- at(P1, R1, C1), at(P2, R2, C2), C1 > C2.
 satisfies(P1, west_of, P2)  :- at(P1, R1, C1), at(P2, R2, C2), C1 < C2.
@@ -129,8 +129,10 @@ satisfies(P1,in_corner) :- at(P1,R,C), corner_cell(R,C).
 satisfies(P1,not_in_corner) :- at(P1,R,C), not corner_cell(R,C).
 % achieved: person is not in corner
 
-satisfies(P1,someone_else_in_room_on,O) :- at(P1,R1,C1), at(P2,R2,C2), same_room((R1,C1),(R2,C2)), contains(R2,C2,O), P1 != P2.
+satisfies(P1,someone_else_in_room_on,O):- at(P2,R2,C2), with_person(P1,P2), contains(R2,C2,O).
 % achieved: someone else in persons room was on an object.
+% Versimpeld: door gebruik te maken van with_person wordt al gekeken of P1 en P2 verschillende personen zijn,
+% en zich in dezelfde kamer bevinden, vervolgens moet alleen nog gekeken worden of persoon P2 op een object O is.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %      General clues    %
