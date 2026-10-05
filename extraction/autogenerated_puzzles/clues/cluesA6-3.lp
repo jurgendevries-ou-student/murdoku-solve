@@ -1,8 +1,7 @@
 %%%% Clues
 clue(n_persons_on,carpet,2).
 clue(n_persons_on,bed,0).
-clue(alphonse,not_next_to,carpet).
-clue(alphonse,not_in_corner).
+clue(alphonse,next_to,bed).
 clue(bonnie,on,carpet).
 clue(bonnie,west_of,emily).
 clue(carol,not_next_to,closet).

@@ -1,16 +1,15 @@
 %%%% Clues
 clue(alphonse,in_same_room,frank).
+clue(alphonse,in_corner).
 clue(alphonse,not_in_same_room,bonnie).
-clue(alphonse,in_column,3).
-clue(alphonse,in_bottom_row).
-clue(bonnie,next_to,bed).
-clue(charlie,not_in_same_room,alphonse).
-clue(charlie,not_in_same_room,emily).
+clue(bonnie,no_object_in_col,box).
 clue(charlie,in,garage).
 clue(daisy,on,sofa).
+clue(daisy,east_of,bonnie).
 clue(daisy,in_row,1).
-clue(emily,east_of,bonnie).
+clue(emily,not_in_same_room,alphonse).
 clue(emily,in,bedroom).
 clue(emily,on,carpet).
+clue(frank,not_in_corner).
 clue(frank,in_right_column).
 clue(frank,not_next_to,carpet).

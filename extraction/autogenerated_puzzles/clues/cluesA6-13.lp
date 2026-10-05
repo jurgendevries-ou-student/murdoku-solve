@@ -3,7 +3,7 @@ clue(n_persons_on,bed,1).
 clue(alice,in_room_with_male).
 clue(alice,in,bedroom).
 clue(alice,not_in_corner).
-clue(alice,not_on,sofa).
+clue(alice,on,carpet).
 clue(bernard,not_in_room_with_male).
 clue(bernard,in_column,5).
 clue(bernard,on,carpet).

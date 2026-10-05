@@ -3,13 +3,12 @@ clue(alphonse,not_in_same_room,edward).
 clue(alphonse,not_in_same_room,bonnie).
 clue(alphonse,not_in_same_room,carol).
 clue(alphonse,alone).
-clue(alphonse,in,bathroom).
 clue(bonnie,not_in_corner).
 clue(bonnie,in_same_room,edward).
 clue(bonnie,in,bedroom).
-clue(bonnie,west_of,edward).
 clue(carol,not_next_to,sofa).
 clue(carol,in_same_room,daniel).
+clue(carol,not_next_to,closet).
 clue(carol,in_corner).
 clue(daniel,not_in_same_room,alphonse).
 clue(daniel,next_to,chair).
@@ -17,3 +16,4 @@ clue(daniel,in,kitchen).
 clue(edward,in_corner).
 clue(florence,not_in_corner).
 clue(florence,west_of,carol).
+clue(florence,object_in_row,statue).

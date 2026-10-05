@@ -11,4 +11,4 @@ clue(carol,not_next_to,closet).
 clue(daniel,on,sofa).
 clue(daniel,in_same_room,carol).
 clue(daniel,north_of,alice).
-clue(daniel,in_column,3).
+clue(daniel,object_in_col,closet).

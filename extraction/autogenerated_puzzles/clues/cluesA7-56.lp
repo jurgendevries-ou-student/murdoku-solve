@@ -7,7 +7,7 @@ clue(bernard,not_alone).
 clue(bernard,in,livingroom).
 clue(carol,in_same_room,florence).
 clue(carol,in,kitchen).
-clue(carol,east_of,edward).
+clue(carol,object_in_row,box).
 clue(daniel,in_top_row).
 clue(daniel,in_column,4).
 clue(edward,next_to,closet).

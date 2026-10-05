@@ -4,7 +4,8 @@ clue(alice,not_next_to,chair).
 clue(alice,not_in_room_with_female).
 clue(bernard,next_to,carpet).
 clue(charlie,next_to,bed).
-clue(daniel,in_corner).
+clue(daniel,in,bathroom).
+clue(daniel,object_in_col,box).
 clue(daniel,in_row,4).
 clue(edward,not_next_to,closet).
 clue(edward,not_in_room_with_female).

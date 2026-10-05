@@ -2,11 +2,10 @@
 clue(alphonse,not_next_to,bed).
 clue(alphonse,next_to,sofa).
 clue(bonnie,in_same_room,carol).
-clue(bonnie,in,bedroom).
+clue(bonnie,no_object_in_col,closet).
 clue(bonnie,next_to,sofa).
 clue(carol,not_in_same_room,daniel).
-clue(carol,in,bedroom).
-clue(carol,not_in_corner).
-clue(carol,on,sofa).
-clue(daniel,alone).
+clue(carol,next_to,sofa).
+clue(carol,object_in_row,closet).
+clue(carol,next_to,box).
 clue(daniel,next_to,closet).

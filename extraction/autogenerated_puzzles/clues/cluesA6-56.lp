@@ -8,9 +8,10 @@ clue(alphonse,east_of,charlie).
 clue(bernard,in_same_room,emily).
 clue(bernard,next_to,statue).
 clue(bernard,in_column,4).
+clue(charlie,not_in,bedroom).
 clue(charlie,not_in_corner).
 clue(charlie,east_of,daniel).
-clue(charlie,in_column,2).
+clue(charlie,object_in_col,closet).
 clue(daniel,west_of,alphonse).
 clue(daniel,not_in_corner).
 clue(daniel,in_column,0).

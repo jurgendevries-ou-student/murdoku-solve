@@ -7,4 +7,5 @@ clue(bonnie,in,bedroom).
 clue(charlie,next_to,box).
 clue(charlie,in_row,1).
 clue(daisy,not_next_to,chair).
+clue(daisy,object_in_row,closet).
 clue(daisy,in_left_column).

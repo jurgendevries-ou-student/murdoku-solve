@@ -15,6 +15,7 @@ clue(daniel,in_top_row).
 clue(emily,in,bedroom).
 clue(emily,not_in_room_with_female).
 clue(emily,in_column,4).
-clue(frank,in_corner).
+clue(frank,not_in,bedroom).
+clue(frank,object_in_row,statue).
 clue(frank,next_to,bed).
 clue(frank,north_of,bonnie).

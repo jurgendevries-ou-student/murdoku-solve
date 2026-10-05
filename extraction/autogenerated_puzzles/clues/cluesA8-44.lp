@@ -1,0 +1,24 @@
+%%%% Clues
+clue(alice,alone).
+clue(alice,north_of,grace).
+clue(alice,in,diningroom).
+clue(bonnie,in,office).
+clue(carol,object_in_row,box).
+clue(carol,next_to,bed).
+clue(carol,not_in_room_with_female).
+clue(carol,alone).
+clue(daniel,not_in_room_with_male).
+clue(daniel,not_in_corner).
+clue(daniel,south_of,carol).
+clue(daniel,not_next_to,box).
+clue(edward,not_next_to,carpet).
+clue(edward,in,garage).
+clue(edward,not_next_to,box).
+clue(edward,in_bottom_row).
+clue(florence,next_to,chair).
+clue(florence,in,hallway).
+clue(grace,not_in_same_room,daniel).
+clue(grace,not_in_corner).
+clue(grace,in_room_with_male).
+clue(grace,next_to,closet).
+clue(grace,in_right_column).

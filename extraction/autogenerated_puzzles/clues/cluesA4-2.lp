@@ -2,7 +2,6 @@
 clue(no_empty_room).
 clue(alphonse,alone).
 clue(alphonse,next_to,chair).
-clue(bernard,in_left_column).
-clue(carol,in,livingroom).
-clue(carol,not_next_to,sofa).
-clue(carol,not_in_corner).
+clue(bernard,no_object_in_col,box).
+clue(carol,no_object_in_row,box).
+clue(carol,in_right_column).

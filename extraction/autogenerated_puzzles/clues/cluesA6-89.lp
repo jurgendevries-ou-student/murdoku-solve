@@ -1,5 +1,6 @@
 %%%% Clues
-clue(alice,next_to,sofa).
+clue(alice,not_in_corner).
+clue(alice,object_in_col,closet).
 clue(alice,in_row,5).
 clue(bernard,not_in_corner).
 clue(bernard,not_alone).

@@ -1,0 +1,19 @@
+%%%% Clues
+clue(no_empty_room).
+clue(alice,alone).
+clue(alice,next_to,box).
+clue(alice,north_of,charlie).
+clue(bonnie,not_in_room_with_female).
+clue(bonnie,next_to,sofa).
+clue(charlie,no_object_in_row,closet).
+clue(charlie,in,hallway).
+clue(charlie,in_right_column).
+clue(daniel,next_to,box).
+clue(daniel,next_to,sofa).
+clue(edward,in,kitchen).
+clue(edward,in_column,5).
+clue(florence,in,livingroom).
+clue(florence,not_next_to,bed).
+clue(florence,in_column,2).
+clue(grace,object_in_row,box).
+clue(grace,on,sofa).

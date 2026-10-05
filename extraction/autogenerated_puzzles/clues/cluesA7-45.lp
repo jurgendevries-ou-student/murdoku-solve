@@ -2,11 +2,12 @@
 clue(n_persons_on,chair,0).
 clue(alphonse,not_alone).
 clue(alphonse,not_in,livingroom).
-clue(alphonse,in_same_room,edward).
+clue(alphonse,object_in_col,closet).
 clue(bernard,not_alone).
 clue(bernard,north_of,edward).
 clue(bernard,in_column,5).
-clue(charlie,next_to,carpet).
+clue(charlie,in_left_column).
+clue(charlie,on,carpet).
 clue(daisy,in,bedroom).
 clue(daisy,in_corner).
 clue(daisy,not_next_to,sofa).

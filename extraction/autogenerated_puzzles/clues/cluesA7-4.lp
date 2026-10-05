@@ -7,10 +7,12 @@ clue(bernard,in,bedroom).
 clue(bernard,in_row,2).
 clue(charlie,in,kitchen).
 clue(charlie,in_corner).
-clue(daisy,alone).
+clue(daisy,no_object_in_row,box).
+clue(daisy,next_to,carpet).
 clue(daisy,in_corner).
 clue(edward,in_row,3).
 clue(edward,next_to,closet).
-clue(edward,west_of,frank).
-clue(frank,next_to,sofa).
+clue(edward,no_object_in_col,closet).
+clue(frank,in,bathroom).
 clue(frank,in_corner).
+clue(frank,in_row,6).

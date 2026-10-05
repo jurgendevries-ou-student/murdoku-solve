@@ -1,0 +1,25 @@
+%%%% Clues
+clue(no_empty_room).
+clue(alphonse,in_same_room,emily).
+clue(alphonse,on,carpet).
+clue(bonnie,in,kitchen).
+clue(bonnie,not_in_same_room,charlie).
+clue(bonnie,east_of,daniel).
+clue(charlie,next_to,carpet).
+clue(charlie,in,bathroom).
+clue(charlie,object_in_row,closet).
+clue(daniel,next_to,sofa).
+clue(daniel,in_row,4).
+clue(emily,in_right_column).
+clue(emily,no_object_in_row,box).
+clue(emily,next_to_with_someone_else,carpet).
+clue(emily,someone_else_in_room_on,carpet).
+clue(emily,next_to,closet).
+clue(frank,east_of,daniel).
+clue(frank,not_in_room_with_male).
+clue(frank,next_to,carpet).
+clue(frank,not_in_room_with_female).
+clue(grace,no_object_in_col,closet).
+clue(grace,on,carpet).
+clue(grace,in,hallway).
+clue(grace,no_object_in_row,statue).

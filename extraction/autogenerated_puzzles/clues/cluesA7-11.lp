@@ -5,9 +5,11 @@ clue(alice,alone).
 clue(bonnie,not_in_same_room,florence).
 clue(bonnie,not_in_room_with_female).
 clue(bonnie,in,livingroom).
-clue(carol,in,diningroom).
+clue(carol,not_next_to,box).
+clue(carol,in_corner).
 clue(daniel,in_corner).
 clue(daniel,alone).
+clue(daniel,in,kitchen).
 clue(emily,in_row,5).
 clue(emily,east_of,alice).
 clue(emily,not_in_same_room,daniel).

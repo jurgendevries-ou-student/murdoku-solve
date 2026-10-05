@@ -2,7 +2,7 @@
 clue(n_persons_on,bed,1).
 clue(n_persons_on,chair,1).
 clue(alice,in_room_with_female).
-clue(bernard,south_of,alice).
+clue(bernard,no_object_in_row,box).
 clue(bernard,in,livingroom).
 clue(carol,in_bottom_row).
 clue(carol,not_alone).
@@ -18,4 +18,4 @@ clue(emily,not_in_same_room,bernard).
 clue(emily,not_next_to,box).
 clue(emily,next_to,closet).
 clue(frank,not_in_corner).
-clue(frank,not_on,bed).
+clue(frank,object_in_row,box).

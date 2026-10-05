@@ -4,6 +4,6 @@ clue(alphonse,in_left_column).
 clue(alphonse,next_to_with_someone_else,sofa).
 clue(alphonse,in_corner).
 clue(bernard,in_room_with_female).
-clue(bernard,on,bed).
-clue(carol,not_in_same_room,alphonse).
-clue(carol,not_in,livingroom).
+clue(bernard,in_corner).
+clue(carol,someone_else_in_room_on,bed).
+clue(carol,in_same_room,bernard).

@@ -7,4 +7,5 @@ clue(daisy,in_corner).
 clue(daisy,in_same_room,alice).
 clue(emily,not_in_room_with_male).
 clue(emily,next_to,closet).
+clue(emily,object_in_col,closet).
 clue(emily,in_left_column).

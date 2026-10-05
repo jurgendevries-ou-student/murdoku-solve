@@ -5,7 +5,7 @@ clue(alphonse,in_top_row).
 clue(alphonse,in_corner).
 clue(bonnie,not_in_room_with_female).
 clue(bonnie,in,bathroom).
-clue(bonnie,in_row,3).
+clue(bonnie,object_in_col,box).
 clue(charlie,in,livingroom).
 clue(charlie,alone).
 clue(daniel,next_to,bed).

@@ -1,10 +1,12 @@
 %%%% Clues
 clue(alice,alone).
-clue(alice,only_one_on,bed).
+clue(alice,in_row,2).
+clue(alice,in_right_column).
+clue(bonnie,in,kitchen).
 clue(bonnie,not_in_room_with_male).
 clue(bonnie,not_alone).
-clue(bonnie,next_to,closet).
+clue(bonnie,object_in_row,closet).
 clue(charlie,not_in,bedroom).
-clue(daniel,alone).
+clue(charlie,no_object_in_col,statue).
+clue(daniel,no_object_in_row,closet).
 clue(daniel,next_to,statue).
-clue(daniel,in_column,2).

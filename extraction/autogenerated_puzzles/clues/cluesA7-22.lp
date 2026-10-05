@@ -15,4 +15,5 @@ clue(emily,not_next_to,box).
 clue(emily,not_next_to,statue).
 clue(emily,not_in,hallway).
 clue(florence,next_to,carpet).
+clue(florence,no_object_in_row,statue).
 clue(florence,in_corner).

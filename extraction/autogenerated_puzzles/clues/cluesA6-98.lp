@@ -3,7 +3,7 @@ clue(n_persons_on,bed,0).
 clue(alice,next_to,carpet).
 clue(alice,in_column,2).
 clue(bernard,in_row,5).
-clue(bernard,in_column,3).
+clue(bernard,object_in_col,statue).
 clue(charlie,in_same_room,alice).
 clue(daniel,in_room_with_female).
 clue(daniel,not_next_to,statue).

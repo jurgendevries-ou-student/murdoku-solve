@@ -1,7 +1,6 @@
 %%%% Clues
 clue(no_empty_room).
 clue(n_persons_on,chair,0).
-clue(n_persons_on,sofa,3).
 clue(alphonse,not_in_same_room,daniel).
 clue(alphonse,west_of,carol).
 clue(alphonse,in_top_row).
@@ -10,8 +9,8 @@ clue(bernard,west_of,carol).
 clue(bernard,alone).
 clue(bernard,on,sofa).
 clue(carol,not_in_same_room,bernard).
+clue(carol,someone_else_in_room_on,sofa).
 clue(carol,in_column,4).
-clue(carol,not_next_to,carpet).
 clue(daniel,not_alone).
 clue(daniel,in,kitchen).
 clue(daniel,in_right_column).
@@ -23,4 +22,4 @@ clue(florence,in_same_room,daniel).
 clue(florence,south_of,daniel).
 clue(florence,west_of,carol).
 clue(florence,not_next_to,sofa).
-clue(florence,not_next_to,chair).
+clue(florence,object_in_col,closet).

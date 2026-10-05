@@ -7,7 +7,7 @@ clue(bernard,next_to,chair).
 clue(bernard,not_in_corner).
 clue(charlie,next_to,carpet).
 clue(daisy,next_to,chair).
-clue(daisy,in_corner).
+clue(daisy,in_right_column).
 clue(emily,in,livingroom).
 clue(emily,not_in_corner).
 clue(emily,north_of,bernard).

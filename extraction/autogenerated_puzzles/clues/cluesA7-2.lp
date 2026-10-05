@@ -1,11 +1,11 @@
 %%%% Clues
 clue(n_persons_on,chair,0).
 clue(alphonse,east_of,charlie).
-clue(alphonse,in_room_with_female).
-clue(alphonse,in_corner).
+clue(alphonse,someone_else_in_room_on,sofa).
+clue(alphonse,in_bottom_row).
 clue(bonnie,on,sofa).
+clue(charlie,in_column,0).
 clue(charlie,on,carpet).
-clue(charlie,in_corner).
 clue(daisy,next_to,sofa).
 clue(daisy,south_of,emily).
 clue(emily,in,kitchen).

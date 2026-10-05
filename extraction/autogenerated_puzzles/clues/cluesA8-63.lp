@@ -1,0 +1,23 @@
+%%%% Clues
+clue(n_persons_on,sofa,0).
+clue(alphonse,in_bottom_row).
+clue(alphonse,next_to,chair).
+clue(bernard,in_room_with_multiple_males,2).
+clue(bernard,next_to_with_someone_else,carpet).
+clue(bernard,object_in_row,closet).
+clue(carol,not_in_same_room,edward).
+clue(carol,not_next_to,carpet).
+clue(carol,not_in,kitchen).
+clue(carol,not_in_corner).
+clue(daisy,in,diningroom).
+clue(daisy,not_in_room_with_female).
+clue(daisy,alone).
+clue(edward,object_in_col,closet).
+clue(edward,on,carpet).
+clue(frank,not_next_to,chair).
+clue(frank,not_in_corner).
+clue(frank,in_right_column).
+clue(frank,not_in_same_room,george).
+clue(george,no_object_in_col,closet).
+clue(george,not_alone).
+clue(george,in,bathroom).

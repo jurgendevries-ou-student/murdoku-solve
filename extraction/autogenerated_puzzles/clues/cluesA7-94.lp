@@ -5,11 +5,13 @@ clue(alice,in_left_column).
 clue(alice,next_to,statue).
 clue(alice,alone).
 clue(bonnie,in_same_room,daniel).
-clue(bonnie,in_row,1).
+clue(bonnie,no_object_in_col,box).
 clue(carol,next_to,closet).
 clue(carol,alone).
 clue(carol,in_column,6).
 clue(daniel,west_of,edward).
+clue(daniel,next_to,closet).
+clue(daniel,in_row,3).
 clue(edward,in_top_row).
 clue(edward,not_in_same_room,carol).
 clue(frank,not_in_same_room,alice).

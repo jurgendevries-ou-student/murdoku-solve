@@ -1,0 +1,21 @@
+%%%% Clues
+clue(alice,not_in_same_room,daisy).
+clue(alice,east_of,bernard).
+clue(alice,in,livingroom).
+clue(bernard,north_of,florence).
+clue(bernard,not_next_to,sofa).
+clue(bernard,in_column,2).
+clue(bernard,not_in_corner).
+clue(carol,next_to,chair).
+clue(daisy,in_same_room,edward).
+clue(daisy,in,kitchen).
+clue(daisy,east_of,edward).
+clue(edward,not_next_to,box).
+clue(edward,not_in_room_with_male).
+clue(edward,in_corner).
+clue(florence,not_in_same_room,edward).
+clue(florence,in_same_room,bernard).
+clue(florence,in,bathroom).
+clue(grace,not_alone).
+clue(grace,not_in_same_room,alice).
+clue(grace,on,sofa).

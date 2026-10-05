@@ -6,7 +6,7 @@ clue(bernard,not_next_to,closet).
 clue(bernard,in_room_with_male).
 clue(bernard,in_corner).
 clue(charlie,in_corner).
-clue(charlie,in_right_column).
+clue(charlie,next_to,sofa).
 clue(daniel,next_to,closet).
-clue(daniel,not_alone).
-clue(daniel,in_row,1).
+clue(daniel,object_in_col,closet).
+clue(daniel,not_in_corner).

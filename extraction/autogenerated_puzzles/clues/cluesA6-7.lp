@@ -6,6 +6,7 @@ clue(bonnie,in,bedroom).
 clue(charlie,not_in_same_room,edward).
 clue(charlie,not_in_same_room,bonnie).
 clue(charlie,next_to,sofa).
+clue(daniel,next_to,carpet).
+clue(daniel,object_in_col,box).
 clue(daniel,in_row,5).
-clue(daniel,in_column,1).
 clue(edward,in_column,4).

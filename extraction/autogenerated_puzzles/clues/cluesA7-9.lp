@@ -4,6 +4,7 @@ clue(alphonse,in,hallway).
 clue(bernard,west_of,frank).
 clue(bernard,in_room_with_female).
 clue(bernard,not_next_to,bed).
+clue(bernard,in_corner).
 clue(carol,in,bathroom).
 clue(carol,in_bottom_row).
 clue(daisy,next_to,box).

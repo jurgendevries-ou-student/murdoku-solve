@@ -1,0 +1,26 @@
+%%%% Clues
+clue(alphonse,not_in_same_room,florence).
+clue(alphonse,next_to,closet).
+clue(bernard,not_alone).
+clue(bernard,object_in_row,closet).
+clue(bernard,not_in_room_with_female).
+clue(bernard,next_to,statue).
+clue(charlie,south_of,daisy).
+clue(charlie,not_in_same_room,alphonse).
+clue(charlie,not_in_room_with_female).
+clue(daisy,in_room_with_female).
+clue(daisy,no_object_in_col,statue).
+clue(daisy,not_next_to,closet).
+clue(daisy,not_in_corner).
+clue(edward,not_in_same_room,daisy).
+clue(edward,not_in_room_with_male).
+clue(edward,in_column,0).
+clue(florence,not_in_same_room,charlie).
+clue(florence,in_room_with_male).
+clue(florence,not_alone).
+clue(florence,east_of,daisy).
+clue(florence,next_to,sofa).
+clue(george,in_corner).
+clue(george,in,bedroom).
+clue(george,not_alone).
+clue(george,in_right_column).

@@ -1,19 +1,20 @@
 %%%% Clues
 clue(n_persons_on,chair,0).
 clue(n_persons_on,chair,0).
-clue(alice,not_in,bedroom).
 clue(alice,in_same_room,bonnie).
-clue(alice,in_corner).
+clue(alice,object_in_row,statue).
 clue(bonnie,in_left_column).
 clue(bonnie,not_in_room_with_male).
+clue(bonnie,object_in_row,box).
 clue(bonnie,in_corner).
 clue(carol,not_in_same_room,alice).
 clue(carol,not_next_to,chair).
-clue(carol,in_column,3).
-clue(daniel,not_alone).
+clue(carol,object_in_col,statue).
 clue(daniel,next_to,chair).
+clue(daniel,not_alone).
 clue(daniel,not_next_to,statue).
+clue(daniel,object_in_col,box).
 clue(emily,in,bedroom).
 clue(emily,alone).
-clue(emily,south_of,bonnie).
-clue(emily,in_row,3).
+clue(emily,object_in_row,statue).
+clue(emily,not_next_to,statue).

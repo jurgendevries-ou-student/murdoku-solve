@@ -5,8 +5,8 @@ clue(alphonse,in_column,5).
 clue(alphonse,next_to_with_someone_else,carpet).
 clue(bernard,in,bathroom).
 clue(bernard,not_in_same_room,daniel).
+clue(bernard,object_in_row,closet).
 clue(charlie,in,kitchen).
-clue(charlie,not_next_to,carpet).
 clue(charlie,not_in_corner).
 clue(daniel,south_of,bernard).
 clue(daniel,alone).

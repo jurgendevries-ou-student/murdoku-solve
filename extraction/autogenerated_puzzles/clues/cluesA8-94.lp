@@ -1,0 +1,22 @@
+%%%% Clues
+clue(alphonse,in,bathroom).
+clue(alphonse,in_same_room,florence).
+clue(alphonse,in_room_with_multiple_females,2).
+clue(alphonse,in_row,5).
+clue(bonnie,not_in_same_room,florence).
+clue(bonnie,in_right_column).
+clue(bonnie,not_in_same_room,charlie).
+clue(bonnie,on,bed).
+clue(charlie,in_left_column).
+clue(charlie,not_in_room_with_male).
+clue(daisy,west_of,emily).
+clue(daisy,in,bathroom).
+clue(daisy,in_same_room,alphonse).
+clue(daisy,next_to_with_someone_else,chair).
+clue(emily,not_in,kitchen).
+clue(emily,in_column,6).
+clue(florence,not_alone).
+clue(florence,in,bathroom).
+clue(florence,next_to_with_someone_else,box).
+clue(george,in,bedroom).
+clue(george,alone).

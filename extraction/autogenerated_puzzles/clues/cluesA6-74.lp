@@ -3,10 +3,9 @@ clue(alphonse,in_same_room,daisy).
 clue(alphonse,in_column,3).
 clue(alphonse,in_row,4).
 clue(bernard,next_to,carpet).
-clue(bernard,not_in_same_room,emily).
+clue(bernard,object_in_col,box).
 clue(carol,in_same_room,alphonse).
+clue(carol,object_in_row,statue).
 clue(carol,next_to,bed).
-clue(daisy,next_to,carpet).
-clue(daisy,not_next_to,statue).
-clue(emily,not_alone).
+clue(daisy,no_object_in_row,box).
 clue(emily,in_column,1).

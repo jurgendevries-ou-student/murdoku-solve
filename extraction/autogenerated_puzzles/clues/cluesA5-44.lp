@@ -1,8 +1,7 @@
 %%%% Clues
 clue(alice,not_in_same_room,carol).
 clue(alice,in,livingroom).
-clue(alice,not_alone).
-clue(alice,in_column,1).
+clue(alice,object_in_col,closet).
 clue(bonnie,next_to,statue).
 clue(carol,in,hallway).
 clue(carol,in_corner).

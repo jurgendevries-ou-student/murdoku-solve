@@ -1,0 +1,21 @@
+%%%% Clues
+clue(n_persons_on,carpet,2).
+clue(alice,not_in_room_with_male).
+clue(alice,alone).
+clue(bonnie,next_to,carpet).
+clue(bonnie,in_corner).
+clue(bonnie,in,office).
+clue(charlie,no_object_in_col,closet).
+clue(charlie,in_same_room,daniel).
+clue(charlie,not_next_to,carpet).
+clue(daniel,in_column,2).
+clue(daniel,next_to,chair).
+clue(emily,not_next_to,bed).
+clue(emily,next_to,carpet).
+clue(emily,south_of,alice).
+clue(frank,in,hallway).
+clue(george,on,sofa).
+clue(george,object_in_col,closet).
+clue(george,in_column,6).
+clue(george,west_of,frank).
+clue(george,only_one_on,sofa).

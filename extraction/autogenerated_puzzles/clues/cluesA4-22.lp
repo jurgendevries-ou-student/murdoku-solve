@@ -6,4 +6,5 @@ clue(bernard,east_of,alphonse).
 clue(bernard,in_corner).
 clue(carol,not_in_room_with_female).
 clue(carol,in,bedroom).
+clue(carol,no_object_in_col,box).
 clue(carol,in_top_row).

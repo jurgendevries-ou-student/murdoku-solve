@@ -7,4 +7,4 @@ clue(bernard,in_column,1).
 clue(bernard,east_of,alice).
 clue(carol,not_in_room_with_female).
 clue(carol,in_same_room,bernard).
-clue(carol,not_in_corner).
+clue(carol,object_in_col,statue).

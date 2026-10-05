@@ -1,6 +1,5 @@
 %%%% Clues
 clue(no_empty_room).
-clue(n_persons_on,sofa,0).
 clue(alice,in,garage).
 clue(alice,not_in_corner).
 clue(alice,next_to,closet).
@@ -10,6 +9,7 @@ clue(carol,on,carpet).
 clue(carol,not_next_to,bed).
 clue(carol,in_right_column).
 clue(daniel,in,livingroom).
-clue(daniel,in_row,2).
+clue(daniel,object_in_row,box).
 clue(edward,next_to,sofa).
+clue(edward,object_in_col,closet).
 clue(florence,in_bottom_row).

@@ -16,9 +16,10 @@ clue(daniel,in,bathroom).
 clue(daniel,in_room_with_female).
 clue(daniel,south_of,edward).
 clue(daniel,next_to,closet).
-clue(edward,not_next_to,closet).
+clue(edward,object_in_row,closet).
 clue(edward,not_in_same_room,daniel).
 clue(edward,in_same_room,frank).
+clue(edward,not_next_to,carpet).
 clue(frank,not_in_same_room,bonnie).
 clue(frank,in_same_room,charlie).
 clue(frank,not_in_corner).

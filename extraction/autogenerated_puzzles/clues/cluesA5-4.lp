@@ -7,7 +7,7 @@ clue(bonnie,not_in,livingroom).
 clue(bonnie,not_alone).
 clue(bonnie,not_next_to,bed).
 clue(bonnie,east_of,carol).
-clue(bonnie,in_corner).
+clue(bonnie,object_in_col,box).
 clue(carol,next_to,bed).
 clue(carol,in_corner).
 clue(carol,north_of,daniel).

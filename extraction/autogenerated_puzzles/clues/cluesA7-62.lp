@@ -1,16 +1,18 @@
 %%%% Clues
-clue(alphonse,not_alone).
+clue(n_persons_on,sofa,0).
+clue(alphonse,no_object_in_col,box).
 clue(alphonse,next_to,closet).
-clue(alphonse,in_right_column).
-clue(bonnie,next_to,sofa).
-clue(bonnie,in_corner).
+clue(bonnie,not_next_to,closet).
+clue(bonnie,not_in_same_room,daniel).
+clue(carol,in_room_with_male).
 clue(carol,in_same_room,alphonse).
 clue(carol,in_row,2).
-clue(daniel,in_room_with_male).
 clue(daniel,in,bathroom).
-clue(daniel,not_in_corner).
-clue(edward,next_to,bed).
-clue(edward,in_same_room,frank).
+clue(daniel,in_row,1).
+clue(daniel,object_in_col,box).
+clue(edward,not_in_same_room,alphonse).
 clue(edward,in,hallway).
-clue(frank,not_in_same_room,alphonse).
+clue(edward,next_to,bed).
+clue(frank,in_same_room,edward).
+clue(frank,in_room_with_female).
 clue(frank,in_bottom_row).

@@ -1,6 +1,6 @@
 %%%% Clues
 clue(alice,on,bed).
-clue(bonnie,on,sofa).
+clue(bonnie,not_in,bathroom).
 clue(bonnie,only_one_on,sofa).
 clue(charlie,not_next_to,closet).
 clue(charlie,not_in_same_room,frank).
@@ -12,4 +12,4 @@ clue(emily,north_of,bonnie).
 clue(emily,in_column,6).
 clue(emily,in,kitchen).
 clue(frank,in_column,2).
-clue(frank,in,garage).
+clue(frank,object_in_row,box).

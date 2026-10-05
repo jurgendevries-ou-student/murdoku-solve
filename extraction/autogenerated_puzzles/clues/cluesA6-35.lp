@@ -1,20 +1,15 @@
 %%%% Clues
 clue(alice,not_in_same_room,daisy).
-clue(alice,next_to,carpet).
-clue(alice,not_on,carpet).
+clue(alice,in_room_with_female).
+clue(alice,in,hallway).
+clue(alice,on,chair).
 clue(bonnie,not_in_same_room,emily).
-clue(bonnie,in_room_with_female).
-clue(bonnie,north_of,emily).
-clue(bonnie,not_in,bedroom).
 clue(bonnie,not_next_to,bed).
-clue(bonnie,in_same_room,daisy).
-clue(bonnie,in_corner).
 clue(carol,not_in_same_room,bonnie).
-clue(carol,not_next_to,sofa).
 clue(carol,not_in_corner).
-clue(carol,north_of,emily).
-clue(daisy,in_top_row).
-clue(daisy,east_of,alice).
+clue(daisy,no_object_in_col,closet).
+clue(daisy,in_same_room,bonnie).
 clue(daisy,in_column,2).
-clue(emily,south_of,daisy).
+clue(daisy,in_top_row).
+clue(emily,in_bottom_row).
 clue(emily,in_room_with_female).

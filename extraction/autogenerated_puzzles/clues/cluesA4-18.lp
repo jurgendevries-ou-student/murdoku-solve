@@ -1,5 +1,5 @@
 %%%% Clues
-clue(alphonse,not_in,livingroom).
+clue(alphonse,no_object_in_row,closet).
 clue(alphonse,in_corner).
 clue(bernard,west_of,carol).
 clue(bernard,next_to,bed).

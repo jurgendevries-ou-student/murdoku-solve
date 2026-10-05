@@ -7,6 +7,7 @@ clue(carol,on,carpet).
 clue(daniel,next_to,closet).
 clue(daniel,next_to,carpet).
 clue(daniel,not_in_same_room,carol).
-clue(daniel,not_alone).
+clue(daniel,someone_else_in_room_on,carpet).
 clue(edward,in,livingroom).
 clue(edward,next_to,statue).
+clue(edward,not_in_room_with_female).

@@ -11,6 +11,7 @@ clue(charlie,next_to,closet).
 clue(charlie,north_of,daniel).
 clue(charlie,in_column,4).
 clue(daniel,not_in_same_room,bonnie).
+clue(daniel,object_in_col,closet).
 clue(daniel,next_to,closet).
+clue(daniel,not_in_corner).
 clue(daniel,east_of,alice).
-clue(daniel,in_column,3).

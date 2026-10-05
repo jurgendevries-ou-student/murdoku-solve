@@ -6,6 +6,7 @@ clue(bonnie,alone).
 clue(bonnie,south_of,edward).
 clue(bonnie,in,kitchen).
 clue(bonnie,next_to,bed).
+clue(carol,someone_else_in_room_on,carpet).
 clue(carol,in_left_column).
 clue(carol,on,carpet).
 clue(daisy,south_of,florence).
@@ -17,4 +18,4 @@ clue(florence,in,livingroom).
 clue(florence,east_of,carol).
 clue(florence,in_room_with_multiple_females,2).
 clue(florence,not_next_to,statue).
-clue(florence,in_row,3).
+clue(florence,no_object_in_row,closet).

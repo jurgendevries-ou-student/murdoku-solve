@@ -1,7 +1,7 @@
 %%%% Clues
 clue(alphonse,not_alone).
 clue(alphonse,next_to,bed).
-clue(bernard,in_corner).
+clue(bernard,no_object_in_row,box).
 clue(bernard,in_bottom_row).
 clue(bernard,in_same_room,daisy).
 clue(charlie,in_top_row).

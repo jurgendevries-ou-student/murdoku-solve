@@ -7,7 +7,8 @@ clue(alice,in,garage).
 clue(bernard,next_to,closet).
 clue(bernard,in_same_room,carol).
 clue(bernard,not_in_corner).
-clue(carol,not_in,bedroom).
+clue(carol,object_in_col,closet).
+clue(carol,not_next_to,chair).
 clue(daniel,next_to,carpet).
 clue(daniel,in_left_column).
 clue(daniel,north_of,florence).

@@ -5,10 +5,10 @@ clue(alphonse,in_same_room,edward).
 clue(alphonse,west_of,bonnie).
 clue(alphonse,not_next_to,closet).
 clue(alphonse,south_of,bonnie).
-clue(bonnie,not_next_to,bed).
 clue(bonnie,not_in_same_room,daniel).
 clue(bonnie,not_in,bedroom).
-clue(bonnie,north_of,edward).
+clue(bonnie,object_in_col,statue).
+clue(bonnie,next_to,statue).
 clue(carol,not_in_room_with_female).
 clue(carol,alone).
 clue(carol,in,garage).

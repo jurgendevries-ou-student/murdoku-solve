@@ -5,8 +5,10 @@ clue(alphonse,in_corner).
 clue(bernard,in_same_room,charlie).
 clue(charlie,not_next_to,bed).
 clue(charlie,in_corner).
+clue(charlie,not_next_to,closet).
+clue(daisy,not_in,kitchen).
 clue(daisy,in_same_room,emily).
-clue(daisy,in_top_row).
+clue(daisy,object_in_row,closet).
 clue(emily,not_in_same_room,alphonse).
 clue(emily,next_to,bed).
 clue(emily,in_same_room,charlie).

@@ -7,5 +7,5 @@ clue(carol,in_left_column).
 clue(carol,in,kitchen).
 clue(daniel,not_alone).
 clue(daniel,in,bathroom).
-clue(daniel,in_corner).
+clue(daniel,object_in_row,box).
 clue(daniel,in_column,3).

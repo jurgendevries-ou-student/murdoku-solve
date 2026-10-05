@@ -1,0 +1,23 @@
+%%%% Clues
+clue(alice,next_to,sofa).
+clue(alice,in_column,2).
+clue(bernard,not_next_to,closet).
+clue(bernard,not_next_to,carpet).
+clue(bernard,not_in_room_with_male).
+clue(bernard,alone).
+clue(bernard,not_next_to,sofa).
+clue(charlie,east_of,daisy).
+clue(charlie,not_in_same_room,george).
+clue(charlie,alone).
+clue(charlie,on,carpet).
+clue(charlie,in_column,5).
+clue(daisy,on,carpet).
+clue(daisy,next_to,box).
+clue(emily,in,garage).
+clue(emily,not_next_to,statue).
+clue(florence,not_next_to,statue).
+clue(florence,not_in_same_room,george).
+clue(florence,not_next_to,box).
+clue(florence,alone).
+clue(florence,not_in_corner).
+clue(george,in,office).

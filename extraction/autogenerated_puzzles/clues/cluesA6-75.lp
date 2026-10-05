@@ -7,7 +7,7 @@ clue(bonnie,next_to,chair).
 clue(charlie,in_right_column).
 clue(charlie,next_to,sofa).
 clue(daisy,in,livingroom).
-clue(daisy,in_top_row).
+clue(daisy,no_object_in_row,box).
 clue(emily,not_in_same_room,bonnie).
 clue(emily,not_in_same_room,daisy).
 clue(emily,not_next_to,carpet).
