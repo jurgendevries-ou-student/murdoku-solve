@@ -1,12 +1,8 @@
 %%%% Clues
 clue(n_persons_on,carpet,0).
-clue(alphonse,in_room_with_multiple_females,2).
 clue(alphonse,in,bathroom).
-clue(bonnie,not_next_to,bed).
-clue(bonnie,not_in_same_room,daisy).
 clue(bonnie,in_corner).
 clue(bonnie,south_of,alphonse).
-clue(carol,not_next_to,bed).
 clue(carol,not_next_to,box).
 clue(carol,not_in_corner).
 clue(daisy,in_column,3).

@@ -1,20 +1,13 @@
 %%%% Clues
-clue(alphonse,next_to,bed).
 clue(alphonse,in_same_room,carol).
 clue(alphonse,in_corner).
-clue(bernard,not_in_room_with_female).
 clue(bernard,in,kitchen).
 clue(bernard,in_right_column).
 clue(carol,in_column,3).
 clue(carol,in_row,4).
-clue(daisy,in,hallway).
-clue(daisy,not_in_same_room,emily).
 clue(daisy,in_column,4).
-clue(emily,not_in,livingroom).
-clue(emily,not_alone).
 clue(emily,in_same_room,grace).
 clue(emily,not_in_corner).
 clue(frank,in_row,6).
 clue(frank,no_object_in_col,box).
-clue(grace,in,bedroom).
 clue(grace,in_top_row).

@@ -1,23 +1,12 @@
 %%%% Clues
 clue(n_persons_on,carpet,1).
-clue(alphonse,not_next_to,bed).
 clue(alphonse,south_of,daniel).
-clue(alphonse,not_in_room_with_male).
-clue(bonnie,not_in_room_with_female).
-clue(bonnie,alone).
 clue(bonnie,in,kitchen).
 clue(charlie,in_row,7).
 clue(charlie,alone).
 clue(charlie,on,sofa).
-clue(daniel,not_in_same_room,charlie).
-clue(daniel,not_alone).
 clue(daniel,on,carpet).
 clue(edward,next_to,carpet).
-clue(edward,not_in_same_room,bonnie).
-clue(edward,not_in_same_room,florence).
-clue(florence,not_in_same_room,bonnie).
 clue(florence,in_room_with_male).
-clue(florence,not_next_to,chair).
 clue(florence,not_next_to,box).
-clue(george,not_in_corner).
 clue(george,in,hallway).

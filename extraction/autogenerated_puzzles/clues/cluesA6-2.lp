@@ -1,21 +1,9 @@
 %%%% Clues
-clue(no_empty_room).
 clue(alice,next_to,sofa).
-clue(alice,in_room_with_multiple_males,2).
-clue(alice,next_to,statue).
-clue(alice,no_object_in_col,statue).
-clue(bernard,no_object_in_row,box).
-clue(bernard,in,kitchen).
-clue(bernard,not_in_same_room,edward).
-clue(bernard,in_room_with_female).
 clue(bernard,only_one_on,sofa).
-clue(charlie,not_alone).
-clue(charlie,not_next_to,bed).
+clue(charlie,in_bottom_row).
 clue(charlie,next_to,chair).
-clue(daisy,in_right_column).
 clue(daisy,in_top_row).
-clue(edward,not_next_to,sofa).
 clue(edward,not_in,livingroom).
-clue(edward,not_in_room_with_male).
 clue(edward,in_row,2).
 clue(edward,in_corner).

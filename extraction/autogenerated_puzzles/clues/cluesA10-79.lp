@@ -1,0 +1,19 @@
+%%%% Clues
+clue(n_persons_on,sofa,1).
+clue(alphonse,next_to,box).
+clue(bonnie,south_of,daniel).
+clue(bonnie,not_in_corner).
+clue(bonnie,not_alone).
+clue(bonnie,no_object_in_col,statue).
+clue(carol,in_same_room,alphonse).
+clue(carol,not_next_to,statue).
+clue(carol,object_in_row,box).
+clue(daniel,in,garage).
+clue(daniel,in_room_with_multiple_males,2).
+clue(emily,in_corner).
+clue(emily,north_of,george).
+clue(frank,in,office).
+clue(george,west_of,daniel).
+clue(henry,not_in_corner).
+clue(henry,west_of,isla).
+clue(isla,not_next_to,box).

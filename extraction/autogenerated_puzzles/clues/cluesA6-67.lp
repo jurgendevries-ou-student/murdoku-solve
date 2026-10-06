@@ -1,8 +1,6 @@
 %%%% Clues
-clue(alphonse,in_same_room,daniel).
 clue(alphonse,not_next_to,statue).
 clue(alphonse,next_to,chair).
-clue(bernard,not_next_to,chair).
 clue(bernard,not_in_corner).
 clue(charlie,not_next_to,sofa).
 clue(charlie,not_in_corner).

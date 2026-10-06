@@ -1,0 +1,19 @@
+%%%% Clues
+clue(alphonse,next_to,closet).
+clue(alphonse,west_of,frank).
+clue(bernard,next_to,sofa).
+clue(bernard,in_row,6).
+clue(carol,next_to,statue).
+clue(daniel,on,carpet).
+clue(daniel,south_of,alphonse).
+clue(daniel,next_to,closet).
+clue(edward,next_to,chair).
+clue(edward,in_column,4).
+clue(frank,not_next_to,box).
+clue(grace,in_column,8).
+clue(henry,not_in_corner).
+clue(henry,in_same_room,frank).
+clue(henry,next_to,bed).
+clue(ivan,not_in,diningroom).
+clue(ivan,west_of,grace).
+clue(ivan,object_in_row,statue).

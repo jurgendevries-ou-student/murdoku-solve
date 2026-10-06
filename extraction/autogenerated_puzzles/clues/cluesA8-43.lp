@@ -1,27 +1,11 @@
 %%%% Clues
-clue(n_persons_on,chair,0).
 clue(n_persons_on,bed,1).
-clue(n_persons_on,carpet,0).
 clue(alice,no_object_in_row,statue).
-clue(alice,in_room_with_male).
-clue(alice,not_alone).
 clue(bonnie,next_to,closet).
-clue(bonnie,no_object_in_row,closet).
 clue(bonnie,in_column,1).
-clue(charlie,not_in_same_room,alice).
-clue(charlie,not_in_room_with_male).
-clue(charlie,not_alone).
 clue(charlie,in_right_column).
 clue(charlie,next_to,chair).
 clue(daniel,not_in_room_with_male).
-clue(daniel,not_next_to,chair).
 clue(emily,in_same_room,florence).
-clue(emily,not_in_same_room,daniel).
-clue(emily,not_on,carpet).
-clue(florence,not_in_same_room,daniel).
-clue(florence,in_corner).
-clue(florence,in,bedroom).
 clue(florence,in_row,7).
 clue(george,next_to,statue).
-clue(george,object_in_col,closet).
-clue(george,not_in_same_room,emily).

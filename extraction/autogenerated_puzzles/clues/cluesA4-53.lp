@@ -1,11 +1,7 @@
 %%%% Clues
-clue(no_empty_room).
 clue(n_persons_on,carpet,0).
 clue(alphonse,not_in_same_room,bonnie).
-clue(alphonse,in,livingroom).
 clue(alphonse,in_row,3).
-clue(bonnie,not_alone).
-clue(bonnie,next_to,carpet).
-clue(bonnie,in_top_row).
-clue(carol,not_in_corner).
-clue(carol,in_same_room,bonnie).
+clue(bonnie,in_right_column).
+clue(carol,not_in_same_room,alphonse).
+clue(carol,no_object_in_row,closet).

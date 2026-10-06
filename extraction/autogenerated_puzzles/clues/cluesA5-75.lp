@@ -1,7 +1,5 @@
 %%%% Clues
-clue(alphonse,in,kitchen).
 clue(alphonse,in_row,2).
-clue(bernard,not_in_room_with_female).
 clue(bernard,in,hallway).
 clue(charlie,in,bathroom).
 clue(charlie,not_alone).

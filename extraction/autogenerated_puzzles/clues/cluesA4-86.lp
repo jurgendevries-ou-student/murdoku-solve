@@ -1,5 +1,4 @@
 %%%% Clues
-clue(alphonse,in_same_room,bernard).
 clue(alphonse,in,bedroom).
 clue(alphonse,object_in_col,box).
 clue(bernard,in_corner).

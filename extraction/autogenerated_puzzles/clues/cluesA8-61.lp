@@ -1,21 +1,13 @@
 %%%% Clues
-clue(n_persons_on,chair,0).
 clue(n_persons_on,bed,1).
 clue(alphonse,in_column,0).
-clue(alphonse,in_row,5).
 clue(bernard,not_alone).
-clue(bernard,north_of,alphonse).
 clue(bernard,in,garage).
 clue(bernard,in_corner).
 clue(charlie,no_object_in_col,box).
-clue(charlie,no_object_in_col,box).
-clue(daniel,next_to,closet).
 clue(daniel,north_of,alphonse).
 clue(daniel,in,livingroom).
-clue(daniel,alone).
-clue(emily,in_column,5).
 clue(emily,in_row,1).
 clue(frank,on,bed).
 clue(frank,not_next_to,chair).
-clue(grace,not_in,office).
 clue(grace,in_same_room,emily).

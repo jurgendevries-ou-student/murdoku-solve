@@ -1,7 +1,5 @@
 %%%% Clues
 clue(n_persons_on,sofa,1).
-clue(alphonse,alone).
-clue(alphonse,in,kitchen).
 clue(alphonse,object_in_row,statue).
 clue(bernard,in_bottom_row).
 clue(charlie,not_in_same_room,bernard).

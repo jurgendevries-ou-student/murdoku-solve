@@ -1,20 +1,10 @@
 %%%% Clues
-clue(n_persons_on,chair,0).
 clue(alphonse,in_right_column).
-clue(alphonse,not_alone).
 clue(alphonse,in_bottom_row).
-clue(bonnie,not_in_room_with_female).
 clue(bonnie,in_row,1).
 clue(bonnie,in_corner).
-clue(bonnie,not_in_room_with_male).
-clue(charlie,in,livingroom).
-clue(daisy,not_alone).
-clue(daisy,not_next_to,box).
-clue(daisy,not_in_same_room,florence).
-clue(daisy,no_object_in_col,statue).
+clue(charlie,no_object_in_col,box).
+clue(daisy,in,kitchen).
 clue(daisy,in_corner).
-clue(edward,in_left_column).
-clue(florence,east_of,edward).
-clue(florence,in,livingroom).
+clue(edward,next_to,chair).
 clue(florence,not_in_corner).
-clue(florence,no_object_in_col,statue).

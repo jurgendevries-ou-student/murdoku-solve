@@ -1,26 +1,16 @@
 %%%% Clues
 clue(n_persons_on,sofa,0).
-clue(n_persons_on,bed,0).
-clue(alphonse,not_next_to,box).
 clue(alphonse,in_room_with_female).
 clue(alphonse,not_next_to,sofa).
 clue(bonnie,next_to_with_someone_else,sofa).
-clue(bonnie,not_next_to,statue).
 clue(bonnie,no_object_in_col,closet).
 clue(bonnie,no_object_in_col,statue).
-clue(carol,not_alone).
-clue(carol,no_object_in_col,box).
 clue(carol,in_row,2).
 clue(carol,in_left_column).
-clue(daniel,in_room_with_male).
-clue(daniel,not_in_same_room,george).
 clue(daniel,east_of,george).
 clue(edward,in,hallway).
 clue(edward,in_corner).
-clue(florence,not_alone).
-clue(florence,in_same_room,george).
 clue(florence,in,bedroom).
 clue(florence,in_corner).
-clue(george,not_in_same_room,edward).
 clue(george,not_next_to,bed).
 clue(george,in_room_with_multiple_females,2).

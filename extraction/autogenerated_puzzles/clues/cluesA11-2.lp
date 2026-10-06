@@ -1,0 +1,23 @@
+%%%% Clues
+clue(n_persons_on,chair,3).
+clue(alice,not_in_same_room,emily).
+clue(bonnie,in_column,8).
+clue(charlie,in_corner).
+clue(charlie,in,garage).
+clue(daniel,not_alone).
+clue(daniel,not_next_to,statue).
+clue(daniel,object_in_col,closet).
+clue(daniel,no_object_in_col,statue).
+clue(emily,in_corner).
+clue(florence,in_same_room,alice).
+clue(florence,in_row,4).
+clue(george,in_room_with_multiple_females,2).
+clue(george,north_of,bonnie).
+clue(george,no_object_in_col,closet).
+clue(george,in_corner).
+clue(hannah,in_room_with_female).
+clue(hannah,next_to,box).
+clue(isla,in_same_room,george).
+clue(isla,next_to,chair).
+clue(jesse,not_next_to,chair).
+clue(jesse,in,bedroom).

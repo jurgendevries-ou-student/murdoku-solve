@@ -1,5 +1,4 @@
 %%%% Clues
-clue(n_persons_on,sofa,2).
 clue(n_persons_on,carpet,1).
 clue(alphonse,in_corner).
 clue(alphonse,in_row,1).

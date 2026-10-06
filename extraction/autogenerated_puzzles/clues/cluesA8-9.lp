@@ -1,22 +1,11 @@
 %%%% Clues
-clue(n_persons_on,sofa,0).
-clue(alphonse,in_same_room,daisy).
 clue(alphonse,next_to,sofa).
-clue(bernard,in,bedroom).
+clue(bernard,east_of,grace).
 clue(charlie,in_corner).
-clue(charlie,no_object_in_row,statue).
-clue(charlie,east_of,edward).
-clue(charlie,next_to,chair).
 clue(charlie,in_column,4).
-clue(daisy,in_room_with_male).
-clue(daisy,not_in_same_room,frank).
+clue(daisy,in_same_room,alphonse).
 clue(daisy,object_in_col,closet).
-clue(edward,not_alone).
-clue(edward,not_alone).
 clue(edward,in_left_column).
 clue(edward,in_row,3).
 clue(frank,on,chair).
-clue(frank,not_in_same_room,alphonse).
-clue(frank,object_in_row,statue).
-clue(grace,not_in_corner).
-clue(grace,in,kitchen).
+clue(grace,object_in_row,closet).

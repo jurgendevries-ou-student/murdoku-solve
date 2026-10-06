@@ -1,21 +1,12 @@
 %%%% Clues
 clue(n_persons_on,sofa,2).
 clue(n_persons_on,bed,0).
-clue(alphonse,not_in_room_with_female).
-clue(alphonse,not_in_same_room,charlie).
-clue(alphonse,next_to,sofa).
-clue(bernard,not_in_same_room,florence).
-clue(bernard,in_room_with_male).
-clue(bernard,not_in_same_room,daniel).
-clue(bernard,in_right_column).
-clue(charlie,not_in_room_with_female).
-clue(charlie,in_bottom_row).
+clue(alphonse,not_in_same_room,edward).
+clue(bernard,not_next_to,carpet).
+clue(bernard,in,kitchen).
 clue(charlie,in_same_room,bernard).
-clue(charlie,someone_else_in_room_on,sofa).
-clue(daniel,in_column,3).
+clue(charlie,in_bottom_row).
+clue(daniel,in_corner).
 clue(edward,not_in_corner).
 clue(edward,in_top_row).
-clue(florence,not_in_same_room,edward).
-clue(florence,in_corner).
-clue(florence,not_in_room_with_female).
 clue(florence,next_to,carpet).

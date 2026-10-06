@@ -1,23 +1,10 @@
 %%%% Clues
-clue(no_empty_room).
 clue(n_persons_on,carpet,3).
-clue(alice,no_object_in_row,statue).
-clue(alice,on,carpet).
-clue(alice,not_in_corner).
-clue(alice,no_object_in_row,closet).
 clue(alice,next_to_with_someone_else,carpet).
-clue(bonnie,alone).
-clue(bonnie,in,kitchen).
 clue(bonnie,in_bottom_row).
-clue(carol,in_same_room,alice).
-clue(carol,not_in_corner).
 clue(carol,in_row,5).
 clue(carol,west_of,alice).
-clue(daisy,in_column,1).
 clue(daisy,next_to,box).
-clue(emily,in_corner).
 clue(emily,not_alone).
 clue(emily,in_row,2).
-clue(frank,alone).
-clue(frank,not_next_to,chair).
-clue(frank,not_next_to,closet).
+clue(frank,in,bedroom).

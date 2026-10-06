@@ -1,0 +1,20 @@
+%%%% Clues
+clue(alphonse,next_to,bed).
+clue(alphonse,in_room_with_male).
+clue(alphonse,east_of,ivan).
+clue(bernard,north_of,alphonse).
+clue(bernard,not_in_corner).
+clue(bernard,west_of,ivan).
+clue(carol,in,bathroom).
+clue(daisy,next_to,bed).
+clue(emily,not_in_room_with_male).
+clue(emily,not_alone).
+clue(emily,next_to,statue).
+clue(frank,in,kitchen).
+clue(frank,in_same_room,daisy).
+clue(grace,not_next_to,closet).
+clue(henry,not_alone).
+clue(henry,in,diningroom).
+clue(henry,object_in_col,closet).
+clue(ivan,not_next_to,bed).
+clue(ivan,in_corner).

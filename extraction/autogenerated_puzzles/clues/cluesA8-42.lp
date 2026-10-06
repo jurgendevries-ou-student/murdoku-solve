@@ -1,19 +1,9 @@
 %%%% Clues
-clue(alphonse,not_in_same_room,carol).
-clue(alphonse,north_of,grace).
 clue(alphonse,next_to,box).
-clue(bernard,in_same_room,daisy).
-clue(bernard,in_same_room,daisy).
 clue(bernard,in_row,4).
 clue(carol,alone).
 clue(carol,next_to,sofa).
-clue(daisy,in_same_room,bernard).
 clue(daisy,next_to,statue).
-clue(emily,next_to,box).
-clue(emily,not_alone).
 clue(emily,in_top_row).
-clue(florence,not_in_room_with_female).
 clue(florence,in_left_column).
-clue(florence,in_row,7).
-clue(grace,in_right_column).
 clue(grace,in_room_with_female).

@@ -1,0 +1,19 @@
+%%%% Clues
+clue(alphonse,next_to,box).
+clue(bernard,next_to,carpet).
+clue(bernard,object_in_col,closet).
+clue(carol,in,kitchen).
+clue(daisy,alone).
+clue(daisy,next_to,closet).
+clue(edward,in,bathroom).
+clue(edward,no_object_in_row,closet).
+clue(frank,next_to,statue).
+clue(frank,no_object_in_row,closet).
+clue(grace,object_in_col,statue).
+clue(grace,next_to,box).
+clue(henry,next_to,chair).
+clue(henry,not_in_same_room,frank).
+clue(henry,in_column,3).
+clue(ivan,in,bedroom).
+clue(jesse,next_to,closet).
+clue(jesse,in,bathroom).

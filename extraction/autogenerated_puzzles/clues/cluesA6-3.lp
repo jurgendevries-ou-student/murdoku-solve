@@ -1,20 +1,9 @@
 %%%% Clues
 clue(n_persons_on,carpet,2).
-clue(n_persons_on,bed,0).
 clue(alphonse,next_to,bed).
-clue(bonnie,on,carpet).
-clue(bonnie,west_of,emily).
-clue(carol,not_next_to,closet).
-clue(carol,north_of,bonnie).
-clue(carol,not_in_same_room,emily).
-clue(carol,in,bathroom).
-clue(daisy,not_in_same_room,alphonse).
-clue(daisy,not_in_corner).
-clue(daisy,not_alone).
+clue(bonnie,in_left_column).
+clue(carol,next_to,box).
 clue(daisy,not_in,kitchen).
 clue(daisy,north_of,carol).
-clue(daisy,next_to_with_someone_else,carpet).
-clue(emily,not_next_to,box).
 clue(emily,in_row,1).
 clue(emily,not_next_to,carpet).
-clue(emily,not_in_same_room,alphonse).

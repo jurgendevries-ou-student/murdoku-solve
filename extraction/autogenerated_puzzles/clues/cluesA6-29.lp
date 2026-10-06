@@ -1,19 +1,10 @@
 %%%% Clues
-clue(no_empty_room).
-clue(no_empty_room).
-clue(alice,west_of,edward).
 clue(alice,not_next_to,box).
-clue(alice,in,bedroom).
-clue(bernard,not_alone).
-clue(bernard,in,bedroom).
+clue(bernard,in_column,0).
 clue(bernard,not_in_corner).
-clue(bernard,next_to,statue).
-clue(charlie,not_in_same_room,bernard).
-clue(charlie,next_to,statue).
+clue(charlie,not_in_room_with_female).
 clue(charlie,in_bottom_row).
-clue(daniel,in_column,4).
-clue(daniel,east_of,charlie).
-clue(daniel,not_in_corner).
-clue(daniel,in,livingroom).
+clue(daniel,in_top_row).
+clue(daniel,object_in_col,box).
 clue(edward,not_in_room_with_female).
 clue(edward,next_to,box).

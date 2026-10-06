@@ -1,24 +1,11 @@
 %%%% Clues
-clue(n_persons_on,carpet,1).
-clue(alphonse,no_object_in_col,box).
-clue(alphonse,not_in_same_room,carol).
 clue(alphonse,west_of,emily).
 clue(alphonse,next_to,carpet).
 clue(alphonse,in,kitchen).
-clue(alphonse,not_next_to,bed).
-clue(bonnie,not_next_to,sofa).
 clue(bonnie,in,livingroom).
-clue(carol,on,sofa).
+clue(carol,next_to,sofa).
 clue(carol,object_in_row,box).
-clue(daisy,not_next_to,closet).
-clue(daisy,not_in_same_room,carol).
-clue(daisy,in,diningroom).
 clue(daisy,someone_else_in_room_on,carpet).
-clue(emily,not_in_same_room,alphonse).
-clue(emily,not_in_corner).
 clue(emily,in_row,6).
-clue(florence,not_next_to,carpet).
-clue(florence,in_same_room,alphonse).
 clue(florence,in_corner).
-clue(grace,not_in_room_with_female).
 clue(grace,in_bottom_row).

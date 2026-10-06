@@ -1,26 +1,12 @@
 %%%% Clues
-clue(alice,no_object_in_col,box).
-clue(alice,alone).
-clue(alice,in,livingroom).
 clue(alice,next_to,sofa).
-clue(bonnie,no_object_in_row,box).
-clue(bonnie,in_corner).
-clue(bonnie,not_in,livingroom).
-clue(bonnie,on,sofa).
+clue(bonnie,in,bedroom).
 clue(bonnie,only_one_on,sofa).
-clue(carol,not_in_same_room,emily).
 clue(carol,in_row,1).
 clue(carol,in_corner).
-clue(daisy,on,bed).
 clue(daisy,next_to,statue).
-clue(emily,not_in_same_room,grace).
 clue(emily,not_in_corner).
-clue(emily,on,carpet).
 clue(emily,in_column,4).
-clue(florence,in,kitchen).
-clue(florence,next_to,sofa).
-clue(florence,not_in_room_with_male).
 clue(florence,in_top_row).
-clue(grace,in,hallway).
 clue(grace,next_to,bed).
 clue(grace,alone).

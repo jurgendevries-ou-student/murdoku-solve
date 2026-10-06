@@ -1,19 +1,13 @@
 %%%% Clues
-clue(n_persons_on,bed,0).
-clue(alice,no_object_in_row,closet).
-clue(alice,alone).
-clue(alice,next_to,sofa).
+clue(alice,in,kitchen).
+clue(bonnie,next_to,box).
 clue(bonnie,in_row,4).
-clue(bonnie,in_right_column).
-clue(charlie,not_in_same_room,florence).
-clue(charlie,not_in_same_room,bonnie).
 clue(charlie,next_to,closet).
 clue(charlie,object_in_row,box).
 clue(charlie,no_object_in_col,box).
 clue(daniel,in,bedroom).
-clue(emily,in_same_room,charlie).
+clue(emily,not_in_room_with_female).
 clue(emily,not_in_corner).
 clue(emily,next_to,closet).
-clue(florence,in_top_row).
-clue(florence,no_object_in_col,statue).
+clue(florence,next_to,box).
 clue(florence,not_alone).

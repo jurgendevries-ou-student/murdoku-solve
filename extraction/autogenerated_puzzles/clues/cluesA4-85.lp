@@ -1,6 +1,4 @@
 %%%% Clues
-clue(no_empty_room).
-clue(alphonse,next_to,chair).
-clue(bonnie,in_same_room,alphonse).
-clue(charlie,in,livingroom).
+clue(alphonse,next_to,statue).
+clue(bonnie,in_top_row).
 clue(charlie,in_corner).

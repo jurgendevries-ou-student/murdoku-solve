@@ -1,21 +1,12 @@
 %%%% Clues
 clue(n_persons_on,sofa,1).
-clue(alice,not_in_room_with_male).
-clue(alice,not_next_to,chair).
 clue(alice,object_in_row,statue).
-clue(bernard,next_to,sofa).
 clue(bernard,in_corner).
-clue(carol,in,bedroom).
-clue(carol,west_of,daniel).
-clue(carol,not_in_corner).
+clue(bernard,in_column,0).
 clue(carol,on,carpet).
 clue(carol,east_of,alice).
-clue(daniel,object_in_row,statue).
-clue(daniel,in,bedroom).
+clue(daniel,in_right_column).
 clue(edward,on,sofa).
+clue(edward,not_next_to,statue).
 clue(florence,in_row,1).
-clue(florence,not_in_corner).
-clue(florence,not_in_room_with_male).
-clue(florence,next_to,carpet).
 clue(florence,alone).
-clue(florence,not_next_to,statue).

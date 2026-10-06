@@ -1,16 +1,10 @@
 %%%% Clues
-clue(no_empty_room).
 clue(alphonse,next_to,closet).
-clue(bernard,only_one_on,sofa).
 clue(bernard,next_to,box).
-clue(carol,in_row,0).
 clue(carol,next_to,sofa).
-clue(daisy,not_alone).
-clue(daisy,not_in,bathroom).
 clue(daisy,in_same_room,bernard).
 clue(daisy,not_in_corner).
-clue(emily,in_same_room,carol).
 clue(emily,in_column,3).
-clue(florence,not_in_same_room,alphonse).
+clue(emily,in_row,1).
 clue(florence,in,bathroom).
 clue(florence,in_row,5).

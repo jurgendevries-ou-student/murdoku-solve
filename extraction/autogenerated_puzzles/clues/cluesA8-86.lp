@@ -1,23 +1,14 @@
 %%%% Clues
 clue(n_persons_on,sofa,0).
 clue(n_persons_on,carpet,0).
-clue(alice,not_alone).
 clue(alice,object_in_row,box).
 clue(bernard,in_column,3).
 clue(bernard,next_to_with_someone_else,sofa).
-clue(carol,not_alone).
-clue(carol,not_in_same_room,grace).
 clue(carol,in,bathroom).
 clue(carol,in_row,0).
-clue(daisy,not_alone).
-clue(daisy,next_to,closet).
 clue(daisy,in,bedroom).
 clue(daisy,in_same_room,grace).
-clue(emily,not_in,bathroom).
 clue(emily,no_object_in_row,statue).
-clue(florence,not_in_same_room,carol).
 clue(florence,not_next_to,statue).
-clue(florence,no_object_in_row,box).
 clue(florence,in_column,6).
-clue(grace,in_room_with_female).
 clue(grace,next_to,sofa).

@@ -1,25 +1,10 @@
 %%%% Clues
-clue(n_persons_on,bed,0).
 clue(n_persons_on,sofa,2).
-clue(alphonse,not_alone).
-clue(alphonse,not_in_same_room,charlie).
 clue(alphonse,west_of,charlie).
-clue(bonnie,in_same_room,frank).
-clue(bonnie,in_same_room,alphonse).
 clue(bonnie,next_to,bed).
-clue(charlie,no_object_in_row,closet).
-clue(charlie,not_in_same_room,daniel).
 clue(charlie,object_in_row,statue).
-clue(charlie,not_next_to,closet).
-clue(daniel,not_in_same_room,bonnie).
-clue(daniel,in_room_with_male).
 clue(daniel,someone_else_in_room_on,carpet).
-clue(daniel,not_in_corner).
 clue(daniel,next_to,closet).
 clue(emily,in_corner).
 clue(emily,alone).
-clue(emily,next_to,sofa).
-clue(frank,not_in,livingroom).
-clue(frank,in_room_with_male).
-clue(frank,next_to,sofa).
 clue(frank,in_corner).

@@ -1,25 +1,12 @@
 %%%% Clues
-clue(n_persons_on,chair,1).
-clue(alphonse,not_in_same_room,grace).
 clue(alphonse,alone).
-clue(alphonse,not_in_same_room,grace).
-clue(bonnie,not_in,bedroom).
-clue(bonnie,not_in_same_room,emily).
 clue(bonnie,only_one_on,chair).
 clue(carol,no_object_in_col,closet).
 clue(carol,next_to_with_someone_else,sofa).
-clue(carol,not_on,chair).
-clue(daisy,north_of,grace).
-clue(daisy,next_to,sofa).
 clue(daisy,in_column,6).
 clue(daisy,in_corner).
 clue(emily,next_to,carpet).
-clue(emily,west_of,daisy).
-clue(emily,not_next_to,closet).
 clue(emily,not_alone).
-clue(frank,not_next_to,statue).
 clue(frank,in,garage).
-clue(grace,next_to,box).
-clue(grace,not_in_same_room,emily).
 clue(grace,in_corner).
 clue(grace,in_left_column).

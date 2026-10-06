@@ -1,6 +1,5 @@
 %%%% Clues
 clue(alphonse,in_top_row).
-clue(bernard,not_in_same_room,daniel).
 clue(bernard,next_to,sofa).
 clue(bernard,not_next_to,carpet).
 clue(bernard,in_row,2).

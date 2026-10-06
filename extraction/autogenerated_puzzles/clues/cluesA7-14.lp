@@ -1,24 +1,12 @@
 %%%% Clues
-clue(n_persons_on,carpet,0).
-clue(n_persons_on,bed,0).
-clue(alice,in_same_room,florence).
 clue(alice,next_to,bed).
-clue(bernard,not_in_room_with_female).
-clue(bernard,not_in_same_room,charlie).
-clue(bernard,not_next_to,closet).
 clue(bernard,east_of,edward).
 clue(bernard,not_in_corner).
-clue(charlie,object_in_col,statue).
-clue(charlie,next_to,carpet).
-clue(charlie,in_same_room,alice).
 clue(charlie,north_of,daniel).
-clue(daniel,not_in_same_room,edward).
+clue(daniel,not_in_same_room,bernard).
 clue(daniel,in_same_room,florence).
 clue(daniel,object_in_col,box).
-clue(edward,not_in_room_with_male).
-clue(edward,not_in,bathroom).
+clue(edward,in,kitchen).
 clue(edward,in_column,4).
-clue(florence,not_in_same_room,edward).
-clue(florence,not_next_to,bed).
 clue(florence,not_next_to,carpet).
 clue(florence,in_column,1).

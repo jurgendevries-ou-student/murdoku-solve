@@ -1,0 +1,19 @@
+%%%% Clues
+clue(alice,in_bottom_row).
+clue(alice,next_to,carpet).
+clue(bonnie,no_object_in_col,box).
+clue(bonnie,only_one_on,sofa).
+clue(bonnie,next_to,closet).
+clue(carol,in_row,5).
+clue(carol,in_same_room,hannah).
+clue(carol,in,bathroom).
+clue(daniel,in_corner).
+clue(emily,next_to,sofa).
+clue(florence,someone_else_in_room_on,sofa).
+clue(grace,in,livingroom).
+clue(grace,not_in_corner).
+clue(grace,next_to,sofa).
+clue(hannah,in_corner).
+clue(hannah,north_of,isla).
+clue(isla,in_column,7).
+clue(isla,no_object_in_row,box).

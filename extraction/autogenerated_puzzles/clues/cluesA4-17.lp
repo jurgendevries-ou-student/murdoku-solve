@@ -1,5 +1,4 @@
 %%%% Clues
-clue(alphonse,not_in_same_room,charlie).
 clue(alphonse,in_left_column).
 clue(alphonse,in_row,2).
 clue(bernard,next_to,closet).

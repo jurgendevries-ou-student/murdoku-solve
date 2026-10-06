@@ -1,7 +1,5 @@
 %%%% Clues
-clue(no_empty_room).
-clue(alphonse,in,livingroom).
+clue(alphonse,in_right_column).
 clue(alphonse,in_row,2).
-clue(carol,in_room_with_female).
-clue(carol,west_of,alphonse).
+clue(bonnie,in,bedroom).
 clue(carol,not_next_to,closet).

@@ -1,19 +1,7 @@
 %%%% Clues
-clue(n_persons_on,sofa,0).
-clue(no_empty_room).
-clue(alphonse,not_in,kitchen).
 clue(alphonse,object_in_col,box).
-clue(bernard,not_next_to,bed).
 clue(bernard,in_room_with_female).
-clue(bernard,in,bathroom).
-clue(bernard,in_corner).
 clue(bernard,someone_else_in_room_on,carpet).
-clue(charlie,no_object_in_row,box).
-clue(charlie,not_next_to,carpet).
-clue(charlie,not_in_same_room,emily).
 clue(charlie,not_next_to,closet).
-clue(charlie,no_object_in_col,box).
 clue(daisy,in,kitchen).
-clue(daisy,north_of,alphonse).
-clue(emily,in_same_room,alphonse).
-clue(emily,no_object_in_col,closet).
+clue(emily,next_to,box).

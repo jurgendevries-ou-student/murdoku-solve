@@ -1,19 +1,11 @@
 %%%% Clues
-clue(n_persons_on,sofa,2).
-clue(n_persons_on,chair,0).
-clue(alice,not_in_same_room,daniel).
-clue(alice,north_of,daniel).
 clue(alice,in_row,3).
 clue(bernard,in,bathroom).
-clue(bernard,next_to_with_someone_else,carpet).
 clue(bernard,no_object_in_col,statue).
 clue(carol,not_in_room_with_female).
 clue(carol,not_in_room_with_male).
-clue(carol,in,kitchen).
-clue(carol,on,sofa).
 clue(daniel,in_corner).
+clue(daniel,in,hallway).
 clue(daniel,not_alone).
-clue(emily,not_alone).
-clue(emily,not_next_to,chair).
+clue(emily,next_to_with_someone_else,sofa).
 clue(emily,on,sofa).
-clue(emily,not_in_same_room,daniel).

@@ -1,5 +1,4 @@
 %%%% Clues
-clue(alphonse,not_next_to,carpet).
 clue(alphonse,object_in_row,box).
 clue(bernard,in_bottom_row).
 clue(bernard,in_corner).

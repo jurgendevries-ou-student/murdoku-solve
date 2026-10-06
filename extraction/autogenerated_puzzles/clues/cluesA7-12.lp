@@ -1,21 +1,11 @@
 %%%% Clues
-clue(alice,not_next_to,statue).
 clue(alice,in_same_room,carol).
 clue(alice,not_in_corner).
+clue(bonnie,object_in_col,closet).
 clue(bonnie,in_row,6).
-clue(bonnie,in_column,0).
-clue(bonnie,alone).
 clue(carol,in_top_row).
-clue(carol,not_in_same_room,florence).
 clue(carol,in_corner).
-clue(daisy,east_of,carol).
 clue(daisy,in_column,6).
-clue(daisy,next_to,carpet).
 clue(emily,in_corner).
-clue(emily,not_in_same_room,bonnie).
-clue(emily,no_object_in_row,statue).
 clue(emily,in_row,4).
-clue(florence,not_next_to,carpet).
-clue(florence,not_next_to,chair).
-clue(florence,in_corner).
-clue(florence,object_in_col,closet).
+clue(florence,in_column,2).

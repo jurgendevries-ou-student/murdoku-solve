@@ -1,6 +1,5 @@
 %%%% Clues
-clue(n_persons_on,bed,0).
 clue(alice,object_in_col,statue).
-clue(alice,not_next_to,statue).
-clue(bernard,next_to,bed).
+clue(alice,in_bottom_row).
+clue(bernard,in_column,1).
 clue(charlie,on,sofa).

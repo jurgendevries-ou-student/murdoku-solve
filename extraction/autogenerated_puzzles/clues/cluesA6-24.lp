@@ -1,11 +1,9 @@
 %%%% Clues
-clue(alphonse,not_in_room_with_female).
+clue(alphonse,on,chair).
 clue(bernard,not_alone).
-clue(bernard,not_next_to,closet).
-clue(carol,in,bathroom).
-clue(carol,in_same_room,bernard).
-clue(daniel,north_of,carol).
-clue(daniel,in_right_column).
+clue(bernard,west_of,emily).
+clue(carol,in_row,5).
 clue(daniel,not_in_room_with_male).
+clue(daniel,in_column,5).
 clue(emily,east_of,carol).
-clue(emily,on,sofa).
+clue(emily,in_row,0).

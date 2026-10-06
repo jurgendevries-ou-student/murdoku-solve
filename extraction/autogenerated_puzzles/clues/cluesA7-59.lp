@@ -1,19 +1,11 @@
 %%%% Clues
-clue(alice,east_of,edward).
-clue(alice,in_same_room,daisy).
 clue(alice,next_to,bed).
 clue(alice,not_in_corner).
 clue(bonnie,not_in_corner).
-clue(bonnie,not_in_same_room,edward).
-clue(bonnie,not_next_to,box).
 clue(charlie,alone).
 clue(charlie,not_in,bedroom).
-clue(charlie,not_next_to,chair).
 clue(charlie,in_corner).
-clue(daisy,not_next_to,chair).
-clue(daisy,not_next_to,carpet).
-clue(daisy,not_in_same_room,florence).
-clue(daisy,in_same_room,bonnie).
+clue(daisy,in,bathroom).
 clue(edward,south_of,daisy).
-clue(edward,next_to,chair).
-clue(florence,in_column,1).
+clue(florence,east_of,edward).
+clue(florence,only_one_on,sofa).

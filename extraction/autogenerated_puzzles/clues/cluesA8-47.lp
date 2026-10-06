@@ -1,27 +1,13 @@
 %%%% Clues
 clue(n_persons_on,carpet,0).
-clue(alice,north_of,florence).
-clue(alice,not_in_same_room,florence).
-clue(alice,not_in_same_room,florence).
 clue(alice,object_in_col,statue).
 clue(alice,alone).
 clue(alice,in_row,6).
-clue(bonnie,object_in_row,closet).
-clue(bonnie,in,bathroom).
 clue(bonnie,object_in_col,closet).
 clue(bonnie,in_top_row).
-clue(charlie,not_alone).
-clue(charlie,north_of,grace).
 clue(charlie,in,bathroom).
 clue(charlie,next_to,closet).
 clue(daniel,in_left_column).
-clue(daniel,alone).
-clue(daniel,not_in_same_room,edward).
-clue(edward,east_of,daniel).
-clue(edward,east_of,daniel).
-clue(edward,in_same_room,florence).
 clue(edward,in_column,7).
-clue(florence,not_in_same_room,alice).
 clue(florence,in_bottom_row).
 clue(grace,not_next_to,sofa).
-clue(grace,in,diningroom).

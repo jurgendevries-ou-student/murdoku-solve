@@ -1,7 +1,6 @@
 %%%% Clues
-clue(alphonse,not_in_room_with_male).
-clue(alphonse,not_in,bedroom).
+clue(n_persons_on,bed,0).
+clue(alphonse,south_of,carol).
 clue(bonnie,in_room_with_male).
-clue(bonnie,not_next_to,statue).
 clue(bonnie,in_row,3).
 clue(carol,in,livingroom).

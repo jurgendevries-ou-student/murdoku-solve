@@ -1,21 +1,12 @@
 %%%% Clues
-clue(n_persons_on,chair,0).
-clue(alphonse,in,bathroom).
 clue(alphonse,in_corner).
-clue(bonnie,not_in_corner).
 clue(bonnie,object_in_row,box).
 clue(bonnie,no_object_in_col,closet).
-clue(charlie,in_same_room,frank).
 clue(charlie,in_row,4).
 clue(charlie,not_in_corner).
-clue(daisy,in,kitchen).
-clue(daisy,in_same_room,charlie).
-clue(daisy,east_of,alphonse).
 clue(daisy,object_in_col,box).
-clue(emily,not_in_room_with_female).
 clue(emily,next_to,closet).
 clue(emily,in_right_column).
-clue(frank,not_in_same_room,bonnie).
 clue(frank,next_to_with_someone_else,carpet).
 clue(frank,in_bottom_row).
 clue(frank,on,carpet).

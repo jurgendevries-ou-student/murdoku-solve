@@ -1,23 +1,16 @@
 %%%% Clues
-clue(n_persons_on,bed,0).
-clue(alphonse,not_in_same_room,george).
 clue(alphonse,not_in_same_room,frank).
 clue(alphonse,not_in,hallway).
-clue(bernard,next_to,closet).
 clue(bernard,in_bottom_row).
 clue(charlie,alone).
 clue(charlie,in,kitchen).
 clue(charlie,in_corner).
 clue(charlie,next_to,sofa).
-clue(daniel,in,hallway).
-clue(edward,no_object_in_col,box).
-clue(edward,in,bathroom).
+clue(daniel,not_in,bathroom).
 clue(edward,west_of,alphonse).
 clue(edward,next_to,sofa).
-clue(frank,not_alone).
 clue(frank,in_left_column).
 clue(frank,next_to,carpet).
-clue(george,not_in_same_room,charlie).
 clue(george,in_column,4).
 clue(george,next_to,carpet).
 clue(george,in_corner).

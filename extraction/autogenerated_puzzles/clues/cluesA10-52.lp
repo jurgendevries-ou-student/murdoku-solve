@@ -1,0 +1,21 @@
+%%%% Clues
+clue(n_persons_on,bed,0).
+clue(alphonse,in_row,9).
+clue(bonnie,in_same_room,alphonse).
+clue(bonnie,in,office).
+clue(bonnie,in_corner).
+clue(carol,no_object_in_row,box).
+clue(carol,in,outside).
+clue(daniel,not_next_to,statue).
+clue(daniel,east_of,bonnie).
+clue(daniel,not_in_same_room,carol).
+clue(daniel,not_alone).
+clue(edward,next_to,closet).
+clue(florence,next_to,sofa).
+clue(grace,next_to,box).
+clue(grace,in_column,3).
+clue(hannah,object_in_row,statue).
+clue(hannah,alone).
+clue(hannah,east_of,edward).
+clue(ivan,next_to,sofa).
+clue(ivan,in_column,7).

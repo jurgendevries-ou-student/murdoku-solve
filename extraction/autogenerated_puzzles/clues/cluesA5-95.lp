@@ -1,5 +1,4 @@
 %%%% Clues
-clue(alphonse,not_alone).
 clue(alphonse,no_object_in_col,box).
 clue(bonnie,in_bottom_row).
 clue(charlie,next_to,box).

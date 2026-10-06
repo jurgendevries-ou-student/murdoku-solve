@@ -1,21 +1,8 @@
 %%%% Clues
 clue(n_persons_on,sofa,1).
-clue(n_persons_on,chair,0).
-clue(alphonse,in_same_room,daisy).
-clue(alphonse,not_next_to,statue).
-clue(alphonse,not_in_corner).
-clue(bonnie,not_next_to,sofa).
-clue(bonnie,in_row,0).
-clue(bonnie,object_in_col,closet).
-clue(charlie,in_room_with_male).
-clue(charlie,no_object_in_col,statue).
+clue(alphonse,next_to,chair).
+clue(bonnie,in,bedroom).
 clue(charlie,in_row,5).
-clue(charlie,object_in_col,closet).
-clue(charlie,next_to,closet).
-clue(daisy,in_same_room,charlie).
-clue(daisy,object_in_col,statue).
 clue(daisy,in_row,4).
-clue(edward,not_alone).
+clue(edward,in_row,2).
 clue(edward,not_in_corner).
-clue(edward,west_of,daisy).
-clue(edward,on,sofa).

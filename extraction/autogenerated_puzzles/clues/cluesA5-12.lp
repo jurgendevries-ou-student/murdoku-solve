@@ -1,6 +1,5 @@
 %%%% Clues
-clue(alice,alone).
-clue(alice,in,hallway).
+clue(alice,south_of,bonnie).
 clue(bonnie,not_in,hallway).
 clue(carol,in,bedroom).
 clue(carol,not_in_corner).

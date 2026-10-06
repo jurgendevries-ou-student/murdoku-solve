@@ -1,19 +1,9 @@
 %%%% Clues
-clue(n_persons_on,sofa,0).
 clue(alphonse,next_to,chair).
-clue(alphonse,in_column,5).
-clue(bonnie,not_in_same_room,daniel).
-clue(bonnie,in_room_with_multiple_males,2).
-clue(bonnie,west_of,alphonse).
-clue(bonnie,not_in_corner).
 clue(bonnie,in_column,3).
-clue(charlie,in_same_room,alphonse).
-clue(charlie,not_in_same_room,daniel).
+clue(charlie,west_of,alphonse).
 clue(charlie,next_to,chair).
-clue(daniel,west_of,alphonse).
-clue(daniel,not_next_to,statue).
-clue(daniel,alone).
+clue(daniel,in_left_column).
 clue(edward,not_next_to,chair).
-clue(edward,not_in_same_room,alphonse).
 clue(edward,not_in_corner).
 clue(edward,in_bottom_row).

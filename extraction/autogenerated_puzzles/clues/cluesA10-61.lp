@@ -1,0 +1,19 @@
+%%%% Clues
+clue(alice,in,kitchen).
+clue(alice,not_in_corner).
+clue(alice,south_of,isla).
+clue(bonnie,in,outside).
+clue(carol,alone).
+clue(carol,next_to,chair).
+clue(carol,in_corner).
+clue(carol,in_row,0).
+clue(daisy,not_in_same_room,edward).
+clue(edward,in_same_room,george).
+clue(edward,someone_else_in_room_on,sofa).
+clue(edward,in_bottom_row).
+clue(edward,next_to,sofa).
+clue(florence,not_in_corner).
+clue(george,not_in_same_room,florence).
+clue(george,no_object_in_row,statue).
+clue(henry,not_in_same_room,alice).
+clue(isla,in,kitchen).
