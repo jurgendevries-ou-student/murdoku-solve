@@ -1,6 +1,6 @@
 import json
 
-names_male = ['alphonse', 'bernard', 'charlie', 'daniel', 'edward', 'frank', 'george', 'henry', 'ivan', 'james', 'keith', 'louis', 'mike', 'victor']
+names_male = ['alphonse', 'bernard', 'charlie', 'daniel', 'edward', 'frank', 'george', 'henry', 'ivan', 'jesse', 'keith', 'louis', 'mike', 'victor']
 names_female = ['alice', 'bonnie', 'carol', 'daisy', 'emily', 'florence', 'grace', 'hannah', 'isla', 'jane', 'kate', 'lily', 'mary', 'victoria']
 def generate_murdoku_world_asp(puzzle, cols, rooms, objects, persons):
     ''' Generate ASP .lp file from puzzle instructions '''
@@ -79,7 +79,7 @@ def convert_to_asp(puzzle_num):
 
     lp = generate_murdoku_world_asp(puzzle, cols, rooms, objects, persons)
 
-    with open(f'./extraction/puzzles/puzzleM{puzzle_num}.lp', 'w') as f:
+    with open(f'./extraction/puzzles/puzzleM{cols}-{puzzle_num}.lp', 'w') as f:
         f.write("\n".join(lp))
 
-convert_to_asp(24)
+convert_to_asp(30)

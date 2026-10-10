@@ -1,0 +1,10 @@
+clue(alphonse,next_to,tv).
+clue(bonnie,alone).
+clue(bonnie,in,kitchen).
+clue(charlie,next_to,table).
+clue(charlie,not_in,dining).
+clue(daisy,only_one_on,chair).
+clue(emily,on,carpet).
+clue(frank,next_to,plant).
+clue(george,on,bed).
+clue(hannah,in_corner).
