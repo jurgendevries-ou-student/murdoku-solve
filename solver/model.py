@@ -1,5 +1,5 @@
 from helpers import *
-from solver import *
+from solver.solver import *
 from grounder import *
 
 #-----------#
