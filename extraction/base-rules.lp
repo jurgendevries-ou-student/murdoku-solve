@@ -1,3 +1,5 @@
+%% beetje ordenen en soortgelijke dingen bij elkaar zetten
+
 person(X) :- suspect(X).
 person(X) :- victim(X).
 person(X) :- male(X).
@@ -9,12 +11,17 @@ can_not_be_occupied(plant).
 can_not_be_occupied(table).
 can_not_be_occupied(register).
 can_not_be_occupied(box).
+can_not_be_occupied(shelf).
+can_not_be_occupied(bookshelf).
 % achieved: objects that cannot be occupied
 
--in_room(R,C,RR) :- room(RR), R=0..n, C=0..n, not in_room(R,C,RR).
+%% Uitgezet!
+% wij geven zelf al op dat cellen maar in een kamer zijn, dit maakt geen verschil voor de resultaten. 
+% Dus de aanname is dat we de puzzles goed invoeren/genereren waardoor elke cel al maar in een kamer is.
+% -in_room(R,C,RR) :- room(RR), R=0..n, C=0..n, not in_room(R,C,RR).
 % achieved: every cell is in only one room
 
-{at(P,R,C) : cell(R,C)}=1 :- person(P).
+{at(P,R,C) : can_occupy(R,C)}=1 :- person(P).
 % achieved: every person is on a cell in the grid.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,6 +29,9 @@ can_not_be_occupied(box).
 %%%%%%%%%%%%%%%%%%%%%%%%%
 murderer(P1) :- with_person(P1,P2), suspect(P1), victim(P2).
 % achieved: the murderer is the suspect with the victim.
+
+contains_non_occupiable_object(R,C) :- contains(R,C,O), can_not_be_occupied(O).
+can_occupy(R,C) :- cell(R,C), not contains_non_occupiable_object(R,C).
 
 cell_same_room((R1,C1),(R2,C2)) :- in_room(R1,C1,RR), in_room(R2,C2,RR).
 % achieved: cells are in the same room.
@@ -59,22 +69,20 @@ satisfies(P,on,O) :- at(P,R,C), contains(R,C,O).
 satisfies(P,not_on,O) :- at(P,R,C), object(O), not contains(R,C,O).
 % achieved: satisfies a clue with not on context (a person is not on an object).
 
-satisfies(P,only_one_on,O) :- at(P,R,C), contains(R,C,O), #count{P1 : at(P1,R1,C1), contains(R1,C1,O), P1 != P} = 0.
+satisfies(P1,only_one_on,O) :- at(P1,R1,C1), contains(R1,C1,O), #count{P2 : at(P2,R2,C2), contains(R2,C2,O), P1 != P2} = 0.
 % achieved: satisfies a clue with only person on an object
 
 satisfies(P,in,RR) :- at(P,R,C), in_room(R,C,RR).
 % achieved: person is in room
 
-satisfies(P,in_same_room,P2) :- with_person(P, P2).
+satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
+% achieved: person is not in room.
+
+satisfies(P1,in_same_room,P2) :- with_person(P1, P2).
 % achieved: persons are in same room
 
-satisfies(P,not_in_same_room,P2) :- not with_person(P, P2), person(P), person(P2).
+satisfies(P1,not_in_same_room,P2) :- not with_person(P1, P2), person(P1), person(P2).
 % achieved: persons are not in same room
-
-satisfies(P,not_in,RR) :- at(P,R,C), room(RR), not in_room(R,C,RR).
-% Als we geen info hebben (wat misschien zou kunnen als de kamers niet een vierkant vormen), dan klopt het toch ook dat persoon P niet in kamer RR is?
-% satisfies(P,not_in,RR) :- at(P,R,C), in_room(R,C,RR2), RR!=RR2.
-% achieved: person is not in room.
 
 with_person(P1,P2) :- at(P1, R1, C1), at(P2, R2, C2), cell_same_room((R1, C1), (R2, C2)), P1 != P2.
 % achieved: 2 person are in the same room if both cells are in the same room.
@@ -91,11 +99,20 @@ satisfies(P1, in_room_with_multiple_females,N) :- person(P1), #count{P2: with_pe
 satisfies(P1, in_room_with_multiple_males,N) :-  person(P1), #count{P2: with_person(P1,P2), male(P2)} = N.
 % person is (not) in same room as n males/females
 
-satisfies(P1, east_of, P2)  :- at(P1, R1, C1), at(P2, R2, C2), C1 > C2.
-satisfies(P1, west_of, P2)  :- at(P1, R1, C1), at(P2, R2, C2), C1 < C2.
-satisfies(P1, north_of, P2) :- at(P1, R1, C1), at(P2, R2, C2), R1 < R2.
-satisfies(P1, south_of, P2) :- at(P1, R1, C1), at(P2, R2, C2), R1 > R2.
+distance(P1,P2,DC,DR) :- at(P1, R1, C1), at(P2, R2, C2), DC = C1 - C2, DR = R1 - R2.
+% achieved: DC is delta column, DR is delta row, distance between P1 and P2 to be used in east_of/west_of/south_of/north_of etc.
+
+satisfies(P1, east_of, P2)  :- distance(P1, P2, DC, _), DC > 0.
+satisfies(P1, west_of, P2)  :- distance(P1, P2, DC, _), DC < 0.
+satisfies(P1, north_of, P2)  :- distance(P1, P2, _, RC), RC < 0.
+satisfies(P1, south_of, P2)  :- distance(P1, P2, _, RC), RC > 0.
 % achieved: person is east/west/north/south of another person
+
+satisfies(P1, east_of, P2, N)  :- distance(P1, P2, DC, _), DC = N.
+satisfies(P1, west_of, P2, N)  :- distance(P1, P2, DC, _), DC = -N.
+satisfies(P1, north_of, P2, N)  :- distance(P1, P2, _, RC), RC = -N.
+satisfies(P1, south_of, P2, N)  :- distance(P1, P2, _, RC), RC = N.
+% achieved: person is exaxtly N columns/rows east/west/north/south of another person
 
 satisfies(P1,in_row,R) :- at(P1,R,_).
 % achieved: person is in row R
@@ -150,9 +167,12 @@ satisfies(n_persons_on, O, N) :- object(O), #count{P : at(P,R,C), contains(R,C,O
 %      constraints      %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- person(P), person(P1), at(P,R,C), at(P1,R1,C1), R=R1, P!=P1.
-:- person(P), person(P1), at(P,R,C), at(P1,R1,C1), C=C1, P!=P1.
+:- person(P1), person(P2), at(P1,R1,C1), at(P2,R2,C2), R1=R2, P1!=P2.
+:- person(P1), person(P2), at(P1,R1,C1), at(P2,R2,C2), C1=C2, P1!=P2.
 % achieved: no two persons may be in the same row or col.
+
+:- clue(P,T,O,N), not satisfies(P,T,O,N).
+% achieved: all clues containing, Person, Type, Object/Person, Numeric Value must be satisfied.
 
 :- clue(P,T,O), not satisfies(P,T,O).
 % achieved: all clues containing Person, Type, Object/Person must be satisfied.

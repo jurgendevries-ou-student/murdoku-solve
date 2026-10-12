@@ -1,230 +1,6 @@
-from itertools import product, chain, combinations
-
-# -----------------------
-# helper classes        #
-# -----------------------
-class Rule:
-    def __init__(self, head, body):
-        self.head = head
-        self.body = body
-
-    def __eq__(self, other):
-        if not isinstance(other, Rule):
-            return NotImplemented
-
-        return (self.head == other.head and self.body == other.body)
-
-    def __hash__(self):
-        return hash((self.head, tuple(self.body))) 
-
-    def __repr__(self):
-        return f'{self.head!r} :- {self.body!r}.'
-        
-class Literal:
-    def __init__(self, atom, negated=False):
-        self.atom = atom
-        self.negated = negated
-
-    def __eq__(self, other):
-        if not isinstance(other, Literal):
-            return NotImplemented
-
-        return (self.atom == other.atom and self.negated == other.negated)
-
-    def __hash__(self):
-        return hash((self.atom, self.negated))
-
-    def __repr__(self):
-        return f'{self.atom!r}, {self.negated!r}'
-
-class Atom:
-    def __init__(self, predicate, args):
-        self.predicate = predicate
-        self.args = args
-
-    def __eq__(self, other):
-        if not isinstance(other, Atom):
-            return not NotImplemented
-
-        return(
-            self.predicate == other.predicate
-            and self.args == other.args
-        )
-
-    def __hash__(self):
-        return hash((
-            self.predicate, tuple(self.args)
-        ))
-
-    def __repr__(self):
-        return f'Atom({self.predicate!r}, {self.args!r})'
-
-# -----------------------
-# Grounding             #
-# -----------------------
-def substitute_atom(atom, substitution):
-    args = [substitution.get(arg, arg) for arg in atom.args]
-
-    return Atom(atom.predicate, args)
-
-def substitute_rule(rule, substitution):
-    head = (substitute_atom(rule.head, substitution) if rule.head else None)
-    body = [Literal(substitute_atom(lit.atom, substitution), lit.negated) for lit in rule.body]
-
-    return Rule(head, body)
-
-def variables(rule):
-    vars_ = set()
-    atoms = []
-
-    if rule.head:
-        atoms.append(rule.head)
-
-    atoms.extend(lit.atom for lit in rule.body)
-
-    for atom in atoms:
-        for arg in atom.args:
-            if arg.startswith("?"):
-                vars_.add(arg)
-
-    return vars_
-
-def substitutions(rule, constants):
-    vars_ = list(variables(rule))
-
-    for values in product(constants, repeat=len(vars_)):
-        yield dict(zip(vars_, values))
-
-def ground_rule(rule, constants):
-    return [substitute_rule(rule, subst) for subst in substitutions(rule, constants)]
-
-def match_atom(pattern, fact, substitution):
-    if pattern.predicate != fact.predicate:
-        return None
-
-    result = dict(substitution)
-
-    for pattern_arg, fact_arg in zip(pattern.args, fact.args):
-        if pattern_arg.startswith("?"):
-            if pattern_arg in result:
-                if result[pattern_arg] != fact_arg:
-                    return None
-            else:
-                result[pattern_arg] = fact_arg
-        elif pattern_arg != fact_arg:
-            return None
-    return result
-
-def substitutions_from_body(rule, known_atoms):
-    substitutions = [{}]
-
-    positive_literals = [lit for lit in rule.body if not lit.negated]
-    for literal in positive_literals:
-        new_substitutions = []
-
-        for substitution in substitutions:
-            pattern = substitute_atom(literal.atom, substitution)
-
-            for fact in known_atoms:
-                new_substitution = match_atom(pattern, fact, substitution)
-                if new_substitution is not None:
-                    new_substitutions.append(new_substitution)
-
-        substitutions = new_substitutions
-    return substitutions
-
-def ground_rule_from_known_atoms(rule, known_atoms):
-    substitutions = substitutions_from_body(rule, known_atoms)
-    return [substitute_rule(rule, substitution) for substitution in substitutions]
-
-def ground(program):
-    ground_program = []
-    known_atoms = set()
-
-    # add starting facts
-    for rule in program:
-        if not rule.body:
-            ground_program.append(rule)
-            known_atoms.add(rule.head)
-
-    # keep looping untill no new facts have been added
-    changed = True
-    while changed:
-        changed = False
-
-        # for all program rules
-        for rule in program:
-            # skip empty rule bodies
-            if not rule.body:
-                continue
-
-            # ground this rule using what we currently know
-            grounded_rules = ground_rule_from_known_atoms(rule, known_atoms)
-
-            # check newly grounded rules for new facts
-            for grounded_rule in grounded_rules:
-                if grounded_rule not in ground_program:
-                    ground_program.append(grounded_rule)
-
-                    if grounded_rule.head not in known_atoms:
-                        known_atoms.add(grounded_rule.head)
-                        changed = True
-    return ground_program
-
-# -----------------------
-# Solving               #
-# -----------------------
-def reduct(program, interpretation):
-    result = []
-
-    for rule in program:
-        # if a negative literal is false (atom is in the interpretation), remove the rule
-        if any(lit.negated and lit.atom in interpretation for lit in rule.body):
-            continue
-
-        # remove remaining negative literals
-        body = [lit for lit in rule.body if not lit.negated]
-
-        result.append(Rule(rule.head, body))
-
-    return result
-
-def least_model(program):
-    interpretation = set()
-
-    changed = True
-    while changed:
-        changed = False
-        for rule in program:
-            if all(lit.atom in interpretation for lit in rule.body):
-                if rule.head is not None:
-                    if rule.head not in interpretation:
-                        interpretation.add(rule.head)
-                        changed = True
-    return interpretation
-
-## Solver1
-
-def powerset(items):
-    items = list(items)
-
-    for r in range(len(items) + 1):
-        yield from combinations(items, r)
-
-def solver1(program):
-    atoms = {rule.head for rule in program if rule.head is not None}
-
-    answer_sets = []
-
-    for interpretation_tuple in powerset(atoms):
-        interpretation = set(interpretation_tuple)
-
-        reduct_program = reduct(program, interpretation)
-        model = least_model(reduct_program)
-
-        if model == interpretation:
-            answer_sets.append(interpretation)
-    return answer_sets
+from helpers import *
+from solver.solver import *
+from grounder import *
 
 #-----------#
 ### TEST ###
@@ -249,66 +25,462 @@ for grounded_rule in grounded:
     print(f'{grounded_rule.head.predicate}({grounded_rule.head.args}) :- {[(b.atom.predicate, b.atom.args) for b in grounded_rule.body]}')
 
 
-program = [
+program = {'rules': [
     Rule(head = Atom("p",["a"]), body=[]),
     Rule(head = Atom("q",["?X"]), body=[Literal(Atom("p",["?X"]))]),
     Rule(head = Atom("r",["?X"]), body=[Literal(Atom("q",["?X"]))])
-]
+]}
 
-program2 = [
+program2 = {'rules': [
     Rule(head = Atom("p",["a"]), body=[]),
     Rule(head = Atom("p",["b"]), body=[]),
     Rule(head = Atom("q",["?X"]), body=[Literal(Atom("p",["?X"]))])
-]
+]}
 
-program3 = [
+program3 = {'rules': [
     Rule(head = Atom("p",["a"]), body=[]),
     Rule(head = Atom("q",["a"]), body=[]),
     Rule(head = Atom("r",["?X"]), body=[Literal(Atom("p",["?X"])), Literal(Atom("q",["?X"]))])
-]
+]}
 
-program4 = [
+program4 = {'rules': [
     Rule(head = Atom("p",["a"]), body=[]),
     Rule(head = Atom("q",["b"]), body=[]),
     Rule(head = Atom("r",["?X"]), body=[Literal(Atom("p",["?X"])), Literal(Atom("q",["?X"]))])
-]
+]}
 
-program5 = [
+program5 = {'rules': [
     Rule(head = Atom("p",["a"]), body=[]),
     Rule(head = Atom("q",["a"]), body=[]),
     Rule(head = Atom("p",["b"]), body=[]),
     Rule(head = Atom("q",["b"]), body=[]),
     Rule(head = Atom("r",["?X"]), body=[Literal(Atom("p",["?X"])), Literal(Atom("q",["?X"]))])
-]
+]}
 
-program6 = [
+program6 = {'rules': [
     Rule(head = Atom("p",[]), body=[Literal(Atom("q",[]), True)]),
     Rule(head = Atom("q",[]), body=[Literal(Atom("p",[]), True)])
-]
+]}
 
-program7 = [
+program7 = {'rules': [
     Rule(head = Atom("bird",["tweety"]), body=[]),
     Rule(head = Atom("flies",["?X"]), body=[Literal(Atom("bird",["?X"])), Literal(Atom("abnormal", ["?X"]), True)])
-]
+]}
 
-program8 = [
+program8 = {'rules': [
     Rule(head = Atom("abnormal",["tweety"]), body=[]),
     Rule(head = Atom("bird",["tweety"]), body=[]),
     Rule(head = Atom("flies",["?X"]), body=[Literal(Atom("bird",["?X"])), Literal(Atom("abnormal", ["?X"]), True)])
-]
+]}
 
-ground_program = ground(program8)
-answer_sets = solver1(ground_program)
+# --- Programs with constraints ---
+program9 = {'rules': [
+    Rule(head=Atom("p",["a"]), body=[]),
+    Rule(head=None, body=[Literal(Atom("p",["a"]))])
+]}
+
+program10 = {'rules': [
+    Rule(head=Atom("p",["a"]), body=[]),
+    Rule(head=Atom("q",["b"]), body=[]),
+    Rule(head=None, body=[Literal(Atom("p",["b"]))])
+]}
+
+program11 = {'rules': [
+    Rule(head=Atom("p",["a"]), body=[]),
+    Rule(head=Atom("q",["a"]), body=[]),
+    Rule(head=None, body=[Literal(Atom("p",["?X"])), Literal(Atom("q",["?X"]))])
+]}
+
+program12 = {'rules': [
+    Rule(head=Atom("p",["a"]), body=[]),
+    Rule(head=Atom("q",["b"]), body=[]),
+    Rule(head=None, body=[Literal(Atom("p",["?X"])), Literal(Atom("q",["?X"]))])
+]}
+
+program13 = {'rules': [
+    Rule(head=Atom("p",["a"]), body=[]),
+    Rule(head=Atom("p",["b"]), body=[]),
+    Rule(head=Atom("q",["?X"]), body=[Literal(Atom("p",["?X"]))]),
+    Rule(head=None, body=[Literal(Atom("q",["a"]))])
+    # not a valid solution, because the program is inconsisten q(a) -> p(a). but this is inconsisten because of constraint: -> q(a).
+]}
+
+program14 = {'rules': [
+    Rule(head=Atom("p",[]), body=[Literal(Atom("q",[]), True)]),
+    Rule(head=Atom("q",[]), body=[Literal(Atom("p",[]), True)])
+]}
+
+program15 = {'rules': [
+    Rule(head=Atom("p",[]), body=[Literal(Atom("q",[]), True)]),
+    Rule(head=Atom("q",[]), body=[Literal(Atom("p",[]), True)]),
+    Rule(head=None, body=[Literal(Atom("q",[]))])
+]}
+
+program16 = {'rules': [
+    Rule(head=Atom("p",["a"]), body=[]),
+    Rule(head=None, body=[Literal(Atom("p",["a"]), True)]),
+]}
+
+program17 = {'rules': [
+    Rule(head=None, body=[Literal(Atom("p",["a"]), True)]),
+]}
+
+program18 = {'rules': [
+    Rule(head=Atom("p",["a"]), body=[]),
+    Rule(head=Atom("p",["b"]), body=[]),
+    Rule(head=None, body=[Literal(Atom("q",[]))])
+]}
+
+print("RUNNING TEST PROGRAM:")
+
+ground_program = ground(program18)
+answer_sets = solver1(ground_program, program.get('constants', {}))
 
 print (ground_program)
 print(answer_sets)
 
-print('----------')
-pattern = Atom('p',['?X'])
-fact = Atom('p',['a'])
+# print('----------')
+# pattern = Atom('p',['?X'])
+# fact = Atom('p',['a'])
 
-substitution = match_atom(pattern, fact, {})
-print(substitution)
+# substitution = match_atom(pattern, fact, {})
+# print(substitution)
 
-result = substitute_atom(Atom('q',['?X']), substitution)
-print(result.args)
+# result = substitute_atom(Atom('q',['?X']), substitution)
+# print(result.args)
+
+
+
+# #count{p : p(X)}
+# p(a;b;c)
+
+
+interp_test0 = [Atom('q',['a'])]
+interp_test1 = [Atom('p',['a'])]
+interp_test2 = [Atom('p',['a']),Atom('p',['b'])]
+interp_test3 = [Atom('p',['a']),Atom('p',['b']),Atom('p',['c'])]
+interp_test4 = [Atom('p',['a']),Atom('p',['b']),Atom('p',['c']), Atom('p',['d'])]
+interp_test4_1 = {Atom('p',['a']),Atom('p',['b']),Atom('p',['c']), Atom('p',['d']), Atom('p',['d'])}
+agg_test = Aggregate('count', ['?X'], [Literal(Atom('p', ['?X']))], '>=', 3)
+
+print(evaluate_aggregate(agg_test, interp_test0,{}))
+print(evaluate_aggregate(agg_test, interp_test1,{}))
+print(evaluate_aggregate(agg_test, interp_test2,{}))
+print(evaluate_aggregate(agg_test, interp_test3,{}))
+print(evaluate_aggregate(agg_test, interp_test4,{}))
+print(evaluate_aggregate(agg_test, interp_test4_1,{}))
+
+print(evaluate_aggregate_satisfied(agg_test, interp_test0,{}))
+print(evaluate_aggregate_satisfied(agg_test, interp_test1,{}))
+print(evaluate_aggregate_satisfied(agg_test, interp_test2,{}))
+print(evaluate_aggregate_satisfied(agg_test, interp_test3,{}))
+print(evaluate_aggregate_satisfied(agg_test, interp_test4,{}))
+print(evaluate_aggregate_satisfied(agg_test, interp_test4_1,{}))
+
+#------
+print('### TEST INACTIVE PEOPLE')
+program_test = {'rules': [
+
+    # Facts
+    Rule(head=Atom("person", ["alice"]), body=[]),
+    Rule(head=Atom("person", ["bob"]), body=[]),
+    Rule(head=Atom("person", ["charlie"]), body=[]),
+
+    # Charlie is inactive
+    Rule(head=Atom("inactive", ["charlie"]), body=[]),
+
+    # every person is active, if nowhere it is stated he/she is inactive
+    Rule(head=Atom("active", ["?X"]),body=[Literal(Atom("person", ["?X"])),Literal(Atom("inactive", ["?X"]), negated=True)]),
+
+    # There are at least 2 active people
+    Rule(head=Atom("enough_active", []),body=[Aggregate("count",["?X"],[Literal(Atom("active", ["?X"]))],">=",2)]),
+
+    # Charlie cannot be active
+    Rule(head=None, body=[Literal(Atom("active", ["charlie"]))])
+]}
+
+ground_program = ground(program_test)
+answer_sets = solver1(ground_program, program_test.get('constants', {}))
+
+print (ground_program)
+print(answer_sets)
+
+#------
+print('### TEST FRIENDS PEOPLE')
+program_test = {'rules': [
+
+    # Facts
+    Rule(head=Atom("person", ["alice"]), body=[]),
+    Rule(head=Atom("person", ["bob"]), body=[]),
+    Rule(head=Atom("person", ["charlie"]), body=[]),
+
+    # Charlie is inactive
+    Rule(head=Atom("friend", ["alice", 'bob']), body=[]),
+    Rule(head=Atom("friend", ["alice", 'charlie']), body=[]),
+    Rule(head=Atom("friend", ["bob", 'alice']), body=[]),
+
+    
+    # There are at least 2 active people
+    Rule(head=Atom("enough_friends", ['?X']),body=[Literal(Atom('person',['?X'])), Aggregate("count",["?Y"],[Literal(Atom("friend", ["?X","?Y"]))],">=",2)])
+]}
+
+ground_program = ground(program_test)
+answer_sets = solver1(ground_program, program_test.get('constants', {}))
+
+print (ground_program)
+print(answer_sets)
+
+#------------
+print("TEST CHOICE RULES")
+program_test = {'rules': [
+
+    # Facts
+    Rule(head=Atom("p", ["a"]), body=[]),
+    Rule(head=Atom("p", ["b"]), body=[]),
+
+    # Choice rule for {q(X) : p(X)} = 1
+    ChoiceRule(choices=[(Atom("q", ["?X"]), Literal(Atom("p",['?X'])))], body=[], value=1),
+]}
+ground_program = ground(program_test)
+answer_sets = solver1(ground_program, program_test.get('constants', {}))
+
+print (ground_program)
+print(answer_sets)
+
+# Tonight
+# DONE add constants + ranges
+# TODO solve simple puzzle
+# TODO translate puzzles to input for grounder-solver
+
+
+print("TEST CONSTANTS")
+
+program_test = {
+    'constants': {
+        'n': 2
+    },
+
+    'rules': [
+
+        # cell(R) for R = 0..n
+        Rule(
+            head=Atom("cell", ["?R", "?C"]),
+            body=[
+                Range("?R", 0, "n"),
+                Range("?C", 0, "n")
+            ]
+        ),
+    ]
+}
+
+ground_program = ground(program_test)
+
+print("grounded:")
+for rule in ground_program:
+    print(rule)
+
+answer_sets = solver1(
+    ground_program,
+    program_test.get('constants', {})
+)
+
+print("solved:")
+for answer_set in answer_sets:
+    print(answer_set)
+
+program_test = {
+    'constants': {
+        'n': 1
+    },
+
+    'rules': [
+
+        # Two people
+        Rule(
+            head=Atom("person", ["alice"]),
+            body=[]
+        ),
+
+        Rule(
+            head=Atom("person", ["bob"]),
+            body=[]
+        ),
+
+        # Generate the 2x2 grid
+        Rule(
+            head=Atom("cell", ["?R", "?C"]),
+            body=[
+                Range("?R", 0, "n"),
+                Range("?C", 0, "n")
+            ]
+        ),
+
+        # Every cell can be occupied
+        Rule(
+            head=Atom("can_occupy", ["?R", "?C"]),
+            body=[
+                Literal(Atom("cell", ["?R", "?C"]))
+            ]
+        ),
+
+        # Every person occupies exactly one cell
+        ChoiceRule(
+            choices=[
+                (
+                    Atom("at", ["?P", "?R", "?C"]),
+                    Literal(Atom("can_occupy", ["?R", "?C"]))
+                )
+            ],
+            body=[
+                Literal(Atom("person", ["?P"]))
+            ],
+            value=1
+        ),
+        Rule(
+            head=None,
+            body=[
+                Literal(
+                    Atom("cell", ["?R", "?C"])
+                ),
+                Aggregate(
+                    function="count",
+                    variables=["?P", "?C2"],
+                    body=[
+                        Literal(
+                            Atom("at", ["?P", "?R", "?C2"])
+                        )
+                    ],
+                    operator=">",
+                    value=1
+                )
+            ]
+        ),
+        Rule(
+            head=None,
+            body=[
+                Literal(
+                    Atom("cell", ["?R", "?C"])
+                ),
+                Aggregate(
+                    function="count",
+                    variables=["?P", "?R2"],
+                    body=[
+                        Literal(
+                            Atom("at", ["?P", "?R2", "?C"])
+                        )
+                    ],
+                    operator=">",
+                    value=1
+                )
+            ]
+        ),
+        Rule(
+            Atom("at", ["alice", 0, 0]),
+            []
+        ),
+    ]
+}
+
+ground_program = ground(program_test)
+
+print("GROUNDED:")
+for rule in ground_program:
+    print(rule)
+
+answer_sets = solver1(
+    ground_program,
+    program_test.get('constants', {})
+)
+
+print("\nANSWER SETS:")
+for answer_set in answer_sets:
+    print(answer_set)
+
+program_test = {
+    'constants': {
+        'n': 1
+    },
+
+    'rules': [
+
+        # People
+        Rule(
+            Atom("person", ["alice"]),
+            []
+        ),
+
+        Rule(
+            Atom("person", ["bob"]),
+            []
+        ),
+
+
+        # Grid
+        Rule(
+            Atom("cell", ["?R", "?C"]),
+            [
+                Range("?R", 0, "n"),
+                Range("?C", 0, "n")
+            ]
+        ),
+
+
+        # Every cell can be occupied
+        Rule(
+            Atom("can_occupy", ["?R", "?C"]),
+            [
+                Literal(
+                    Atom("cell", ["?R", "?C"])
+                )
+            ]
+        ),
+
+
+        # Each person gets exactly one cell
+        ChoiceRule(
+            choices=[
+                (
+                    Atom("at", ["?P", "?R", "?C"]),
+                    Literal(
+                        Atom("can_occupy", ["?R", "?C"])
+                    )
+                )
+            ],
+            body=[
+                Literal(
+                    Atom("person", ["?P"])
+                )
+            ],
+            value=1
+        ),
+
+
+        # Alice is given to be at (0,0)
+        Rule(
+            Atom("at", ["alice", 0, 0]),
+            []
+        ),
+
+
+        # Bob is given to be at (1,1)
+        Rule(
+            Atom("at", ["bob", 1, 1]),
+            []
+        ),
+    ]
+}
+
+ground_program = ground(program_test)
+
+print("GROUNDED:")
+for rule in ground_program:
+    print(rule)
+
+answer_sets = solver1(
+    ground_program,
+    program_test.get('constants', {})
+)
+
+print("\nANSWER SETS:")
+for answer_set in answer_sets:
+    print(answer_set)

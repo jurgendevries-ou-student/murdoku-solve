@@ -1,0 +1,10 @@
+clue(alphonse,in,terrace).
+clue(alphonse,not_on,chair).
+clue(bonnie,next_to,shelf).
+clue(carol,on,chair).
+clue(carol,in,dining).
+clue(daisy,not_next_to,table).
+clue(edward,in,restroom).
+clue(frank,south_of,daisy).
+clue(george,in_same_room,bonnie).
+clue(hannah,only_one_on,carpet).
