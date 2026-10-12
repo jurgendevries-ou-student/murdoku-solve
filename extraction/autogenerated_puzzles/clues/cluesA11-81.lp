@@ -1,0 +1,22 @@
+%%%% Clues
+clue(n_persons_on,carpet,0).
+clue(alice,in_same_room,bernard).
+clue(bernard,not_next_to,sofa).
+clue(bernard,in,bedroom).
+clue(bernard,north_of,george).
+clue(carol,east_of,florence).
+clue(carol,next_to,chair).
+clue(daisy,on,sofa).
+clue(daisy,not_next_to,carpet).
+clue(edward,on,sofa).
+clue(edward,in_same_room,jesse).
+clue(edward,north_of,daisy).
+clue(florence,in_row,2).
+clue(florence,not_in_corner).
+clue(george,not_next_to,sofa).
+clue(george,in_column,3).
+clue(hannah,in,office).
+clue(isla,in_corner).
+clue(isla,south_of,hannah).
+clue(jesse,next_to_with_someone_else,sofa).
+clue(jesse,south_of,edward).

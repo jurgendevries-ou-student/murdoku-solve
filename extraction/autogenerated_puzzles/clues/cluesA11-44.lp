@@ -1,0 +1,20 @@
+%%%% Clues
+clue(n_persons_on,chair,1).
+clue(alphonse,in,office).
+clue(bernard,next_to,chair).
+clue(bernard,next_to,carpet).
+clue(charlie,in_row,10).
+clue(daisy,alone).
+clue(daisy,in_column,5).
+clue(edward,on,carpet).
+clue(edward,west_of,grace).
+clue(florence,in_top_row).
+clue(florence,in,diningroom).
+clue(grace,next_to_with_someone_else,carpet).
+clue(grace,no_object_in_row,statue).
+clue(hannah,in,garderobe).
+clue(hannah,object_in_col,closet).
+clue(isla,alone).
+clue(isla,south_of,grace).
+clue(jesse,next_to,statue).
+clue(jesse,next_to,carpet).

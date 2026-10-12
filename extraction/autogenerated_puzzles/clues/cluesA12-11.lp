@@ -1,0 +1,22 @@
+%%%% Clues
+clue(n_persons_on,carpet,2).
+clue(alice,in_column,1).
+clue(bonnie,in_corner).
+clue(charlie,in_same_room,alice).
+clue(charlie,south_of,hannah).
+clue(charlie,on,carpet).
+clue(daniel,in_left_column).
+clue(emily,in_bottom_row).
+clue(emily,in_same_room,daniel).
+clue(frank,in,outside).
+clue(frank,no_object_in_col,box).
+clue(george,in_corner).
+clue(george,object_in_col,statue).
+clue(george,in,hallway).
+clue(hannah,in,hallway).
+clue(hannah,in_corner).
+clue(ivan,alone).
+clue(ivan,in_row,7).
+clue(jesse,in_column,11).
+clue(keith,in,guestroom).
+clue(keith,no_object_in_col,box).

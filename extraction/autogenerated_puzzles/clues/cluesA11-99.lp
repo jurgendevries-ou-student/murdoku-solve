@@ -1,0 +1,23 @@
+%%%% Clues
+clue(alphonse,in_room_with_female).
+clue(bernard,in,bedroom).
+clue(bernard,east_of,florence).
+clue(carol,in_column,3).
+clue(carol,in_corner).
+clue(daniel,object_in_col,statue).
+clue(daniel,not_next_to,statue).
+clue(edward,north_of,daniel).
+clue(edward,next_to,statue).
+clue(florence,in_same_room,hannah).
+clue(grace,north_of,florence).
+clue(grace,in,office).
+clue(grace,object_in_col,closet).
+clue(hannah,not_in_corner).
+clue(hannah,next_to,sofa).
+clue(isla,not_in_same_room,edward).
+clue(isla,in_corner).
+clue(isla,next_to,sofa).
+clue(jesse,alone).
+clue(jesse,in_row,6).
+clue(jesse,not_next_to,carpet).
+clue(jesse,next_to,chair).

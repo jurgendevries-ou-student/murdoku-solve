@@ -1,0 +1,19 @@
+%%%% Clues
+clue(n_persons_on,carpet,1).
+clue(alphonse,in,bedroom).
+clue(bernard,object_in_row,box).
+clue(bernard,in,garage).
+clue(charlie,in_corner).
+clue(charlie,in_same_room,grace).
+clue(charlie,south_of,edward).
+clue(charlie,in_row,9).
+clue(daniel,on,bed).
+clue(edward,in,hallway).
+clue(edward,in_corner).
+clue(florence,object_in_col,box).
+clue(florence,next_to,closet).
+clue(grace,east_of,florence).
+clue(henry,in,office).
+clue(isla,in,livingroom).
+clue(jesse,in_corner).
+clue(jesse,object_in_row,statue).

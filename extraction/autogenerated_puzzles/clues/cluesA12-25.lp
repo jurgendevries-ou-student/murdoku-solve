@@ -1,0 +1,19 @@
+%%%% Clues
+clue(n_persons_on,sofa,1).
+clue(alphonse,next_to,closet).
+clue(bonnie,in,hallway).
+clue(charlie,next_to,chair).
+clue(charlie,on,sofa).
+clue(daniel,in,livingroom).
+clue(emily,in_same_room,alphonse).
+clue(emily,next_to,sofa).
+clue(florence,in,garderobe).
+clue(grace,in,bathroom).
+clue(hannah,in_row,11).
+clue(hannah,in,office).
+clue(ivan,in,outside).
+clue(jane,in_column,7).
+clue(jane,next_to,sofa).
+clue(kate,in_right_column).
+clue(kate,in,livingroom).
+clue(kate,next_to,statue).

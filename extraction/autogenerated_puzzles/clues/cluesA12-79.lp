@@ -1,0 +1,24 @@
+%%%% Clues
+clue(alphonse,in_corner).
+clue(bernard,not_in,livingroom).
+clue(carol,in,garage).
+clue(carol,only_one_on,carpet).
+clue(carol,north_of,bernard).
+clue(daisy,in,kitchen).
+clue(daisy,in_room_with_male).
+clue(daisy,object_in_row,closet).
+clue(emily,in_same_room,daisy).
+clue(emily,in_column,4).
+clue(florence,west_of,keith).
+clue(florence,not_next_to,carpet).
+clue(florence,not_next_to,sofa).
+clue(george,in,livingroom).
+clue(george,in_corner).
+clue(henry,south_of,emily).
+clue(ivan,object_in_row,box).
+clue(ivan,in_column,2).
+clue(jane,in_corner).
+clue(jane,in_room_with_male).
+clue(keith,in_row,1).
+clue(keith,not_alone).
+clue(keith,in,office).

@@ -1,0 +1,19 @@
+%%%% Clues
+clue(alphonse,south_of,daniel).
+clue(alphonse,next_to,closet).
+clue(alphonse,in,kitchen).
+clue(bonnie,next_to,sofa).
+clue(charlie,in_same_room,bonnie).
+clue(charlie,next_to,closet).
+clue(daniel,in_same_room,isla).
+clue(daniel,in_right_column).
+clue(emily,not_in_same_room,bonnie).
+clue(florence,next_to_with_someone_else,bed).
+clue(florence,in_top_row).
+clue(george,in_column,7).
+clue(george,only_one_on,carpet).
+clue(hannah,on,bed).
+clue(isla,not_next_to,box).
+clue(isla,not_next_to,chair).
+clue(jesse,on,sofa).
+clue(jesse,next_to,bed).

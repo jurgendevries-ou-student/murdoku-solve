@@ -1,0 +1,22 @@
+%%%% Clues
+clue(n_persons_on,bed,0).
+clue(n_persons_on,sofa,0).
+clue(alice,in,garderobe).
+clue(bonnie,in,garage).
+clue(carol,in_column,5).
+clue(carol,next_to,bed).
+clue(daniel,alone).
+clue(daniel,not_in,hallway).
+clue(edward,alone).
+clue(edward,in_row,4).
+clue(frank,not_in_corner).
+clue(frank,next_to,chair).
+clue(grace,in,bathroom).
+clue(grace,in_column,6).
+clue(henry,in,bathroom).
+clue(isla,in_row,10).
+clue(isla,not_next_to,box).
+clue(jane,next_to,closet).
+clue(jane,in,bathroom).
+clue(keith,not_in_room_with_female).
+clue(keith,in_row,1).

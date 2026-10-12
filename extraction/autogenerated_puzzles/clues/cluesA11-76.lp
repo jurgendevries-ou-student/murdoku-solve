@@ -1,0 +1,19 @@
+%%%% Clues
+clue(alice,west_of,charlie).
+clue(alice,in_same_room,hannah).
+clue(bonnie,in_column,5).
+clue(charlie,in,garage).
+clue(daniel,in,kitchen).
+clue(daniel,next_to,box).
+clue(edward,not_in_same_room,hannah).
+clue(edward,in_bottom_row).
+clue(florence,no_object_in_row,box).
+clue(florence,in,livingroom).
+clue(grace,in,outside).
+clue(grace,next_to,bed).
+clue(hannah,next_to,carpet).
+clue(hannah,not_next_to,sofa).
+clue(ivan,object_in_col,statue).
+clue(ivan,not_in_room_with_male).
+clue(ivan,next_to,chair).
+clue(jane,only_one_on,carpet).

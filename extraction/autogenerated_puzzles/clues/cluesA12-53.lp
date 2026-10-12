@@ -1,0 +1,26 @@
+%%%% Clues
+clue(alphonse,in_right_column).
+clue(bonnie,next_to,closet).
+clue(bonnie,object_in_col,statue).
+clue(bonnie,in_corner).
+clue(charlie,in_room_with_male).
+clue(charlie,in_corner).
+clue(daniel,object_in_col,closet).
+clue(daniel,not_next_to,closet).
+clue(daniel,next_to,chair).
+clue(emily,in_column,7).
+clue(emily,in_same_room,florence).
+clue(florence,in,hallway).
+clue(florence,east_of,grace).
+clue(florence,not_next_to,sofa).
+clue(florence,north_of,keith).
+clue(florence,in_column,2).
+clue(grace,only_one_on,sofa).
+clue(henry,in,kitchen).
+clue(henry,in_room_with_female).
+clue(henry,next_to,box).
+clue(isla,alone).
+clue(jesse,in_corner).
+clue(jesse,in_room_with_male).
+clue(jesse,east_of,daniel).
+clue(keith,next_to,sofa).

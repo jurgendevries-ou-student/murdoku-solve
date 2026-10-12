@@ -1,0 +1,20 @@
+%%%% Clues
+clue(n_persons_on,chair,0).
+clue(alice,next_to,sofa).
+clue(bonnie,in_column,7).
+clue(bonnie,in_row,3).
+clue(charlie,next_to,box).
+clue(charlie,in_same_room,alice).
+clue(charlie,object_in_col,box).
+clue(daisy,on,carpet).
+clue(emily,not_next_to,chair).
+clue(emily,in_top_row).
+clue(florence,not_in_corner).
+clue(florence,object_in_row,closet).
+clue(grace,in_corner).
+clue(grace,in_row,5).
+clue(henry,in,bathroom).
+clue(isla,in_same_room,florence).
+clue(isla,in_same_room,emily).
+clue(isla,not_next_to,sofa).
+clue(jesse,in_row,7).

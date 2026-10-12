@@ -1,0 +1,22 @@
+%%%% Clues
+clue(n_persons_on,carpet,3).
+clue(alice,next_to,box).
+clue(alice,no_object_in_col,box).
+clue(bonnie,in_same_room,daniel).
+clue(bonnie,next_to,box).
+clue(charlie,north_of,emily).
+clue(daniel,in,diningroom).
+clue(daniel,not_next_to,statue).
+clue(emily,alone).
+clue(frank,in,bedroom).
+clue(george,in,bedroom).
+clue(george,object_in_row,box).
+clue(george,in_right_column).
+clue(henry,in,hallway).
+clue(isla,in,hallway).
+clue(isla,in_corner).
+clue(isla,not_in_room_with_female).
+clue(isla,in_column,4).
+clue(jane,not_next_to,statue).
+clue(keith,in,outside).
+clue(keith,next_to,box).

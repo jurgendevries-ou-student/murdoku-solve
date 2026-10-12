@@ -1,0 +1,25 @@
+%%%% Clues
+clue(n_persons_on,carpet,0).
+clue(alphonse,not_next_to,carpet).
+clue(bonnie,south_of,henry).
+clue(bonnie,not_in_corner).
+clue(carol,in,livingroom).
+clue(carol,in_row,4).
+clue(daisy,not_alone).
+clue(daisy,in_left_column).
+clue(daisy,no_object_in_row,closet).
+clue(emily,next_to,closet).
+clue(florence,object_in_row,statue).
+clue(george,in_same_room,bonnie).
+clue(george,not_in_corner).
+clue(george,not_next_to,closet).
+clue(george,not_next_to,sofa).
+clue(george,south_of,bonnie).
+clue(henry,in_corner).
+clue(ivan,in_same_room,alphonse).
+clue(ivan,in_right_column).
+clue(ivan,in_row,9).
+clue(jesse,in,office).
+clue(jesse,in_same_room,florence).
+clue(jesse,in_column,8).
+clue(kate,in,bedroom).

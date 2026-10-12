@@ -1,0 +1,25 @@
+%%%% Clues
+clue(n_persons_on,carpet,0).
+clue(alice,no_object_in_col,closet).
+clue(alice,in_top_row).
+clue(alice,no_object_in_col,statue).
+clue(bonnie,west_of,carol).
+clue(bonnie,north_of,florence).
+clue(carol,in,outside).
+clue(carol,east_of,florence).
+clue(daisy,in_corner).
+clue(edward,in_row,11).
+clue(florence,not_in_same_room,daisy).
+clue(florence,not_in_corner).
+clue(george,alone).
+clue(george,not_in,livingroom).
+clue(george,not_next_to,carpet).
+clue(hannah,in_same_room,daisy).
+clue(hannah,in_row,6).
+clue(hannah,in_column,2).
+clue(ivan,in_corner).
+clue(ivan,not_in_room_with_male).
+clue(ivan,in_column,9).
+clue(jane,not_alone).
+clue(jane,next_to,closet).
+clue(keith,next_to,statue).

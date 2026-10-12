@@ -1,0 +1,20 @@
+%%%% Clues
+clue(alphonse,not_in,hallway).
+clue(bonnie,in_same_room,grace).
+clue(charlie,in,garage).
+clue(daniel,not_next_to,statue).
+clue(daniel,in_row,6).
+clue(daniel,not_alone).
+clue(emily,in_row,9).
+clue(emily,in_column,9).
+clue(frank,north_of,bonnie).
+clue(frank,south_of,alphonse).
+clue(frank,object_in_col,box).
+clue(grace,object_in_col,box).
+clue(grace,in_row,7).
+clue(hannah,in_same_room,ivan).
+clue(hannah,no_object_in_row,closet).
+clue(ivan,in_column,3).
+clue(jesse,in_row,4).
+clue(jesse,in_room_with_male).
+clue(jesse,in_column,6).

@@ -1,0 +1,21 @@
+%%%% Clues
+clue(alphonse,in,guestroom).
+clue(bernard,in_room_with_multiple_males,2).
+clue(bernard,in_same_room,henry).
+clue(bernard,not_next_to,closet).
+clue(charlie,not_in_corner).
+clue(charlie,alone).
+clue(charlie,no_object_in_col,box).
+clue(daisy,in_same_room,george).
+clue(daisy,not_next_to,box).
+clue(daisy,not_in_corner).
+clue(edward,in_bottom_row).
+clue(edward,not_in_corner).
+clue(florence,next_to,closet).
+clue(george,next_to,bed).
+clue(henry,north_of,kate).
+clue(henry,in_column,7).
+clue(isla,next_to,chair).
+clue(jane,in_column,0).
+clue(jane,next_to,chair).
+clue(kate,in_column,3).
