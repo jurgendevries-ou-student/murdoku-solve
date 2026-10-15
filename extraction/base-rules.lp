@@ -108,10 +108,10 @@ satisfies(P1, north_of, P2)  :- distance(P1, P2, _, RC), RC < 0.
 satisfies(P1, south_of, P2)  :- distance(P1, P2, _, RC), RC > 0.
 % achieved: person is east/west/north/south of another person
 
-satisfies(P1, east_of, P2, N)  :- distance(P1, P2, DC, _), DC = N.
-satisfies(P1, west_of, P2, N)  :- distance(P1, P2, DC, _), DC = -N.
-satisfies(P1, north_of, P2, N)  :- distance(P1, P2, _, RC), RC = -N.
-satisfies(P1, south_of, P2, N)  :- distance(P1, P2, _, RC), RC = N.
+satisfies(P1, n_east_of, P2, N)  :- distance(P1, P2, DC, _), DC = N.
+satisfies(P1, n_west_of, P2, N)  :- distance(P1, P2, DC, _), DC = -N.
+satisfies(P1, n_north_of, P2, N)  :- distance(P1, P2, _, DR), DR = -N.
+satisfies(P1, n_south_of, P2, N)  :- distance(P1, P2, _, DR), DR = N.
 % achieved: person is exaxtly N columns/rows east/west/north/south of another person
 
 satisfies(P1,in_row,R) :- at(P1,R,_).
@@ -146,10 +146,14 @@ satisfies(P1,in_corner) :- at(P1,R,C), corner_cell(R,C).
 satisfies(P1,not_in_corner) :- at(P1,R,C), not corner_cell(R,C).
 % achieved: person is not in corner
 
+satisfies(P1,someone_else_in_room_next_to,O):- at(P2,R2,C2), with_person(P1,P2), next_to_object((R2,C2),O).
 satisfies(P1,someone_else_in_room_on,O):- at(P2,R2,C2), with_person(P1,P2), contains(R2,C2,O).
-% achieved: someone else in persons room was on an object.
+% achieved: someone else in persons room was on/next_to an object.
 % Versimpeld: door gebruik te maken van with_person wordt al gekeken of P1 en P2 verschillende personen zijn,
 % en zich in dezelfde kamer bevinden, vervolgens moet alleen nog gekeken worden of persoon P2 op een object O is.
+
+satisfies(P1,object_in_same_room,O) :- at(P1,R1,C2), contains(R2,C2,O), cell_same_room((R1,C1),(R2,C2)).
+% achieved: there is an object O in the same room as the person.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %      General clues    %
