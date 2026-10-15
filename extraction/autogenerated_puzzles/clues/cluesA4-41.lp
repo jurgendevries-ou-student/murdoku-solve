@@ -1,5 +1,5 @@
 %%%% Clues
-clue(alice,in_column,3).
 clue(alice,not_in_corner).
-clue(bernard,in,kitchen).
-clue(charlie,on,chair).
+clue(bernard,alone).
+clue(charlie,only_one_on,chair).
+clue(charlie,west_of,alice).

@@ -1,11 +1,10 @@
 %%%% Clues
 clue(n_persons_on,bed,2).
-clue(alice,someone_else_in_room_on,bed).
-clue(alice,south_of,carol).
+clue(alice,n_south_of,edward,3).
 clue(bernard,on,carpet).
-clue(carol,only_one_on,sofa).
+clue(carol,on,sofa).
 clue(daniel,east_of,edward).
-clue(edward,next_to,chair).
-clue(florence,in_corner).
+clue(edward,in_same_room,daniel).
 clue(florence,in_bottom_row).
+clue(florence,in_corner).
 clue(grace,in,livingroom).

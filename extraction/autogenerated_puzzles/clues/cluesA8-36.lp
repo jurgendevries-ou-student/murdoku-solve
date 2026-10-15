@@ -1,11 +1,12 @@
 %%%% Clues
-clue(alphonse,west_of,emily).
+clue(n_persons_on,sofa,2).
 clue(alphonse,next_to,carpet).
-clue(alphonse,in,kitchen).
-clue(bonnie,in,livingroom).
-clue(carol,next_to,sofa).
-clue(carol,object_in_row,box).
-clue(daisy,someone_else_in_room_on,carpet).
-clue(emily,in_row,6).
-clue(florence,in_corner).
-clue(grace,in_bottom_row).
+clue(bonnie,next_to,box).
+clue(carol,n_north_of,daisy,3).
+clue(carol,on,sofa).
+clue(daisy,in_column,1).
+clue(emily,in,garage).
+clue(emily,north_of,grace).
+clue(florence,in_same_room,alphonse).
+clue(florence,not_next_to,statue).
+clue(grace,alone).

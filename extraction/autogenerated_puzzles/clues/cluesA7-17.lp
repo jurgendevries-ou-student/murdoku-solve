@@ -1,10 +1,10 @@
 %%%% Clues
-clue(alice,in,hallway).
-clue(alice,next_to,bed).
-clue(bonnie,in,garage).
-clue(charlie,in_top_row).
+clue(n_persons_on,chair,1).
+clue(alice,in_column,6).
+clue(bonnie,not_next_to,chair).
+clue(charlie,in_left_column).
 clue(daniel,not_in_corner).
-clue(daniel,in_room_with_female).
+clue(emily,n_south_of,alice,3).
+clue(emily,object_in_col,statue).
 clue(emily,in_same_room,bonnie).
-clue(emily,in_column,5).
-clue(florence,in,bedroom).
+clue(florence,next_to,sofa).

@@ -1,8 +1,8 @@
 %%%% Clues
-clue(alphonse,in_row,2).
+clue(alphonse,not_next_to,chair).
 clue(bernard,in,hallway).
-clue(charlie,in,bathroom).
-clue(charlie,not_alone).
-clue(charlie,south_of,daisy).
-clue(charlie,not_next_to,sofa).
-clue(daisy,in,livingroom).
+clue(bernard,not_in_room_with_female).
+clue(bernard,in_row,4).
+clue(charlie,in_column,3).
+clue(charlie,in_room_with_female).
+clue(daisy,in_top_row).

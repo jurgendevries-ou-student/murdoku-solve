@@ -1,11 +1,8 @@
 %%%% Clues
-clue(alice,alone).
-clue(alice,on,sofa).
-clue(bernard,in,kitchen).
-clue(bernard,in_top_row).
-clue(charlie,not_next_to,bed).
-clue(daisy,not_in_same_room,charlie).
-clue(daisy,next_to,closet).
-clue(edward,in,bedroom).
-clue(edward,not_next_to,closet).
-clue(edward,not_next_to,box).
+clue(alice,not_next_to,statue).
+clue(bernard,n_north_of,daisy,1).
+clue(bernard,not_in,livingroom).
+clue(charlie,next_to,box).
+clue(daisy,object_in_row,closet).
+clue(edward,on,sofa).
+clue(edward,in_right_column).

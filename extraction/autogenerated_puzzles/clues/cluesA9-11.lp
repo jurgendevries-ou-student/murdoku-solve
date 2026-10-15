@@ -1,13 +1,13 @@
 %%%% Clues
-clue(alphonse,not_in_corner).
-clue(alphonse,not_in_room_with_male).
-clue(alphonse,in_row,0).
-clue(bonnie,next_to,carpet).
-clue(bonnie,next_to,closet).
-clue(charlie,not_next_to,closet).
-clue(daniel,only_one_on,carpet).
+clue(alphonse,not_next_to,closet).
+clue(alphonse,alone).
+clue(alphonse,on,bed).
+clue(bonnie,in,outside).
+clue(charlie,alone).
+clue(daniel,on,carpet).
+clue(daniel,in,outside).
 clue(edward,next_to,statue).
-clue(frank,in_column,4).
-clue(grace,someone_else_in_room_on,chair).
-clue(grace,next_to,carpet).
+clue(frank,next_to,closet).
+clue(frank,in_corner).
+clue(grace,in_left_column).
 clue(henry,in,bedroom).

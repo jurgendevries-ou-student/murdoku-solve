@@ -1,13 +1,14 @@
 %%%% Clues
 clue(n_persons_on,carpet,2).
-clue(alphonse,next_to,carpet).
-clue(bernard,in,garage).
+clue(alphonse,n_east_of,daniel,2).
+clue(alphonse,north_of,carol).
+clue(alphonse,alone).
+clue(alphonse,in_corner).
 clue(bernard,not_in_corner).
-clue(carol,in_same_room,george).
-clue(carol,next_to_with_someone_else,carpet).
-clue(carol,south_of,george).
+clue(bernard,not_in_same_room,george).
 clue(carol,on,carpet).
-clue(daniel,next_to,closet).
-clue(emily,not_in_corner).
-clue(frank,in_left_column).
-clue(george,not_next_to,statue).
+clue(daniel,not_in_corner).
+clue(emily,next_to,bed).
+clue(emily,in_right_column).
+clue(frank,next_to,bed).
+clue(george,in_row,4).

@@ -1,6 +1,6 @@
 %%%% Clues
-clue(n_persons_on,sofa,0).
 clue(alice,in_same_room,bonnie).
-clue(alice,in_row,0).
-clue(bonnie,north_of,charlie).
-clue(charlie,in_right_column).
+clue(bonnie,in_corner).
+clue(bonnie,n_south_of,alice,2).
+clue(charlie,east_of,bonnie).
+clue(charlie,not_next_to,chair).

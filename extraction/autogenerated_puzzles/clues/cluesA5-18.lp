@@ -1,7 +1,7 @@
 %%%% Clues
-clue(alphonse,in_column,3).
-clue(bernard,in_same_room,daniel).
+clue(alphonse,next_to,carpet).
 clue(bernard,on,carpet).
+clue(carol,only_one_on,sofa).
 clue(carol,next_to,box).
-clue(carol,object_in_col,box).
-clue(daniel,in_column,2).
+clue(daniel,not_in_corner).
+clue(daniel,object_in_col,box).

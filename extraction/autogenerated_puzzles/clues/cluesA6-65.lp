@@ -1,8 +1,7 @@
 %%%% Clues
 clue(alphonse,in,hallway).
-clue(bernard,south_of,carol).
-clue(carol,in_same_room,daisy).
-clue(daisy,south_of,bernard).
-clue(daisy,next_to,closet).
+clue(bernard,object_in_row,closet).
+clue(carol,on,sofa).
+clue(daisy,in_row,3).
 clue(emily,next_to,chair).
 clue(emily,no_object_in_col,box).

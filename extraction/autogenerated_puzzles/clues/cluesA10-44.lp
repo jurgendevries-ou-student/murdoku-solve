@@ -1,15 +1,14 @@
 %%%% Clues
-clue(alphonse,in_corner).
-clue(bernard,in,livingroom).
-clue(carol,not_next_to,box).
-clue(carol,in_corner).
+clue(n_persons_on,sofa,3).
+clue(alphonse,next_to,box).
+clue(bernard,next_to,closet).
+clue(carol,in_column,0).
 clue(daisy,on,chair).
-clue(edward,no_object_in_row,box).
+clue(daisy,not_in_same_room,bernard).
 clue(edward,on,bed).
-clue(frank,in_corner).
+clue(edward,alone).
 clue(frank,in_top_row).
-clue(grace,in_column,3).
 clue(grace,next_to,closet).
-clue(hannah,on,sofa).
-clue(hannah,alone).
-clue(ivan,next_to,statue).
+clue(grace,on,sofa).
+clue(hannah,west_of,bernard).
+clue(ivan,in,garderobe).

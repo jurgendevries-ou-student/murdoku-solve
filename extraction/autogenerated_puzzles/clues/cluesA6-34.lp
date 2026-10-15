@@ -1,9 +1,7 @@
 %%%% Clues
-clue(alice,not_in_room_with_female).
-clue(alice,in_left_column).
-clue(alice,in_top_row).
-clue(bernard,on,carpet).
-clue(charlie,on,chair).
-clue(daniel,object_in_col,box).
-clue(daniel,in_row,4).
-clue(edward,not_in_room_with_female).
+clue(no_empty_room).
+clue(alice,in_row,0).
+clue(bernard,not_next_to,chair).
+clue(charlie,n_east_of,daniel,2).
+clue(daniel,someone_else_in_room_next_to,box).
+clue(edward,in,livingroom).

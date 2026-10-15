@@ -1,10 +1,12 @@
 %%%% Clues
-clue(alphonse,object_in_row,closet).
-clue(bonnie,in,livingroom).
-clue(charlie,someone_else_in_room_on,chair).
-clue(charlie,not_next_to,chair).
-clue(charlie,object_in_row,box).
-clue(daniel,in_column,3).
-clue(daniel,in_row,3).
-clue(edward,in_column,1).
-clue(edward,in_row,2).
+clue(n_persons_on,carpet,2).
+clue(no_empty_room).
+clue(alphonse,only_one_on,chair).
+clue(bonnie,not_in_same_room,alphonse).
+clue(charlie,next_to,box).
+clue(daniel,not_alone).
+clue(daniel,n_east_of,alphonse,1).
+clue(daniel,n_west_of,charlie,1).
+clue(edward,not_in,livingroom).
+clue(edward,no_object_in_col,closet).
+clue(edward,object_in_row,closet).

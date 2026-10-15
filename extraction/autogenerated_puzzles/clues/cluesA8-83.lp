@@ -1,13 +1,11 @@
 %%%% Clues
-clue(alice,in_column,5).
-clue(bernard,alone).
-clue(bernard,only_one_on,chair).
-clue(carol,in_bottom_row).
+clue(alice,next_to,closet).
+clue(bernard,in_left_column).
 clue(carol,alone).
+clue(carol,in_corner).
+clue(daisy,not_in_room_with_male).
 clue(daisy,in,diningroom).
-clue(daisy,north_of,alice).
-clue(emily,not_next_to,carpet).
 clue(emily,in_same_room,alice).
 clue(florence,in,hallway).
-clue(florence,alone).
-clue(grace,not_in_corner).
+clue(grace,next_to,closet).
+clue(grace,n_east_of,alice,1).

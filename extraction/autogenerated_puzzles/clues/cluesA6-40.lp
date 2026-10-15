@@ -1,8 +1,8 @@
 %%%% Clues
-clue(alice,east_of,bonnie).
-clue(bonnie,only_one_on,carpet).
-clue(bonnie,in_row,4).
-clue(charlie,in,bedroom).
+clue(alice,in,bathroom).
+clue(bonnie,next_to,closet).
+clue(charlie,in_same_room,bonnie).
+clue(charlie,in_column,4).
 clue(daniel,in,kitchen).
+clue(edward,n_north_of,charlie,3).
 clue(edward,next_to,box).
-clue(edward,in_corner).

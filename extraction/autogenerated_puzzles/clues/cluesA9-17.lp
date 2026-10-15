@@ -1,14 +1,13 @@
 %%%% Clues
-clue(alphonse,not_in,livingroom).
-clue(alphonse,in_column,7).
-clue(bonnie,next_to,bed).
-clue(bonnie,in_same_room,hannah).
-clue(bonnie,in_corner).
-clue(carol,in_column,3).
-clue(carol,someone_else_in_room_on,sofa).
-clue(daniel,in_corner).
-clue(emily,someone_else_in_room_on,sofa).
-clue(florence,not_in_corner).
-clue(florence,in_right_column).
-clue(grace,next_to,bed).
-clue(hannah,in_row,4).
+clue(n_persons_on,carpet,2).
+clue(alphonse,in,bathroom).
+clue(alphonse,not_in_corner).
+clue(bonnie,in_bottom_row).
+clue(carol,not_in_corner).
+clue(daniel,n_north_of,emily,4).
+clue(emily,in_same_room,daniel).
+clue(florence,in,livingroom).
+clue(florence,on,carpet).
+clue(grace,in_left_column).
+clue(hannah,in_same_room,bonnie).
+clue(hannah,in_corner).

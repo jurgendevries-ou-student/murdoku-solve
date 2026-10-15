@@ -1,4 +1,5 @@
 %%%% Clues
 clue(alphonse,next_to,closet).
-clue(bernard,in_same_room,alphonse).
+clue(alphonse,in_room_with_male).
+clue(bernard,east_of,carol).
 clue(carol,not_in_corner).

@@ -1,7 +1,7 @@
 %%%% Clues
-clue(alphonse,in,kitchen).
-clue(alphonse,west_of,carol).
-clue(bernard,in,livingroom).
-clue(bernard,not_next_to,bed).
-clue(carol,not_alone).
-clue(daisy,in_bottom_row).
+clue(n_persons_on,bed,1).
+clue(alphonse,in_row,0).
+clue(bernard,no_object_in_row,statue).
+clue(carol,in,bedroom).
+clue(carol,not_next_to,carpet).
+clue(daisy,in_right_column).

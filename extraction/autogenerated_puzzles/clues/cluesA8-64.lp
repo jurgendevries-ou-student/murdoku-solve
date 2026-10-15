@@ -1,13 +1,12 @@
 %%%% Clues
-clue(alice,next_to,sofa).
-clue(alice,in_column,2).
-clue(bernard,not_next_to,closet).
-clue(bernard,alone).
-clue(charlie,on,carpet).
-clue(daisy,on,carpet).
-clue(daisy,next_to,box).
+clue(alice,on,sofa).
+clue(bernard,object_in_col,statue).
+clue(bernard,in_row,1).
+clue(charlie,in_column,5).
+clue(daisy,in_bottom_row).
+clue(daisy,someone_else_in_room_next_to,box).
 clue(emily,in,garage).
 clue(emily,not_next_to,statue).
-clue(florence,alone).
+clue(florence,on,sofa).
 clue(florence,not_in_corner).
-clue(george,in_right_column).
+clue(george,in,office).

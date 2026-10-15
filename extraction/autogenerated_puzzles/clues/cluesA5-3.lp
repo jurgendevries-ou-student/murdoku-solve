@@ -1,8 +1,8 @@
 %%%% Clues
 clue(alphonse,north_of,bernard).
-clue(bernard,not_in,bedroom).
-clue(carol,west_of,bernard).
-clue(carol,in_top_row).
+clue(bernard,on,bed).
+clue(carol,in_corner).
 clue(carol,in_same_room,alphonse).
-clue(daisy,next_to,carpet).
+clue(carol,in,kitchen).
+clue(carol,no_object_in_col,closet).
 clue(daisy,in_corner).

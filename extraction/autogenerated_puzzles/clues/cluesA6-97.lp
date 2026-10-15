@@ -1,9 +1,9 @@
 %%%% Clues
 clue(alphonse,in_same_room,edward).
-clue(bonnie,on,carpet).
+clue(bonnie,object_in_row,closet).
+clue(bonnie,in_same_room,carol).
 clue(carol,in_top_row).
-clue(carol,in,bedroom).
-clue(daniel,in_right_column).
+clue(daniel,next_to,chair).
 clue(daniel,not_in_corner).
-clue(edward,someone_else_in_room_on,chair).
+clue(edward,in_column,0).
 clue(edward,not_in_corner).

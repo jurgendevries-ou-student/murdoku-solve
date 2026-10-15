@@ -1,7 +1,9 @@
 %%%% Clues
-clue(alice,in,bathroom).
+clue(alice,in_right_column).
+clue(bernard,next_to,carpet).
+clue(bernard,north_of,alice).
 clue(bernard,in_row,3).
-clue(bernard,no_object_in_col,closet).
 clue(carol,on,carpet).
-clue(carol,in_column,0).
-clue(daisy,in_column,3).
+clue(carol,in_corner).
+clue(daisy,in,bathroom).
+clue(daisy,on,carpet).

@@ -1,8 +1,6 @@
 %%%% Clues
-clue(alphonse,in_room_with_male).
-clue(bernard,in_row,4).
-clue(charlie,in_room_with_female).
-clue(daniel,not_in_same_room,alphonse).
-clue(daniel,next_to,closet).
-clue(daniel,east_of,charlie).
-clue(daniel,south_of,alphonse).
+clue(alphonse,n_north_of,daniel,1).
+clue(alphonse,in_same_room,bernard).
+clue(bernard,n_east_of,daniel,3).
+clue(charlie,on,bed).
+clue(daniel,in,bedroom).

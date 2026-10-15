@@ -1,4 +1,5 @@
 %%%% Clues
-clue(alphonse,in,bathroom).
-clue(bonnie,in_row,3).
-clue(carol,next_to,chair).
+clue(alphonse,in_top_row).
+clue(bonnie,no_object_in_col,box).
+clue(bonnie,in_bottom_row).
+clue(carol,in_corner).

@@ -1,9 +1,9 @@
 %%%% Clues
 clue(alice,in_same_room,charlie).
-clue(alice,not_in_corner).
-clue(alice,not_next_to,box).
-clue(bernard,in_top_row).
+clue(bernard,next_to,carpet).
 clue(charlie,in,livingroom).
-clue(daniel,in_left_column).
-clue(emily,in_row,4).
-clue(emily,in_corner).
+clue(charlie,n_west_of,alice,1).
+clue(daniel,in_corner).
+clue(emily,next_to,carpet).
+clue(emily,west_of,bernard).
+clue(emily,n_south_of,alice,2).

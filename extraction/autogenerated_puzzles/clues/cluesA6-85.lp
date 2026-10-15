@@ -1,9 +1,8 @@
 %%%% Clues
-clue(alphonse,in_row,1).
+clue(alphonse,in_same_room,charlie).
 clue(bernard,next_to,chair).
-clue(bernard,not_in_corner).
-clue(charlie,next_to,carpet).
-clue(daisy,next_to,chair).
-clue(daisy,in_right_column).
+clue(charlie,only_one_on,carpet).
+clue(daisy,someone_else_in_room_next_to,chair).
+clue(daisy,n_east_of,emily,5).
 clue(emily,not_in_corner).
-clue(emily,north_of,bernard).
+clue(emily,next_to,chair).

@@ -1,7 +1,8 @@
 %%%% Clues
-clue(alice,on,bed).
+clue(alice,next_to,box).
+clue(alice,object_in_row,box).
+clue(alice,n_north_of,daniel,1).
+clue(bonnie,not_next_to,chair).
 clue(bonnie,next_to,bed).
-clue(carol,not_next_to,box).
-clue(carol,in_column,1).
-clue(carol,next_to_with_someone_else,carpet).
-clue(daniel,someone_else_in_room_on,bed).
+clue(carol,east_of,daniel).
+clue(daniel,in_room_with_multiple_females,2).

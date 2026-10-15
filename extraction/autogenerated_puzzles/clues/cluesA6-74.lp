@@ -1,8 +1,7 @@
 %%%% Clues
-clue(alphonse,in_same_room,daisy).
-clue(alphonse,in_row,4).
-clue(bernard,next_to,carpet).
-clue(bernard,object_in_col,box).
-clue(carol,next_to,bed).
-clue(daisy,no_object_in_row,box).
+clue(n_persons_on,carpet,0).
+clue(alphonse,not_next_to,box).
+clue(bernard,n_south_of,carol,2).
+clue(carol,in_row,1).
+clue(daisy,next_to,carpet).
 clue(emily,in_column,1).

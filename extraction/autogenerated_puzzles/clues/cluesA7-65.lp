@@ -1,11 +1,8 @@
 %%%% Clues
-clue(alphonse,east_of,emily).
-clue(alphonse,in_row,2).
-clue(alphonse,in_column,2).
-clue(bernard,in,garage).
-clue(carol,no_object_in_col,statue).
-clue(daisy,north_of,emily).
-clue(daisy,in_room_with_male).
-clue(emily,north_of,florence).
-clue(florence,in_column,5).
-clue(florence,not_in_same_room,daisy).
+clue(alphonse,in_same_room,daisy).
+clue(bernard,in_corner).
+clue(carol,next_to,chair).
+clue(daisy,not_in_same_room,carol).
+clue(emily,on,sofa).
+clue(emily,n_west_of,alphonse,2).
+clue(florence,n_south_of,bernard,5).

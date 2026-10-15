@@ -1,5 +1,5 @@
 %%%% Clues
 clue(alice,in,kitchen).
-clue(bonnie,in_bottom_row).
-clue(bonnie,next_to,carpet).
-clue(charlie,on,bed).
+clue(alice,north_of,bonnie).
+clue(bonnie,not_in_corner).
+clue(charlie,next_to,statue).

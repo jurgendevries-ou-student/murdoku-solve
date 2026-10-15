@@ -1,10 +1,10 @@
 %%%% Clues
-clue(alphonse,on,carpet).
-clue(alphonse,in_bottom_row).
+clue(alphonse,object_in_row,closet).
 clue(bonnie,in_same_room,frank).
-clue(bonnie,in_left_column).
-clue(charlie,in_column,4).
-clue(charlie,next_to_with_someone_else,carpet).
-clue(daniel,in_row,4).
+clue(bonnie,n_west_of,alphonse,5).
+clue(bonnie,north_of,daniel).
+clue(charlie,next_to,carpet).
+clue(charlie,n_north_of,alphonse,1).
+clue(daniel,in_right_column).
 clue(emily,on,bed).
 clue(frank,in_corner).

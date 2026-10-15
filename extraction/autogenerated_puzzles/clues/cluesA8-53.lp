@@ -1,13 +1,12 @@
 %%%% Clues
+clue(n_persons_on,carpet,1).
 clue(alphonse,next_to,statue).
-clue(bernard,not_next_to,sofa).
-clue(bernard,next_to,closet).
+clue(bernard,in_same_room,daniel).
 clue(bernard,not_in_corner).
+clue(bernard,n_south_of,florence,2).
 clue(charlie,next_to,sofa).
-clue(charlie,no_object_in_col,box).
-clue(daniel,not_in_same_room,charlie).
-clue(daniel,next_to,closet).
-clue(emily,next_to,statue).
+clue(daniel,in_corner).
+clue(emily,n_south_of,george,2).
+clue(florence,in_column,4).
 clue(florence,in_room_with_female).
-clue(florence,next_to,box).
-clue(george,in_top_row).
+clue(george,in,bathroom).

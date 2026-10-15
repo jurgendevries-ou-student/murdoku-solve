@@ -1,8 +1,8 @@
 %%%% Clues
 clue(no_empty_room).
-clue(alphonse,in_top_row).
-clue(alphonse,in_corner).
-clue(bonnie,object_in_col,box).
+clue(alphonse,object_in_col,statue).
+clue(bonnie,in_column,2).
 clue(charlie,in,livingroom).
-clue(daniel,next_to,bed).
+clue(daniel,north_of,edward).
+clue(daniel,next_to,chair).
 clue(edward,in_right_column).

@@ -1,9 +1,9 @@
 %%%% Clues
-clue(alphonse,in_right_column).
-clue(bonnie,in_row,4).
+clue(alphonse,next_to,chair).
+clue(bonnie,n_north_of,alphonse,1).
 clue(carol,next_to,bed).
-clue(carol,in_same_room,frank).
-clue(carol,east_of,emily).
-clue(daniel,not_in_corner).
-clue(emily,not_in_corner).
+clue(daniel,in_column,4).
+clue(daniel,in_room_with_female).
+clue(emily,in_column,1).
+clue(frank,in,livingroom).
 clue(frank,on,chair).

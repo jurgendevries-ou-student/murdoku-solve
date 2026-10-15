@@ -1,7 +1,8 @@
 %%%% Clues
-clue(n_persons_on,bed,1).
-clue(alphonse,in,bedroom).
-clue(bonnie,next_to,closet).
-clue(carol,not_in,livingroom).
-clue(daniel,in_column,3).
-clue(emily,on,chair).
+clue(alphonse,next_to,sofa).
+clue(bonnie,in,bathroom).
+clue(carol,not_in_room_with_male).
+clue(daniel,in_room_with_female).
+clue(daniel,in,livingroom).
+clue(daniel,no_object_in_row,closet).
+clue(emily,only_one_on,chair).

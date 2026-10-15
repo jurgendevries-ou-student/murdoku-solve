@@ -1,6 +1,7 @@
 %%%% Clues
-clue(alice,next_to,box).
-clue(bonnie,not_in,kitchen).
-clue(charlie,next_to,closet).
-clue(daniel,in_row,4).
-clue(daniel,no_object_in_col,box).
+clue(alice,in_left_column).
+clue(bonnie,in,bedroom).
+clue(charlie,in_room_with_multiple_females,2).
+clue(charlie,in_top_row).
+clue(charlie,n_east_of,daniel,1).
+clue(daniel,in_bottom_row).

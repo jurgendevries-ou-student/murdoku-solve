@@ -1,16 +1,15 @@
 %%%% Clues
+clue(n_persons_on,carpet,2).
 clue(alphonse,not_in_same_room,frank).
-clue(alphonse,not_in,hallway).
-clue(bernard,in_bottom_row).
-clue(charlie,alone).
+clue(bernard,next_to,closet).
+clue(bernard,in_same_room,edward).
 clue(charlie,in,kitchen).
-clue(charlie,in_corner).
-clue(charlie,next_to,sofa).
-clue(daniel,not_in,bathroom).
-clue(edward,west_of,alphonse).
-clue(edward,next_to,sofa).
-clue(frank,in_left_column).
-clue(frank,next_to,carpet).
-clue(george,in_column,4).
+clue(charlie,alone).
+clue(charlie,on,sofa).
+clue(daniel,in_top_row).
+clue(edward,in_corner).
+clue(frank,not_next_to,statue).
+clue(frank,object_in_row,statue).
+clue(frank,not_in_same_room,george).
 clue(george,next_to,carpet).
-clue(george,in_corner).
+clue(george,object_in_col,closet).

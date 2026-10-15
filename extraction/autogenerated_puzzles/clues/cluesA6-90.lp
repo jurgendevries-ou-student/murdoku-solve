@@ -1,9 +1,9 @@
 %%%% Clues
-clue(n_persons_on,sofa,1).
+clue(alphonse,n_west_of,daniel,1).
+clue(alphonse,on,sofa).
 clue(alphonse,object_in_row,statue).
-clue(bernard,in_bottom_row).
-clue(charlie,not_in_same_room,bernard).
-clue(daniel,not_in_corner).
-clue(daniel,someone_else_in_room_on,bed).
+clue(bernard,next_to,closet).
+clue(bernard,in_corner).
+clue(charlie,in_top_row).
+clue(daniel,in,bathroom).
 clue(emily,next_to,closet).
-clue(emily,in_row,1).

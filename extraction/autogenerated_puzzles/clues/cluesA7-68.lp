@@ -1,10 +1,9 @@
 %%%% Clues
-clue(alice,in_bottom_row).
-clue(bonnie,not_next_to,chair).
-clue(bonnie,no_object_in_row,statue).
-clue(bonnie,east_of,emily).
+clue(alice,in_row,6).
+clue(bonnie,not_next_to,bed).
+clue(bonnie,n_south_of,daniel,1).
+clue(bonnie,n_east_of,emily,1).
 clue(charlie,on,bed).
-clue(daniel,on,chair).
-clue(daniel,not_in_room_with_female).
+clue(daniel,only_one_on,chair).
 clue(emily,next_to,carpet).
-clue(frank,next_to,statue).
+clue(frank,north_of,emily).

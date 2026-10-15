@@ -1,6 +1,7 @@
 %%%% Clues
 clue(alphonse,not_next_to,sofa).
-clue(bonnie,on,sofa).
 clue(bonnie,in_left_column).
-clue(charlie,in_top_row).
-clue(daniel,in_right_column).
+clue(bonnie,on,sofa).
+clue(charlie,not_in_corner).
+clue(charlie,north_of,alphonse).
+clue(daniel,not_in_corner).

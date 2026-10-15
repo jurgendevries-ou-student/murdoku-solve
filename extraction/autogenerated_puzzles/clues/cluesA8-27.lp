@@ -1,14 +1,12 @@
 %%%% Clues
-clue(alice,in,garage).
-clue(alice,in_same_room,daisy).
-clue(bernard,not_next_to,chair).
-clue(charlie,in_corner).
-clue(daisy,in_corner).
+clue(n_persons_on,chair,1).
+clue(alice,not_next_to,statue).
+clue(bernard,n_east_of,emily,5).
+clue(charlie,in,hallway).
+clue(daisy,in_same_room,alice).
 clue(daisy,next_to,statue).
-clue(emily,in_left_column).
-clue(frank,south_of,charlie).
-clue(frank,in,hallway).
-clue(frank,in_same_room,charlie).
-clue(frank,in_corner).
-clue(george,not_in_same_room,emily).
-clue(george,someone_else_in_room_on,chair).
+clue(daisy,east_of,alice).
+clue(emily,next_to,bed).
+clue(frank,in_right_column).
+clue(frank,n_south_of,charlie,2).
+clue(george,in_corner).

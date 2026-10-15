@@ -1,8 +1,9 @@
 %%%% Clues
-clue(alice,no_object_in_col,closet).
 clue(alice,in_corner).
-clue(bonnie,not_in_same_room,edward).
-clue(bonnie,in_same_room,alice).
-clue(carol,someone_else_in_room_on,chair).
-clue(daisy,on,bed).
-clue(edward,next_to,bed).
+clue(bonnie,in_column,2).
+clue(bonnie,in,bedroom).
+clue(carol,n_east_of,bonnie,1).
+clue(daisy,in_corner).
+clue(daisy,alone).
+clue(edward,in_left_column).
+clue(edward,in_bottom_row).

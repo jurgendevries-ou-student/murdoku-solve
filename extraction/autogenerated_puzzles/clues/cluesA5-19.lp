@@ -1,7 +1,5 @@
 %%%% Clues
-clue(alphonse,next_to,closet).
-clue(alphonse,in_row,1).
-clue(bonnie,not_in_same_room,daniel).
-clue(carol,in_right_column).
-clue(carol,in_top_row).
-clue(daniel,object_in_col,statue).
+clue(alphonse,north_of,bonnie).
+clue(bonnie,not_next_to,sofa).
+clue(carol,in_corner).
+clue(daniel,in_row,4).

@@ -1,9 +1,9 @@
 %%%% Clues
-clue(alice,in,bedroom).
-clue(bernard,on,carpet).
-clue(charlie,in_corner).
+clue(n_persons_on,sofa,0).
+clue(alice,alone).
+clue(bernard,only_one_on,carpet).
 clue(charlie,next_to,sofa).
-clue(daniel,next_to,bed).
+clue(daniel,not_next_to,closet).
+clue(daniel,in_same_room,bernard).
 clue(emily,in,diningroom).
-clue(florence,in,bathroom).
-clue(florence,in_corner).
+clue(florence,n_north_of,bernard,3).

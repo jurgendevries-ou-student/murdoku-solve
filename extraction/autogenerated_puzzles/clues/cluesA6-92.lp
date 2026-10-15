@@ -1,9 +1,9 @@
 %%%% Clues
-clue(n_persons_on,carpet,0).
 clue(alphonse,in,kitchen).
-clue(bernard,not_in_corner).
-clue(carol,in_room_with_female).
+clue(bernard,in,bedroom).
+clue(bernard,only_one_on,sofa).
 clue(carol,next_to,chair).
-clue(daisy,north_of,carol).
 clue(daisy,in_right_column).
-clue(edward,in_row,3).
+clue(daisy,not_next_to,carpet).
+clue(edward,next_to,carpet).
+clue(edward,in_corner).

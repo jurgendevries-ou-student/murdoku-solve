@@ -1,9 +1,9 @@
 %%%% Clues
-clue(alphonse,alone).
-clue(alphonse,not_next_to,closet).
-clue(bonnie,not_in_corner).
-clue(bonnie,in_bottom_row).
-clue(charlie,object_in_col,closet).
-clue(charlie,in_room_with_male).
-clue(daniel,next_to,box).
+clue(alphonse,in_right_column).
+clue(bonnie,next_to,statue).
+clue(charlie,in,bedroom).
+clue(daniel,not_in_same_room,edward).
+clue(daniel,in_same_room,bonnie).
+clue(daniel,not_in_corner).
 clue(edward,next_to,closet).
+clue(edward,in_top_row).

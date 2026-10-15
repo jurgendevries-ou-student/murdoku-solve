@@ -1,12 +1,12 @@
 %%%% Clues
-clue(alphonse,in,livingroom).
-clue(bonnie,on,sofa).
-clue(carol,in_row,5).
-clue(daniel,in_column,4).
-clue(emily,not_in,hallway).
-clue(emily,in_row,6).
-clue(emily,object_in_col,box).
-clue(florence,on,sofa).
-clue(florence,no_object_in_row,closet).
-clue(george,not_in_corner).
-clue(george,in,hallway).
+clue(n_persons_on,sofa,2).
+clue(alphonse,in_corner).
+clue(alphonse,alone).
+clue(alphonse,n_north_of,emily,2).
+clue(bonnie,n_east_of,carol,1).
+clue(carol,not_alone).
+clue(daniel,not_next_to,chair).
+clue(emily,n_east_of,carol,5).
+clue(florence,n_west_of,alphonse,5).
+clue(george,not_in_room_with_male).
+clue(george,on,chair).

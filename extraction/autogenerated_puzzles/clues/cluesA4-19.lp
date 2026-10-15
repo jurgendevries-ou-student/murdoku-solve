@@ -1,4 +1,5 @@
 %%%% Clues
-clue(alice,in_column,1).
+clue(alice,n_east_of,bonnie,1).
 clue(bonnie,next_to,statue).
-clue(carol,in_bottom_row).
+clue(carol,next_to,statue).
+clue(carol,no_object_in_row,closet).

@@ -1,7 +1,6 @@
 %%%% Clues
-clue(alphonse,object_in_row,box).
-clue(bernard,in_bottom_row).
-clue(bernard,in_corner).
-clue(carol,only_one_on,sofa).
-clue(carol,in_room_with_male).
-clue(carol,in_column,1).
+clue(n_persons_on,carpet,0).
+clue(alphonse,south_of,carol).
+clue(bernard,object_in_col,box).
+clue(carol,on,sofa).
+clue(carol,n_east_of,alphonse,1).

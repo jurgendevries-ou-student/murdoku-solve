@@ -1,14 +1,13 @@
 %%%% Clues
-clue(alice,in_row,7).
+clue(n_persons_on,bed,2).
+clue(alice,in_same_room,florence).
+clue(alice,n_east_of,grace,1).
 clue(bernard,in,bathroom).
-clue(bernard,on,bed).
-clue(charlie,on,carpet).
-clue(charlie,in_corner).
-clue(daniel,in,hallway).
+clue(charlie,in_bottom_row).
+clue(daniel,no_object_in_col,box).
 clue(edward,next_to,carpet).
-clue(edward,in_column,5).
-clue(florence,next_to,carpet).
-clue(florence,object_in_col,statue).
+clue(florence,not_next_to,box).
+clue(grace,in,livingroom).
 clue(grace,in_corner).
-clue(hannah,object_in_col,statue).
 clue(hannah,in,kitchen).
+clue(hannah,n_north_of,florence,5).

@@ -1,5 +1,6 @@
 %%%% Clues
-clue(alice,next_to,statue).
-clue(alice,in_column,2).
-clue(bernard,in_row,2).
-clue(carol,in_right_column).
+clue(alice,in_corner).
+clue(bernard,not_in,bedroom).
+clue(bernard,in_left_column).
+clue(bernard,no_object_in_row,statue).
+clue(carol,n_east_of,alice,1).

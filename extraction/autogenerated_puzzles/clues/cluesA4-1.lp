@@ -1,6 +1,6 @@
 %%%% Clues
-clue(alphonse,next_to,carpet).
-clue(alphonse,next_to,sofa).
-clue(bernard,in,bedroom).
+clue(alphonse,on,carpet).
 clue(bernard,not_next_to,carpet).
-clue(charlie,on,sofa).
+clue(charlie,south_of,bernard).
+clue(charlie,only_one_on,sofa).
+clue(charlie,n_west_of,alphonse,1).

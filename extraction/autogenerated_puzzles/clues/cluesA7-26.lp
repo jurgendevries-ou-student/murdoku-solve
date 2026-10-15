@@ -1,11 +1,10 @@
 %%%% Clues
-clue(alice,in_same_room,frank).
-clue(bonnie,south_of,daisy).
-clue(bonnie,north_of,edward).
-clue(carol,in_corner).
-clue(daisy,in_column,4).
+clue(alice,not_next_to,statue).
+clue(bonnie,object_in_col,closet).
+clue(carol,in_left_column).
+clue(carol,in_top_row).
 clue(daisy,next_to,bed).
-clue(edward,east_of,carol).
-clue(edward,in,bedroom).
-clue(frank,on,carpet).
-clue(frank,not_next_to,statue).
+clue(edward,next_to,sofa).
+clue(edward,in_bottom_row).
+clue(frank,in_same_room,alice).
+clue(frank,next_to,closet).

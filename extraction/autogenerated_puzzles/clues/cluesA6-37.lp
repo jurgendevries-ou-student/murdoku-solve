@@ -1,11 +1,8 @@
 %%%% Clues
-clue(n_persons_on,bed,1).
-clue(alice,not_on,carpet).
+clue(alice,north_of,bonnie).
+clue(alice,on,bed).
 clue(bonnie,on,sofa).
-clue(bonnie,south_of,carol).
-clue(carol,not_in_corner).
 clue(carol,object_in_col,box).
-clue(daisy,not_on,bed).
-clue(daisy,not_next_to,bed).
-clue(edward,object_in_row,box).
+clue(carol,n_north_of,edward,2).
+clue(daisy,in_corner).
 clue(edward,in_column,1).

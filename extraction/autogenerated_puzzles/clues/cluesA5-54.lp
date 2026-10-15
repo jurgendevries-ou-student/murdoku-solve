@@ -1,6 +1,7 @@
 %%%% Clues
-clue(alice,in_corner).
-clue(bernard,only_one_on,bed).
-clue(charlie,in_column,4).
-clue(charlie,in_row,0).
-clue(daisy,not_next_to,bed).
+clue(alice,in_left_column).
+clue(bernard,not_in_corner).
+clue(bernard,in_column,2).
+clue(charlie,next_to,carpet).
+clue(charlie,north_of,bernard).
+clue(daisy,in_same_room,bernard).

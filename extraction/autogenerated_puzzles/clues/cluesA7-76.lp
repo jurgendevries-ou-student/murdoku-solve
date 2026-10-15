@@ -1,9 +1,12 @@
 %%%% Clues
-clue(alphonse,in_column,5).
-clue(alphonse,in_top_row).
-clue(bonnie,in_row,2).
-clue(charlie,in,garage).
-clue(daisy,in_row,3).
-clue(daisy,in_same_room,edward).
-clue(edward,not_next_to,carpet).
-clue(florence,in_row,5).
+clue(n_persons_on,carpet,1).
+clue(alphonse,in_corner).
+clue(alphonse,object_in_col,closet).
+clue(bonnie,n_east_of,charlie,1).
+clue(bonnie,in_corner).
+clue(bonnie,in,livingroom).
+clue(charlie,not_next_to,sofa).
+clue(daisy,not_in_same_room,alphonse).
+clue(edward,west_of,daisy).
+clue(edward,next_to,bed).
+clue(florence,next_to,box).

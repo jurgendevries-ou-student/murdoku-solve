@@ -1,7 +1,8 @@
 %%%% Clues
-clue(alphonse,in_bottom_row).
+clue(alphonse,in_corner).
+clue(alphonse,object_in_same_room,chair).
 clue(bonnie,next_to,closet).
-clue(charlie,in_column,4).
-clue(charlie,in_row,1).
-clue(daniel,object_in_row,box).
-clue(daniel,in_column,2).
+clue(charlie,n_south_of,daniel,1).
+clue(charlie,in_corner).
+clue(daniel,no_object_in_col,box).
+clue(daniel,n_east_of,bonnie,2).

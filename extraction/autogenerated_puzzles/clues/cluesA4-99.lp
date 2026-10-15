@@ -1,5 +1,5 @@
 %%%% Clues
-clue(alphonse,in_top_row).
-clue(bonnie,west_of,alphonse).
-clue(charlie,in_right_column).
-clue(charlie,in_row,2).
+clue(alphonse,in,kitchen).
+clue(alphonse,n_north_of,charlie,2).
+clue(bonnie,alone).
+clue(charlie,on,chair).

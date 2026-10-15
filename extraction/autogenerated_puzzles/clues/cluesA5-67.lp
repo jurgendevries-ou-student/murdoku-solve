@@ -1,7 +1,8 @@
 %%%% Clues
-clue(alphonse,east_of,daisy).
-clue(alphonse,in_same_room,daisy).
-clue(alphonse,in_row,2).
-clue(bonnie,next_to,statue).
+clue(alphonse,no_object_in_col,statue).
+clue(bonnie,in_corner).
+clue(carol,not_next_to,carpet).
 clue(carol,not_next_to,closet).
-clue(daisy,object_in_col,closet).
+clue(daisy,not_next_to,bed).
+clue(daisy,n_north_of,bonnie,1).
+clue(daisy,not_next_to,closet).

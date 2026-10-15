@@ -1,12 +1,13 @@
 %%%% Clues
-clue(alphonse,in_corner).
-clue(bernard,not_in_same_room,alphonse).
-clue(bernard,in_row,5).
-clue(bernard,not_alone).
-clue(charlie,on,sofa).
-clue(daisy,in,hallway).
-clue(emily,in_corner).
+clue(alphonse,not_in,garage).
+clue(bernard,object_in_col,statue).
+clue(bernard,next_to,statue).
+clue(charlie,next_to,sofa).
+clue(charlie,not_alone).
+clue(daisy,alone).
+clue(daisy,n_north_of,alphonse,1).
+clue(daisy,in_corner).
 clue(emily,in,bedroom).
 clue(florence,in,kitchen).
-clue(florence,next_to,bed).
 clue(florence,not_in_corner).
+clue(florence,next_to,bed).

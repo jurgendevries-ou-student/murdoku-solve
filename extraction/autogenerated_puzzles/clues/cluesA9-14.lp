@@ -1,13 +1,16 @@
 %%%% Clues
-clue(n_persons_on,chair,1).
-clue(alphonse,object_in_col,box).
+clue(n_persons_on,sofa,2).
+clue(alphonse,in,livingroom).
+clue(alphonse,next_to,box).
+clue(bonnie,west_of,henry).
 clue(bonnie,on,sofa).
-clue(charlie,north_of,frank).
+clue(charlie,in,livingroom).
+clue(charlie,n_west_of,george,1).
+clue(daisy,next_to,sofa).
 clue(daisy,next_to,closet).
-clue(edward,next_to,statue).
-clue(frank,in_left_column).
-clue(frank,in_same_room,daisy).
-clue(george,south_of,alphonse).
-clue(george,next_to_with_someone_else,closet).
-clue(george,in_right_column).
-clue(henry,in,bathroom).
+clue(edward,not_alone).
+clue(edward,not_in_room_with_female).
+clue(edward,in_column,3).
+clue(frank,in,hallway).
+clue(george,next_to,closet).
+clue(henry,not_in_room_with_female).

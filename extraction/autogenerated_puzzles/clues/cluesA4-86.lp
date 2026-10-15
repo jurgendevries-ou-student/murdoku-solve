@@ -1,7 +1,5 @@
 %%%% Clues
-clue(alphonse,in,bedroom).
-clue(alphonse,object_in_col,box).
-clue(bernard,in_corner).
-clue(charlie,not_in_same_room,bernard).
-clue(charlie,in_top_row).
-clue(charlie,in_column,2).
+clue(alphonse,in_left_column).
+clue(bernard,n_south_of,charlie,3).
+clue(bernard,next_to,statue).
+clue(charlie,someone_else_in_room_on,carpet).

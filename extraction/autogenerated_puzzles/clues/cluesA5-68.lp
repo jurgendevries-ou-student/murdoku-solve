@@ -1,6 +1,7 @@
 %%%% Clues
-clue(alice,next_to,sofa).
-clue(bernard,not_in_corner).
-clue(bernard,not_next_to,box).
+clue(alice,n_north_of,bernard,2).
+clue(alice,n_south_of,daisy,1).
+clue(alice,in_right_column).
+clue(bernard,n_east_of,charlie,3).
 clue(charlie,in,hallway).
-clue(daisy,in_top_row).
+clue(daisy,in_corner).

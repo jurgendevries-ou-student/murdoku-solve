@@ -1,9 +1,8 @@
 %%%% Clues
-clue(alphonse,in,bedroom).
+clue(n_persons_on,bed,0).
+clue(alphonse,next_to,box).
 clue(bernard,on,chair).
-clue(charlie,not_in,bedroom).
-clue(daniel,in_same_room,charlie).
-clue(daniel,in_same_room,bernard).
-clue(daniel,in_bottom_row).
+clue(bernard,east_of,charlie).
+clue(charlie,in_same_room,daniel).
+clue(daniel,in_room_with_multiple_males,2).
 clue(emily,next_to,statue).
-clue(emily,in_left_column).

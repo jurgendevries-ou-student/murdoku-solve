@@ -1,4 +1,5 @@
 %%%% Clues
-clue(alphonse,next_to,statue).
-clue(bonnie,in_top_row).
-clue(charlie,in_corner).
+clue(n_persons_on,chair,0).
+clue(alphonse,in_room_with_female).
+clue(bonnie,not_next_to,chair).
+clue(charlie,n_east_of,alphonse,1).

@@ -1,18 +1,15 @@
 %%%% Clues
 clue(n_persons_on,carpet,0).
-clue(alice,in,kitchen).
-clue(alice,not_in_same_room,henry).
+clue(n_persons_on,bed,0).
+clue(alice,in_room_with_multiple_females,2).
+clue(alice,no_object_in_row,closet).
 clue(bonnie,next_to,closet).
-clue(bonnie,not_in_corner).
-clue(carol,not_in_room_with_female).
-clue(carol,in_row,6).
-clue(carol,in,office).
+clue(carol,next_to,box).
+clue(daniel,not_in,bathroom).
+clue(daniel,not_alone).
 clue(daniel,in_bottom_row).
-clue(daniel,next_to,bed).
-clue(emily,north_of,alice).
+clue(emily,in,bedroom).
 clue(emily,not_in_corner).
-clue(florence,in,diningroom).
-clue(florence,not_in_corner).
-clue(grace,in_same_room,bonnie).
-clue(grace,not_next_to,carpet).
+clue(florence,not_in,garage).
+clue(grace,n_south_of,bonnie,1).
 clue(henry,on,sofa).

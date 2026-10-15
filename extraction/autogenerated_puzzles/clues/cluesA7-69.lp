@@ -1,10 +1,9 @@
 %%%% Clues
-clue(alice,alone).
-clue(alice,in_row,2).
-clue(bernard,south_of,emily).
-clue(charlie,west_of,emily).
-clue(daniel,in,bedroom).
-clue(daniel,in_right_column).
-clue(emily,next_to_with_someone_else,carpet).
+clue(alice,n_east_of,charlie,1).
+clue(alice,next_to,closet).
+clue(bernard,in_bottom_row).
+clue(charlie,in_left_column).
+clue(daniel,in_top_row).
+clue(daniel,n_east_of,frank,4).
 clue(emily,only_one_on,bed).
-clue(frank,in_column,2).
+clue(frank,next_to,carpet).

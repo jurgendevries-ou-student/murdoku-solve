@@ -1,5 +1,5 @@
 %%%% Clues
-clue(alphonse,in_row,0).
-clue(bernard,in_bottom_row).
-clue(bernard,in_column,3).
-clue(carol,in_corner).
+clue(alphonse,in,kitchen).
+clue(bernard,in_right_column).
+clue(carol,alone).
+clue(carol,object_in_row,box).

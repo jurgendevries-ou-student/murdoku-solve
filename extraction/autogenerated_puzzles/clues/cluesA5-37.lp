@@ -1,6 +1,7 @@
 %%%% Clues
-clue(alice,in_top_row).
-clue(bernard,in,livingroom).
-clue(bernard,in_right_column).
-clue(carol,object_in_col,box).
-clue(daisy,in_row,2).
+clue(alice,in_same_room,bernard).
+clue(alice,in_left_column).
+clue(alice,in_corner).
+clue(bernard,in_corner).
+clue(carol,on,carpet).
+clue(daisy,south_of,bernard).

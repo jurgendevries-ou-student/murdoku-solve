@@ -1,5 +1,6 @@
 %%%% Clues
+clue(alice,south_of,carol).
 clue(alice,alone).
-clue(bonnie,in_row,0).
+clue(bonnie,next_to,bed).
+clue(carol,south_of,bonnie).
 clue(carol,in_right_column).
-clue(carol,in,kitchen).

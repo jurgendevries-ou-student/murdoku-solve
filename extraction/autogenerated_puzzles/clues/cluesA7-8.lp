@@ -1,14 +1,10 @@
 %%%% Clues
-clue(n_persons_on,carpet,3).
-clue(alice,someone_else_in_room_on,carpet).
-clue(alice,in,bathroom).
-clue(bernard,in_same_room,daniel).
-clue(carol,not_in_room_with_female).
-clue(carol,on,carpet).
-clue(daniel,in_row,2).
-clue(daniel,next_to_with_someone_else,carpet).
-clue(emily,in,kitchen).
-clue(emily,not_next_to,statue).
+clue(alice,in_corner).
+clue(alice,n_south_of,emily,2).
+clue(bernard,next_to_with_someone_else,carpet).
+clue(bernard,n_north_of,daniel,1).
+clue(carol,in,bedroom).
+clue(daniel,n_east_of,emily,2).
 clue(emily,on,carpet).
-clue(frank,north_of,daniel).
-clue(frank,not_in_corner).
+clue(frank,n_east_of,alice,2).
+clue(frank,in_top_row).

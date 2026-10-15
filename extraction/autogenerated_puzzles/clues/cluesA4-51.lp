@@ -1,6 +1,6 @@
 %%%% Clues
-clue(alphonse,no_object_in_col,closet).
-clue(alphonse,on,chair).
+clue(alphonse,object_in_row,closet).
 clue(bernard,next_to,chair).
-clue(charlie,in_right_column).
+clue(charlie,in,livingroom).
+clue(charlie,n_south_of,bernard,1).
 clue(charlie,not_in_corner).

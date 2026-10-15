@@ -1,9 +1,9 @@
 %%%% Clues
-clue(n_persons_on,carpet,0).
 clue(alice,alone).
-clue(bonnie,in,bathroom).
-clue(charlie,in,hallway).
-clue(charlie,south_of,alice).
-clue(daniel,not_in_corner).
-clue(emily,not_in_corner).
+clue(alice,object_in_same_room,carpet).
+clue(alice,object_in_col,statue).
+clue(bonnie,next_to,chair).
+clue(charlie,in_row,2).
+clue(daniel,in_left_column).
 clue(emily,next_to,chair).
+clue(emily,not_in_corner).

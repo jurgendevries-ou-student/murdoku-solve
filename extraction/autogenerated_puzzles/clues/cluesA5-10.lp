@@ -1,6 +1,6 @@
 %%%% Clues
-clue(alice,in_row,0).
+clue(alice,n_east_of,bonnie,1).
+clue(alice,not_in,bedroom).
 clue(bonnie,not_next_to,closet).
 clue(charlie,in_corner).
-clue(daniel,next_to,closet).
-clue(daniel,someone_else_in_room_on,carpet).
+clue(daniel,n_west_of,charlie,2).

@@ -1,6 +1,5 @@
 %%%% Clues
-clue(n_persons_on,chair,1).
-clue(alphonse,in_top_row).
-clue(bonnie,in,bedroom).
-clue(bonnie,object_in_row,statue).
-clue(carol,in_bottom_row).
+clue(alphonse,next_to,closet).
+clue(bonnie,in_column,1).
+clue(bonnie,not_in_corner).
+clue(carol,not_next_to,chair).

@@ -1,8 +1,8 @@
 %%%% Clues
-clue(alphonse,in_row,3).
-clue(bonnie,in,bedroom).
-clue(charlie,not_in_same_room,edward).
+clue(alphonse,next_to,statue).
+clue(bonnie,next_to,closet).
 clue(charlie,next_to,sofa).
-clue(daniel,object_in_col,box).
-clue(daniel,in_row,5).
-clue(edward,in_column,4).
+clue(charlie,alone).
+clue(daniel,in_bottom_row).
+clue(daniel,n_west_of,edward,3).
+clue(edward,not_next_to,carpet).

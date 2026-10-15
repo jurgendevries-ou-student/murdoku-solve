@@ -1,11 +1,9 @@
 %%%% Clues
-clue(alice,in_row,3).
-clue(bernard,in,bathroom).
-clue(bernard,no_object_in_col,statue).
+clue(alice,in,garage).
+clue(alice,alone).
+clue(bernard,no_object_in_row,box).
 clue(carol,not_in_room_with_female).
-clue(carol,not_in_room_with_male).
-clue(daniel,in_corner).
-clue(daniel,in,hallway).
-clue(daniel,not_alone).
-clue(emily,next_to_with_someone_else,sofa).
-clue(emily,on,sofa).
+clue(daniel,in_bottom_row).
+clue(emily,in_same_room,bernard).
+clue(emily,west_of,daniel).
+clue(emily,next_to,bed).

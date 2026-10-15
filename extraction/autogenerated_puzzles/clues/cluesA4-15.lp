@@ -1,5 +1,5 @@
 %%%% Clues
-clue(alphonse,in_row,2).
-clue(alphonse,in_right_column).
-clue(bernard,object_in_row,closet).
-clue(charlie,in_same_room,bernard).
+clue(alphonse,not_next_to,box).
+clue(alphonse,n_east_of,bernard,3).
+clue(bernard,next_to,chair).
+clue(charlie,south_of,alphonse).

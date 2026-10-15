@@ -1,16 +1,15 @@
 %%%% Clues
-clue(n_persons_on,carpet,0).
-clue(alphonse,not_next_to,box).
+clue(alphonse,not_alone).
 clue(bernard,next_to,chair).
-clue(charlie,south_of,bernard).
-clue(charlie,south_of,alphonse).
-clue(charlie,object_in_col,closet).
-clue(charlie,on,sofa).
-clue(daniel,next_to,chair).
+clue(bernard,no_object_in_col,closet).
+clue(charlie,in_column,6).
+clue(charlie,n_south_of,alphonse,1).
+clue(daniel,not_in_corner).
 clue(edward,in,kitchen).
-clue(frank,in_row,3).
+clue(frank,someone_else_in_room_next_to,sofa).
 clue(frank,not_in_corner).
-clue(grace,next_to,carpet).
+clue(grace,north_of,hannah).
+clue(grace,not_alone).
+clue(hannah,in,bedroom).
+clue(hannah,alone).
 clue(hannah,not_in_corner).
-clue(hannah,no_object_in_row,statue).
-clue(hannah,next_to,box).

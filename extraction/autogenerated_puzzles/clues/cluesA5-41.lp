@@ -1,7 +1,7 @@
 %%%% Clues
-clue(alice,in,bathroom).
-clue(bonnie,in,livingroom).
-clue(bonnie,next_to,bed).
-clue(charlie,not_alone).
-clue(charlie,in_row,0).
+clue(alice,in_column,0).
+clue(bonnie,in_right_column).
+clue(bonnie,not_in_corner).
+clue(charlie,next_to,sofa).
+clue(charlie,in_corner).
 clue(daisy,next_to,bed).

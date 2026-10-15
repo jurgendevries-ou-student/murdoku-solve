@@ -1,8 +1,8 @@
 %%%% Clues
-clue(alice,not_in_corner).
+clue(alice,south_of,carol).
+clue(alice,on,carpet).
 clue(bonnie,not_in_corner).
-clue(bonnie,south_of,carol).
-clue(bonnie,in_column,3).
-clue(carol,in_column,0).
-clue(daniel,in_column,4).
-clue(daniel,next_to,bed).
+clue(bonnie,west_of,daniel).
+clue(bonnie,n_east_of,alice,2).
+clue(carol,in_corner).
+clue(daniel,in_bottom_row).

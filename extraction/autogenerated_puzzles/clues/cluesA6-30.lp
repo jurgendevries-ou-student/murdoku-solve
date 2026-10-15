@@ -1,9 +1,9 @@
 %%%% Clues
-clue(n_persons_on,carpet,3).
-clue(alphonse,in_left_column).
-clue(bernard,in,bathroom).
-clue(bernard,in_column,1).
-clue(carol,not_on,sofa).
-clue(daniel,in,livingroom).
+clue(alphonse,in_same_room,daniel).
+clue(bernard,in_row,0).
+clue(carol,alone).
+clue(carol,in_corner).
+clue(carol,n_east_of,bernard,1).
+clue(daniel,not_next_to,carpet).
 clue(edward,next_to,closet).
-clue(edward,in_row,5).
+clue(edward,in_bottom_row).

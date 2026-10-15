@@ -1,9 +1,9 @@
 %%%% Clues
-clue(no_empty_room).
-clue(alice,on,chair).
-clue(bonnie,in_column,4).
+clue(alice,next_to,bed).
 clue(bonnie,in_corner).
-clue(carol,not_in,hallway).
-clue(daisy,in_row,0).
-clue(emily,not_next_to,sofa).
-clue(emily,not_next_to,statue).
+clue(bonnie,object_in_row,closet).
+clue(bonnie,not_in_room_with_female).
+clue(carol,in_right_column).
+clue(daisy,n_north_of,emily,3).
+clue(emily,not_next_to,bed).
+clue(emily,not_next_to,closet).

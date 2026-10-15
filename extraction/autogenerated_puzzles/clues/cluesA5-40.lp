@@ -1,7 +1,7 @@
 %%%% Clues
-clue(alice,in_bottom_row).
+clue(alice,in,kitchen).
+clue(alice,object_in_row,box).
+clue(bonnie,object_in_col,box).
 clue(bonnie,on,sofa).
-clue(bonnie,not_next_to,chair).
-clue(carol,next_to,chair).
-clue(daisy,only_one_on,chair).
-clue(daisy,in_row,3).
+clue(carol,in_top_row).
+clue(daisy,on,chair).

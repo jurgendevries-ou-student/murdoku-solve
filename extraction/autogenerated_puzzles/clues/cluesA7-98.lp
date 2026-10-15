@@ -1,10 +1,10 @@
 %%%% Clues
-clue(alphonse,in_bottom_row).
-clue(alphonse,in_column,5).
-clue(bonnie,on,chair).
-clue(charlie,not_alone).
-clue(daisy,in,kitchen).
-clue(daisy,in_column,3).
-clue(daisy,north_of,charlie).
-clue(emily,not_in_corner).
+clue(alphonse,in_corner).
+clue(bonnie,next_to,bed).
+clue(charlie,n_south_of,daisy,1).
+clue(charlie,object_in_row,statue).
+clue(daisy,east_of,bonnie).
+clue(emily,next_to,box).
+clue(emily,not_in_room_with_female).
+clue(frank,in_top_row).
 clue(frank,next_to,bed).

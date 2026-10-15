@@ -1,16 +1,14 @@
 %%%% Clues
-clue(n_persons_on,sofa,1).
-clue(alice,in_corner).
+clue(n_persons_on,chair,0).
 clue(alice,only_one_on,carpet).
-clue(bernard,in_same_room,daniel).
 clue(bernard,in_corner).
-clue(carol,in,garage).
-clue(carol,in_row,3).
+clue(carol,n_east_of,alice,3).
+clue(daniel,in_same_room,bernard).
 clue(daniel,next_to,box).
-clue(edward,no_object_in_row,box).
-clue(frank,not_in_room_with_female).
-clue(frank,in_column,0).
-clue(grace,next_to,sofa).
-clue(hannah,in_column,4).
-clue(hannah,not_in_same_room,daniel).
-clue(hannah,not_next_to,sofa).
+clue(daniel,no_object_in_row,box).
+clue(edward,next_to,carpet).
+clue(edward,south_of,hannah).
+clue(frank,in,kitchen).
+clue(frank,n_south_of,carol,1).
+clue(grace,n_east_of,edward,5).
+clue(hannah,not_next_to,chair).

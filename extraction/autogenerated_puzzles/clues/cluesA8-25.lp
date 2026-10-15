@@ -1,13 +1,15 @@
 %%%% Clues
-clue(n_persons_on,sofa,1).
-clue(alice,in,bathroom).
-clue(alice,in_row,1).
-clue(bonnie,no_object_in_row,box).
+clue(alice,not_in_same_room,frank).
+clue(alice,not_alone).
+clue(alice,n_east_of,emily,2).
+clue(bonnie,not_in_corner).
 clue(charlie,on,carpet).
-clue(charlie,in_column,5).
-clue(daisy,in_right_column).
-clue(daisy,north_of,emily).
-clue(emily,in,livingroom).
-clue(emily,in_row,6).
+clue(charlie,n_east_of,bonnie,2).
+clue(daisy,in_column,7).
+clue(daisy,not_next_to,closet).
+clue(daisy,not_in_same_room,george).
+clue(daisy,not_in_corner).
+clue(emily,n_south_of,daisy,2).
+clue(frank,south_of,alice).
 clue(frank,next_to,bed).
-clue(george,in_same_room,alice).
+clue(george,not_in,hallway).

@@ -1,12 +1,11 @@
 %%%% Clues
-clue(alice,in,livingroom).
-clue(bernard,not_next_to,sofa).
-clue(bernard,in_column,2).
-clue(bernard,not_in_corner).
+clue(n_persons_on,sofa,2).
+clue(alice,n_south_of,bernard,2).
+clue(bernard,in_same_room,florence).
 clue(carol,next_to,chair).
+clue(daisy,in_corner).
 clue(daisy,in,kitchen).
-clue(daisy,east_of,edward).
-clue(edward,in_corner).
-clue(florence,in,bathroom).
-clue(grace,not_alone).
-clue(grace,on,sofa).
+clue(daisy,in_row,4).
+clue(edward,in,kitchen).
+clue(florence,not_alone).
+clue(grace,next_to,sofa).

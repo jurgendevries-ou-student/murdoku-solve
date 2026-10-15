@@ -1,11 +1,9 @@
 %%%% Clues
-clue(n_persons_on,carpet,3).
-clue(alphonse,not_in_corner).
-clue(bonnie,north_of,daisy).
+clue(n_persons_on,bed,1).
+clue(alphonse,in_same_room,emily).
+clue(alphonse,north_of,daisy).
 clue(bonnie,on,carpet).
-clue(charlie,not_next_to,bed).
-clue(charlie,in,livingroom).
+clue(bonnie,in_corner).
 clue(charlie,on,carpet).
-clue(daisy,in_same_room,emily).
 clue(daisy,in_column,2).
-clue(emily,in_right_column).
+clue(emily,in_bottom_row).

@@ -1,9 +1,8 @@
 %%%% Clues
-clue(alphonse,in,livingroom).
-clue(bonnie,next_to,box).
-clue(bonnie,in,bedroom).
-clue(carol,north_of,alphonse).
-clue(carol,in,bedroom).
-clue(carol,object_in_col,box).
-clue(daniel,not_next_to,chair).
-clue(daniel,in_room_with_male).
+clue(alphonse,alone).
+clue(alphonse,not_next_to,statue).
+clue(bonnie,east_of,alphonse).
+clue(bonnie,not_in_corner).
+clue(carol,not_next_to,chair).
+clue(daniel,object_in_col,box).
+clue(daniel,in,kitchen).

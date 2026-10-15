@@ -1,9 +1,8 @@
 %%%% Clues
 clue(alice,next_to,closet).
-clue(bonnie,on,carpet).
-clue(carol,in_bottom_row).
-clue(carol,not_alone).
+clue(bonnie,next_to,carpet).
+clue(carol,next_to_with_someone_else,statue).
 clue(daniel,next_to,box).
-clue(edward,in_column,0).
-clue(florence,not_in_same_room,edward).
-clue(florence,in_column,1).
+clue(daniel,n_north_of,carol,5).
+clue(edward,in_left_column).
+clue(florence,in_corner).

@@ -1,9 +1,8 @@
 %%%% Clues
-clue(alphonse,north_of,bonnie).
-clue(bonnie,in,bathroom).
-clue(charlie,not_in_corner).
-clue(charlie,object_in_row,closet).
-clue(daniel,not_on,bed).
-clue(daniel,not_next_to,bed).
-clue(daniel,someone_else_in_room_on,carpet).
-clue(daniel,not_in_corner).
+clue(n_persons_on,carpet,2).
+clue(alphonse,in_corner).
+clue(alphonse,next_to,bed).
+clue(bonnie,in_right_column).
+clue(charlie,not_next_to,closet).
+clue(daniel,n_south_of,charlie,3).
+clue(daniel,no_object_in_col,closet).

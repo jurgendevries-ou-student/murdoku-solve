@@ -1,8 +1,8 @@
 %%%% Clues
-clue(n_persons_on,sofa,1).
-clue(alice,in_corner).
-clue(alice,in_row,0).
-clue(bernard,alone).
-clue(charlie,in,bedroom).
-clue(charlie,in_row,2).
-clue(daisy,in_left_column).
+clue(alice,in_top_row).
+clue(alice,not_in_room_with_female).
+clue(alice,n_north_of,charlie,2).
+clue(alice,not_next_to,closet).
+clue(bernard,in_row,4).
+clue(charlie,in_column,3).
+clue(daisy,in,livingroom).

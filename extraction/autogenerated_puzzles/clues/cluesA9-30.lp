@@ -1,14 +1,15 @@
 %%%% Clues
-clue(alphonse,object_in_col,closet).
-clue(bonnie,no_object_in_row,box).
-clue(bonnie,next_to,bed).
-clue(charlie,not_next_to,closet).
-clue(charlie,object_in_col,box).
-clue(daniel,in_room_with_multiple_males,2).
-clue(daniel,next_to,statue).
-clue(emily,object_in_col,statue).
-clue(frank,next_to,closet).
+clue(n_persons_on,carpet,0).
+clue(alphonse,not_alone).
+clue(bonnie,someone_else_in_room_next_to,box).
+clue(bonnie,west_of,henry).
+clue(charlie,in_same_room,emily).
+clue(charlie,no_object_in_col,statue).
+clue(daniel,object_in_col,box).
+clue(daniel,not_next_to,chair).
+clue(emily,in,livingroom).
+clue(frank,in_room_with_male).
+clue(frank,in_row,8).
 clue(grace,in,livingroom).
-clue(grace,in_column,7).
-clue(henry,next_to,closet).
-clue(henry,in_row,5).
+clue(grace,in_row,0).
+clue(henry,in,garage).

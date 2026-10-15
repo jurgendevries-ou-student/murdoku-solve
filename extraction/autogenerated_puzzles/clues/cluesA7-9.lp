@@ -1,11 +1,9 @@
 %%%% Clues
 clue(alphonse,in,hallway).
-clue(bernard,in_room_with_female).
-clue(bernard,in_corner).
-clue(carol,in,bathroom).
-clue(carol,not_in_room_with_female).
-clue(daisy,in_row,0).
-clue(emily,object_in_col,closet).
-clue(emily,next_to,statue).
-clue(frank,in_same_room,daisy).
-clue(frank,next_to,closet).
+clue(alphonse,not_in_corner).
+clue(bernard,not_alone).
+clue(carol,in_bottom_row).
+clue(daisy,next_to,box).
+clue(emily,next_to_with_someone_else,statue).
+clue(emily,no_object_in_row,statue).
+clue(frank,n_east_of,alphonse,1).

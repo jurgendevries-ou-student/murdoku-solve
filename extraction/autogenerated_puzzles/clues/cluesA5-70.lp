@@ -1,6 +1,6 @@
 %%%% Clues
-clue(alice,in_column,4).
-clue(bernard,next_to,carpet).
-clue(charlie,in_bottom_row).
+clue(alice,next_to,carpet).
+clue(bernard,n_east_of,charlie,2).
+clue(bernard,n_south_of,daniel,1).
+clue(charlie,in_same_room,bernard).
 clue(daniel,in_left_column).
-clue(daniel,in_row,1).

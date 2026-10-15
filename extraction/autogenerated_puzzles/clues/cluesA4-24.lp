@@ -1,4 +1,5 @@
 %%%% Clues
-clue(alice,someone_else_in_room_on,bed).
-clue(bonnie,in_left_column).
-clue(charlie,next_to,box).
+clue(n_persons_on,carpet,0).
+clue(alice,in_bottom_row).
+clue(bonnie,not_next_to,carpet).
+clue(charlie,in,bathroom).

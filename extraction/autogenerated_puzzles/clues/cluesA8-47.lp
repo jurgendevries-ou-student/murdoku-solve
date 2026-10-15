@@ -1,13 +1,13 @@
 %%%% Clues
 clue(n_persons_on,carpet,0).
 clue(alice,object_in_col,statue).
-clue(alice,alone).
-clue(alice,in_row,6).
-clue(bonnie,object_in_col,closet).
-clue(bonnie,in_top_row).
-clue(charlie,in,bathroom).
+clue(alice,in_corner).
+clue(bonnie,in_column,2).
 clue(charlie,next_to,closet).
-clue(daniel,in_left_column).
-clue(edward,in_column,7).
+clue(charlie,in_same_room,bonnie).
+clue(daniel,in,kitchen).
+clue(edward,in_same_room,florence).
+clue(edward,in_right_column).
 clue(florence,in_bottom_row).
-clue(grace,not_next_to,sofa).
+clue(grace,object_in_col,closet).
+clue(grace,not_in_corner).

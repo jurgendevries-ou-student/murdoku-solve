@@ -1,10 +1,9 @@
 %%%% Clues
-clue(n_persons_on,sofa,2).
-clue(alice,not_in_room_with_female).
-clue(alice,not_in_corner).
-clue(bernard,not_next_to,sofa).
-clue(carol,not_in,kitchen).
-clue(daisy,in_row,5).
-clue(edward,west_of,bernard).
-clue(edward,east_of,alice).
-clue(edward,west_of,carol).
+clue(alice,n_west_of,bernard,3).
+clue(bernard,not_in_corner).
+clue(carol,alone).
+clue(carol,in_column,4).
+clue(daisy,in_corner).
+clue(daisy,n_south_of,bernard,3).
+clue(daisy,not_in_same_room,edward).
+clue(edward,on,sofa).

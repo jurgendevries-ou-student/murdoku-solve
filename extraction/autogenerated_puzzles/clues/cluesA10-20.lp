@@ -1,13 +1,16 @@
 %%%% Clues
+clue(n_persons_on,bed,1).
 clue(alphonse,in,garage).
-clue(alphonse,not_next_to,sofa).
-clue(bonnie,in_column,1).
-clue(carol,in,office).
+clue(bonnie,in_same_room,grace).
+clue(bonnie,west_of,alphonse).
+clue(carol,in_column,0).
+clue(daniel,in_same_room,florence).
 clue(daniel,on,carpet).
-clue(emily,on,bed).
-clue(florence,in_row,1).
-clue(florence,on,carpet).
-clue(grace,in_row,9).
-clue(grace,in_same_room,bonnie).
-clue(hannah,in,kitchen).
-clue(isla,next_to,box).
+clue(emily,in,bedroom).
+clue(florence,object_in_row,closet).
+clue(florence,next_to,carpet).
+clue(grace,not_in_corner).
+clue(grace,next_to,box).
+clue(hannah,on,chair).
+clue(isla,in_top_row).
+clue(isla,in,hallway).

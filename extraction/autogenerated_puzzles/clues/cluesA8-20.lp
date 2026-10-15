@@ -1,11 +1,11 @@
 %%%% Clues
-clue(n_persons_on,carpet,0).
-clue(alice,north_of,daisy).
-clue(bonnie,in_corner).
+clue(n_persons_on,chair,1).
+clue(alice,n_north_of,edward,4).
+clue(bonnie,next_to,closet).
+clue(bonnie,in_right_column).
 clue(bonnie,in,bathroom).
-clue(charlie,on,chair).
-clue(daisy,not_next_to,chair).
+clue(charlie,in_left_column).
+clue(daisy,not_in_corner).
 clue(edward,in,hallway).
-clue(frank,in_same_room,george).
 clue(frank,next_to,sofa).
-clue(george,in_column,5).
+clue(george,in_room_with_multiple_males,2).

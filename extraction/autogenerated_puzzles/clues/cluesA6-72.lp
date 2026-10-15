@@ -1,8 +1,8 @@
 %%%% Clues
-clue(alice,in_column,5).
-clue(bernard,only_one_on,bed).
+clue(alice,not_in_room_with_male).
+clue(bernard,on,bed).
 clue(carol,not_in_corner).
-clue(daniel,object_in_row,statue).
-clue(daniel,in_column,2).
-clue(edward,not_next_to,bed).
-clue(edward,in_row,2).
+clue(daniel,next_to,statue).
+clue(edward,in_column,4).
+clue(edward,not_in_corner).
+clue(edward,no_object_in_row,closet).

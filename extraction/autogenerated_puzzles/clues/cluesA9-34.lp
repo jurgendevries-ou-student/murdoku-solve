@@ -1,13 +1,16 @@
 %%%% Clues
-clue(alphonse,next_to,closet).
+clue(alphonse,alone).
 clue(alphonse,not_in_corner).
 clue(bernard,on,carpet).
-clue(bernard,alone).
-clue(charlie,not_next_to,bed).
-clue(daisy,in_row,6).
-clue(daisy,alone).
-clue(edward,in,garage).
-clue(florence,in_same_room,hannah).
-clue(george,in_left_column).
-clue(george,in_bottom_row).
-clue(hannah,next_to,closet).
+clue(bernard,in_row,5).
+clue(charlie,in,diningroom).
+clue(charlie,not_in_corner).
+clue(daisy,next_to,sofa).
+clue(daisy,in,kitchen).
+clue(edward,next_to,closet).
+clue(edward,east_of,george).
+clue(florence,next_to,bed).
+clue(george,south_of,alphonse).
+clue(george,in_corner).
+clue(hannah,not_in_corner).
+clue(hannah,in_same_room,florence).

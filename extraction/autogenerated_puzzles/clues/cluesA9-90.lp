@@ -1,14 +1,16 @@
 %%%% Clues
-clue(alphonse,next_to,box).
-clue(bonnie,next_to,box).
+clue(alphonse,in_same_room,carol).
+clue(bonnie,alone).
 clue(bonnie,in_bottom_row).
+clue(carol,object_in_col,closet).
 clue(carol,next_to,box).
-clue(carol,no_object_in_col,box).
 clue(daisy,in,kitchen).
-clue(edward,in_left_column).
-clue(florence,not_in_same_room,hannah).
-clue(florence,not_next_to,closet).
-clue(grace,in_row,4).
-clue(grace,no_object_in_col,statue).
+clue(edward,n_west_of,florence,3).
+clue(edward,alone).
+clue(florence,west_of,bonnie).
+clue(florence,in_same_room,grace).
+clue(florence,n_west_of,daisy,2).
 clue(grace,in_corner).
-clue(hannah,in_row,7).
+clue(grace,object_in_same_room,closet).
+clue(grace,no_object_in_col,statue).
+clue(hannah,object_in_col,closet).

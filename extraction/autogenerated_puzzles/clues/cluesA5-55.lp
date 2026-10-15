@@ -1,7 +1,8 @@
 %%%% Clues
-clue(alphonse,in_same_room,daniel).
+clue(n_persons_on,chair,1).
+clue(alphonse,not_in_corner).
 clue(bonnie,not_in_corner).
-clue(bonnie,not_next_to,chair).
+clue(carol,in_same_room,alphonse).
 clue(carol,next_to,chair).
-clue(carol,in_column,1).
-clue(daniel,next_to_with_someone_else,statue).
+clue(carol,next_to_with_someone_else,statue).
+clue(daniel,next_to,statue).

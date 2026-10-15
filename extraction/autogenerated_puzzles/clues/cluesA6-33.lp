@@ -1,7 +1,8 @@
 %%%% Clues
-clue(alice,next_to,sofa).
+clue(alice,n_west_of,bonnie,3).
+clue(alice,east_of,emily).
 clue(bonnie,next_to,box).
 clue(bonnie,in_bottom_row).
 clue(charlie,next_to,box).
-clue(daisy,in_same_room,alice).
-clue(emily,in_left_column).
+clue(daisy,not_in_same_room,emily).
+clue(emily,next_to,closet).

@@ -1,7 +1,7 @@
 %%%% Clues
 clue(alphonse,next_to,statue).
-clue(bernard,not_in_same_room,daniel).
-clue(bernard,in_column,4).
-clue(carol,object_in_col,closet).
-clue(daniel,not_in_room_with_female).
-clue(daniel,in_left_column).
+clue(alphonse,someone_else_in_room_next_to,statue).
+clue(bernard,north_of,alphonse).
+clue(carol,next_to,bed).
+clue(daniel,not_next_to,chair).
+clue(daniel,next_to,closet).

@@ -1,7 +1,6 @@
 %%%% Clues
-clue(no_empty_room).
-clue(alice,next_to,statue).
-clue(bonnie,not_next_to,carpet).
-clue(carol,in_row,2).
-clue(carol,in_corner).
-clue(daisy,in_column,1).
+clue(alice,in_left_column).
+clue(bonnie,next_to,closet).
+clue(bonnie,n_west_of,carol,2).
+clue(carol,north_of,alice).
+clue(daisy,in,livingroom).

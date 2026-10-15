@@ -1,5 +1,4 @@
 %%%% Clues
-clue(alphonse,in,bedroom).
-clue(bernard,on,sofa).
-clue(carol,in_room_with_female).
+clue(alphonse,in_bottom_row).
+clue(bernard,in_same_room,alphonse).
 clue(carol,next_to,chair).

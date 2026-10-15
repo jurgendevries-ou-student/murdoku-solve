@@ -1,9 +1,8 @@
 %%%% Clues
-clue(alphonse,next_to,carpet).
-clue(bonnie,in_left_column).
-clue(bonnie,south_of,carol).
-clue(bonnie,on,carpet).
+clue(alphonse,not_next_to,closet).
+clue(bonnie,n_west_of,daniel,3).
 clue(carol,on,carpet).
-clue(daniel,next_to,carpet).
-clue(daniel,west_of,alphonse).
+clue(carol,next_to,box).
+clue(daniel,next_to,closet).
+clue(daniel,someone_else_in_room_next_to,bed).
 clue(emily,next_to,box).

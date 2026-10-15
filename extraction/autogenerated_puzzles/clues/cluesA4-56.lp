@@ -1,5 +1,7 @@
 %%%% Clues
-clue(alphonse,not_in_corner).
-clue(bonnie,not_in_room_with_male).
-clue(charlie,not_next_to,statue).
-clue(charlie,on,carpet).
+clue(no_empty_room).
+clue(n_persons_on,bed,0).
+clue(alphonse,not_next_to,carpet).
+clue(bonnie,in_bottom_row).
+clue(charlie,someone_else_in_room_next_to,statue).
+clue(charlie,south_of,alphonse).

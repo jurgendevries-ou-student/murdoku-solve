@@ -1,8 +1,6 @@
 %%%% Clues
-clue(alphonse,next_to,sofa).
-clue(bonnie,in_same_room,carol).
-clue(bonnie,next_to,sofa).
-clue(carol,next_to,sofa).
-clue(carol,object_in_row,closet).
-clue(carol,next_to,box).
-clue(daniel,next_to,closet).
+clue(n_persons_on,sofa,2).
+clue(alphonse,object_in_col,box).
+clue(bonnie,next_to,bed).
+clue(carol,in_left_column).
+clue(daniel,in,kitchen).

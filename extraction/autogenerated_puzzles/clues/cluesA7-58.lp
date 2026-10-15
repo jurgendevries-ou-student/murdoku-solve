@@ -1,11 +1,12 @@
 %%%% Clues
-clue(alice,in_column,0).
-clue(alice,next_to,carpet).
-clue(bonnie,alone).
-clue(charlie,not_next_to,bed).
-clue(charlie,not_in_same_room,daisy).
-clue(daisy,in_corner).
-clue(emily,next_to_with_someone_else,bed).
+clue(n_persons_on,bed,0).
+clue(n_persons_on,carpet,0).
+clue(alice,in_corner).
+clue(alice,in_same_room,charlie).
+clue(bonnie,in_right_column).
+clue(bonnie,not_in_room_with_male).
+clue(charlie,in,kitchen).
+clue(daisy,alone).
+clue(daisy,in,bathroom).
 clue(emily,in_corner).
-clue(florence,alone).
 clue(florence,next_to,box).

@@ -1,7 +1,7 @@
 %%%% Clues
-clue(alice,not_in,livingroom).
-clue(bonnie,no_object_in_col,closet).
-clue(bonnie,in_row,1).
-clue(charlie,west_of,alice).
-clue(charlie,in_bottom_row).
-clue(daniel,next_to,statue).
+clue(alice,next_to,box).
+clue(bonnie,object_in_col,statue).
+clue(bonnie,object_in_row,closet).
+clue(charlie,object_in_row,box).
+clue(charlie,in_corner).
+clue(daniel,not_in_corner).

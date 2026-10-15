@@ -1,9 +1,8 @@
 %%%% Clues
+clue(n_persons_on,sofa,1).
 clue(alice,object_in_col,closet).
-clue(alice,in_row,5).
 clue(bernard,not_in_corner).
-clue(bernard,not_alone).
 clue(bernard,in_top_row).
-clue(carol,on,sofa).
-clue(daniel,not_next_to,chair).
+clue(carol,next_to,box).
+clue(daniel,not_in_same_room,alice).
 clue(edward,next_to,statue).

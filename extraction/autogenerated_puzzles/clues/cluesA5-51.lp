@@ -1,6 +1,6 @@
 %%%% Clues
-clue(alphonse,not_in_corner).
-clue(alphonse,next_to_with_someone_else,statue).
-clue(bonnie,in_row,0).
-clue(charlie,in_row,3).
-clue(daisy,object_in_col,closet).
+clue(alphonse,in,kitchen).
+clue(bonnie,object_in_row,box).
+clue(charlie,north_of,alphonse).
+clue(charlie,next_to_with_someone_else,statue).
+clue(daisy,in_left_column).

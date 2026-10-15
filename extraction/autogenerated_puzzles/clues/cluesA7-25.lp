@@ -1,10 +1,11 @@
 %%%% Clues
-clue(n_persons_on,carpet,1).
 clue(alphonse,in_right_column).
-clue(bernard,object_in_col,closet).
-clue(charlie,next_to,statue).
+clue(bernard,in,livingroom).
+clue(charlie,in,kitchen).
 clue(daniel,in_top_row).
-clue(emily,next_to,carpet).
+clue(emily,in_left_column).
 clue(emily,next_to,statue).
-clue(florence,in,garage).
-clue(florence,in_row,6).
+clue(emily,n_north_of,alphonse,1).
+clue(florence,west_of,bernard).
+clue(florence,alone).
+clue(florence,in_bottom_row).

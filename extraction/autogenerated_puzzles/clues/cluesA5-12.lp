@@ -1,7 +1,6 @@
 %%%% Clues
-clue(alice,south_of,bonnie).
-clue(bonnie,not_in,hallway).
-clue(carol,in,bedroom).
+clue(alice,in,hallway).
+clue(bonnie,alone).
 clue(carol,not_in_corner).
-clue(daisy,in_bottom_row).
-clue(daisy,no_object_in_col,closet).
+clue(daisy,in_corner).
+clue(daisy,in_left_column).

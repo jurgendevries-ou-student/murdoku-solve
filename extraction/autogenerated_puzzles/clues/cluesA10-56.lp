@@ -1,15 +1,14 @@
 %%%% Clues
-clue(n_persons_on,carpet,1).
 clue(alphonse,in_corner).
-clue(bonnie,on,sofa).
-clue(charlie,in_column,0).
-clue(daisy,east_of,emily).
-clue(daisy,on,sofa).
-clue(emily,no_object_in_col,box).
-clue(emily,on,sofa).
-clue(florence,next_to,sofa).
-clue(grace,next_to,closet).
-clue(grace,in_corner).
-clue(hannah,in_column,3).
-clue(isla,in_same_room,emily).
-clue(isla,next_to,carpet).
+clue(bernard,next_to,statue).
+clue(bernard,in_row,3).
+clue(charlie,in_same_room,edward).
+clue(daniel,n_west_of,grace,1).
+clue(edward,only_one_on,carpet).
+clue(edward,no_object_in_col,statue).
+clue(florence,in_left_column).
+clue(grace,in,kitchen).
+clue(grace,n_north_of,ivan,3).
+clue(hannah,n_north_of,alphonse,1).
+clue(hannah,in,diningroom).
+clue(ivan,n_east_of,florence,2).

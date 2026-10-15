@@ -1,12 +1,14 @@
 %%%% Clues
-clue(alphonse,in,hallway).
-clue(bonnie,not_in_room_with_female).
+clue(alphonse,not_in,bathroom).
+clue(bonnie,n_south_of,carol,3).
+clue(bonnie,not_in_same_room,florence).
 clue(bonnie,next_to,bed).
-clue(carol,in,bathroom).
 clue(carol,next_to_with_someone_else,carpet).
-clue(carol,not_in_corner).
-clue(daisy,object_in_row,box).
-clue(edward,in_top_row).
-clue(florence,in_bottom_row).
+clue(daisy,in_room_with_male).
+clue(daisy,in,hallway).
+clue(daisy,next_to,carpet).
+clue(daisy,not_next_to,statue).
+clue(edward,in_row,0).
+clue(florence,in_right_column).
+clue(grace,in,hallway).
 clue(grace,on,carpet).
-clue(grace,next_to_with_someone_else,carpet).

@@ -1,8 +1,8 @@
 %%%% Clues
-clue(n_persons_on,chair,0).
-clue(alice,in,hallway).
+clue(alice,on,bed).
 clue(bernard,in,bedroom).
+clue(charlie,next_to,chair).
 clue(charlie,next_to,closet).
-clue(charlie,alone).
-clue(daisy,south_of,charlie).
+clue(daisy,south_of,alice).
+clue(daisy,in_right_column).
 clue(emily,next_to,box).

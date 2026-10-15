@@ -1,8 +1,7 @@
 %%%% Clues
-clue(alphonse,in_top_row).
-clue(bernard,next_to,sofa).
-clue(bernard,not_next_to,carpet).
-clue(bernard,in_row,2).
-clue(carol,in,livingroom).
+clue(alphonse,in_left_column).
+clue(alphonse,n_north_of,bernard,2).
+clue(bernard,n_east_of,alphonse,1).
 clue(carol,next_to,carpet).
-clue(daniel,in_row,4).
+clue(carol,in,livingroom).
+clue(daniel,in,livingroom).

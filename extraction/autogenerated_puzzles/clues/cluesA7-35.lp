@@ -1,11 +1,10 @@
 %%%% Clues
-clue(n_persons_on,sofa,0).
+clue(alphonse,in_column,2).
 clue(alphonse,next_to_with_someone_else,chair).
 clue(bernard,south_of,daniel).
 clue(bernard,in,garage).
-clue(bernard,in_column,6).
-clue(carol,not_in_corner).
+clue(carol,n_west_of,bernard,2).
 clue(daniel,next_to,chair).
-clue(emily,in_row,6).
-clue(frank,in_row,5).
-clue(frank,in_room_with_female).
+clue(emily,in,bathroom).
+clue(emily,no_object_in_row,closet).
+clue(frank,in,bathroom).

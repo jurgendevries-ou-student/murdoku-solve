@@ -1,5 +1,5 @@
 %%%% Clues
 clue(alphonse,in,livingroom).
-clue(bonnie,on,sofa).
 clue(bonnie,next_to,box).
-clue(carol,in,kitchen).
+clue(bonnie,no_object_in_col,box).
+clue(carol,in_column,1).

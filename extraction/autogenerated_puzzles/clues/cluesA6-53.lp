@@ -1,10 +1,8 @@
 %%%% Clues
-clue(n_persons_on,chair,0).
-clue(alice,in,bathroom).
-clue(bernard,next_to,sofa).
-clue(bernard,in_left_column).
+clue(alice,on,carpet).
+clue(bernard,on,sofa).
 clue(carol,in,bedroom).
+clue(daisy,n_west_of,carol,1).
 clue(daisy,alone).
-clue(daisy,no_object_in_col,statue).
+clue(emily,n_east_of,alice,1).
 clue(emily,in_corner).
-clue(emily,north_of,carol).

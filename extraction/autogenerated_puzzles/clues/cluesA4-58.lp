@@ -1,6 +1,6 @@
 %%%% Clues
-clue(alphonse,in_same_room,bonnie).
+clue(alphonse,n_west_of,carol,1).
 clue(alphonse,next_to,bed).
-clue(bonnie,in_row,1).
-clue(carol,no_object_in_col,statue).
+clue(bonnie,in_same_room,alphonse).
+clue(bonnie,north_of,carol).
 clue(carol,in_row,2).

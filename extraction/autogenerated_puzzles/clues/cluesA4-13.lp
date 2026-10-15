@@ -1,5 +1,5 @@
 %%%% Clues
 clue(alice,in_top_row).
-clue(bonnie,next_to,closet).
-clue(bonnie,in_corner).
-clue(charlie,not_in_corner).
+clue(bonnie,no_object_in_row,closet).
+clue(bonnie,next_to_with_someone_else,closet).
+clue(charlie,n_east_of,alice,1).

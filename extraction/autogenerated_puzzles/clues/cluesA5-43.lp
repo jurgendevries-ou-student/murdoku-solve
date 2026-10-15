@@ -1,8 +1,7 @@
 %%%% Clues
 clue(alphonse,next_to,chair).
-clue(alphonse,in_corner).
-clue(bernard,next_to,box).
+clue(alphonse,in_row,4).
+clue(bernard,object_in_row,box).
 clue(bernard,not_next_to,chair).
-clue(carol,not_next_to,sofa).
-clue(carol,not_in,livingroom).
-clue(daniel,in_left_column).
+clue(carol,in,bedroom).
+clue(daniel,not_in_same_room,bernard).

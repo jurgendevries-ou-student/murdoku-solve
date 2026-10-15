@@ -1,10 +1,10 @@
 %%%% Clues
-clue(alice,in_same_room,charlie).
-clue(bernard,next_to,statue).
-clue(charlie,not_next_to,box).
-clue(charlie,east_of,bernard).
-clue(daniel,in,bathroom).
+clue(alice,in,kitchen).
+clue(bernard,in_bottom_row).
+clue(bernard,n_east_of,daniel,1).
+clue(charlie,next_to,statue).
+clue(charlie,n_east_of,emily,5).
+clue(daniel,alone).
 clue(emily,next_to,box).
 clue(frank,not_in_corner).
-clue(frank,in_right_column).
-clue(frank,object_in_row,box).
+clue(frank,object_in_row,closet).

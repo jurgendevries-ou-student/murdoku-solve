@@ -1,6 +1,5 @@
 %%%% Clues
-clue(alphonse,in_row,4).
 clue(alphonse,not_next_to,closet).
-clue(bernard,in_column,2).
-clue(carol,in_top_row).
+clue(bernard,next_to,chair).
+clue(carol,n_north_of,alphonse,4).
 clue(daniel,not_next_to,statue).

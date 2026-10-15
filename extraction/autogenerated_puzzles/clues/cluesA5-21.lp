@@ -1,7 +1,9 @@
 %%%% Clues
-clue(alphonse,in,livingroom).
-clue(bernard,on,carpet).
-clue(charlie,east_of,bernard).
+clue(n_persons_on,carpet,2).
+clue(alphonse,not_next_to,box).
+clue(bernard,in_left_column).
+clue(charlie,on,carpet).
+clue(charlie,south_of,daniel).
 clue(charlie,not_in_corner).
+clue(daniel,in_corner).
 clue(daniel,in_right_column).
-clue(daniel,in_top_row).

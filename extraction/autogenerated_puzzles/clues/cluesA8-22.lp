@@ -1,12 +1,12 @@
 %%%% Clues
-clue(alice,south_of,bernard).
+clue(n_persons_on,bed,1).
+clue(alice,on,sofa).
+clue(alice,in_same_room,george).
 clue(bernard,on,carpet).
+clue(carol,in_row,6).
 clue(carol,next_to,statue).
-clue(carol,not_next_to,bed).
-clue(daniel,on,bed).
-clue(daniel,not_in_room_with_male).
-clue(emily,next_to,chair).
-clue(frank,in_same_room,carol).
-clue(frank,in_row,4).
-clue(george,in_same_room,alice).
-clue(george,east_of,alice).
+clue(daniel,next_to,closet).
+clue(emily,not_in_corner).
+clue(frank,next_to,closet).
+clue(frank,in,hallway).
+clue(george,not_alone).

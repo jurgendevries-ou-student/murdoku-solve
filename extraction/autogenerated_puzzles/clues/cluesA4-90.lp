@@ -1,5 +1,5 @@
 %%%% Clues
-clue(alice,in_top_row).
-clue(bonnie,in_right_column).
-clue(bonnie,next_to_with_someone_else,closet).
-clue(carol,not_in,livingroom).
+clue(alice,not_in,livingroom).
+clue(alice,in_column,1).
+clue(bonnie,in_corner).
+clue(carol,next_to,box).

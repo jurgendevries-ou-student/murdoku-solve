@@ -1,14 +1,12 @@
 %%%% Clues
-clue(no_empty_room).
-clue(alice,not_in_corner).
-clue(bonnie,east_of,alice).
-clue(carol,in_row,4).
-clue(carol,east_of,frank).
-clue(daisy,in,hallway).
-clue(edward,next_to,chair).
-clue(edward,in_corner).
-clue(frank,alone).
-clue(george,next_to,closet).
-clue(george,next_to,carpet).
-clue(george,not_next_to,box).
-clue(george,in_column,1).
+clue(alice,n_east_of,frank,3).
+clue(alice,in_row,1).
+clue(alice,next_to_with_someone_else,carpet).
+clue(bonnie,in_right_column).
+clue(bonnie,in_top_row).
+clue(carol,in_corner).
+clue(carol,west_of,daisy).
+clue(daisy,in_room_with_female).
+clue(edward,in,bedroom).
+clue(frank,not_in_corner).
+clue(george,someone_else_in_room_on,bed).

@@ -1,5 +1,5 @@
 %%%% Clues
-clue(alphonse,in_column,3).
-clue(bonnie,in_top_row).
+clue(alphonse,in,livingroom).
 clue(bonnie,not_next_to,statue).
-clue(charlie,object_in_row,closet).
+clue(bonnie,in_top_row).
+clue(charlie,in,bedroom).

@@ -1,12 +1,14 @@
 %%%% Clues
+clue(n_persons_on,chair,1).
+clue(alphonse,next_to,bed).
 clue(alphonse,in_same_room,charlie).
-clue(alphonse,in_column,3).
-clue(bonnie,in_column,5).
-clue(charlie,in_row,8).
-clue(daniel,next_to,box).
+clue(alphonse,n_south_of,daniel,4).
+clue(bonnie,in_same_room,daniel).
+clue(charlie,in_column,1).
+clue(daniel,not_in,outside).
 clue(edward,in,garage).
-clue(florence,in_column,2).
-clue(george,in,bathroom).
+clue(florence,not_alone).
+clue(florence,n_north_of,charlie,2).
 clue(george,in_corner).
+clue(hannah,object_in_row,box).
 clue(hannah,in_right_column).
-clue(hannah,in_top_row).

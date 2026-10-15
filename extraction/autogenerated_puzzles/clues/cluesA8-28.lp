@@ -1,9 +1,13 @@
 %%%% Clues
 clue(alphonse,next_to,chair).
 clue(bonnie,on,chair).
-clue(charlie,in,bathroom).
-clue(daniel,next_to_with_someone_else,carpet).
-clue(daniel,east_of,charlie).
-clue(edward,in_room_with_multiple_males,2).
-clue(florence,in_row,7).
-clue(grace,in_column,3).
+clue(charlie,next_to,carpet).
+clue(charlie,in_same_room,daniel).
+clue(daniel,next_to,carpet).
+clue(daniel,no_object_in_row,statue).
+clue(edward,in_same_room,daniel).
+clue(edward,north_of,florence).
+clue(florence,in_right_column).
+clue(grace,on,carpet).
+clue(grace,no_object_in_row,closet).
+clue(grace,in_corner).

@@ -1,6 +1,7 @@
 %%%% Clues
-clue(alphonse,west_of,charlie).
-clue(bernard,next_to,closet).
-clue(bernard,not_next_to,sofa).
-clue(charlie,in_bottom_row).
-clue(charlie,not_alone).
+clue(alphonse,in_corner).
+clue(bernard,in_corner).
+clue(bernard,south_of,alphonse).
+clue(charlie,not_in_same_room,alphonse).
+clue(charlie,next_to,closet).
+clue(charlie,west_of,bernard).

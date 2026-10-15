@@ -1,14 +1,13 @@
 %%%% Clues
 clue(n_persons_on,sofa,2).
-clue(alice,in_column,7).
-clue(bonnie,on,sofa).
+clue(alice,someone_else_in_room_next_to,carpet).
+clue(bonnie,n_south_of,carol,3).
 clue(bonnie,alone).
-clue(carol,next_to,statue).
-clue(daisy,object_in_col,closet).
+clue(carol,in,hallway).
+clue(carol,n_north_of,hannah,6).
+clue(daisy,in_right_column).
 clue(daisy,in_corner).
-clue(emily,in,garage).
-clue(florence,in_same_room,daisy).
-clue(florence,object_in_row,statue).
+clue(emily,in_bottom_row).
+clue(florence,next_to,sofa).
 clue(george,in_left_column).
-clue(george,in_row,7).
-clue(hannah,on,carpet).
+clue(hannah,not_in_same_room,george).

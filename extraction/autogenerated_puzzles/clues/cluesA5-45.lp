@@ -1,7 +1,6 @@
 %%%% Clues
-clue(n_persons_on,bed,0).
-clue(alice,in_row,1).
+clue(alice,n_north_of,daniel,1).
 clue(bernard,next_to,chair).
 clue(bernard,in_bottom_row).
-clue(charlie,in,bedroom).
-clue(daniel,on,chair).
+clue(charlie,next_to,chair).
+clue(daniel,only_one_on,chair).

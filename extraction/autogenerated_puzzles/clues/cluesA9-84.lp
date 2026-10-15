@@ -1,12 +1,16 @@
 %%%% Clues
+clue(alice,south_of,hannah).
 clue(alice,next_to,box).
-clue(bonnie,in,bedroom).
-clue(bonnie,not_next_to,statue).
-clue(carol,in_row,7).
-clue(daisy,in_column,5).
-clue(emily,only_one_on,carpet).
+clue(bonnie,not_in_corner).
+clue(carol,in_same_room,frank).
+clue(carol,in_right_column).
+clue(daisy,on,sofa).
+clue(daisy,next_to,box).
 clue(emily,in,livingroom).
-clue(frank,in_same_room,carol).
+clue(emily,on,carpet).
+clue(frank,in,hallway).
+clue(grace,not_next_to,sofa).
 clue(grace,in_room_with_male).
-clue(grace,next_to,chair).
-clue(hannah,in,garage).
+clue(grace,not_in_corner).
+clue(hannah,in_column,2).
+clue(hannah,next_to,carpet).

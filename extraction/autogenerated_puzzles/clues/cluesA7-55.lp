@@ -1,11 +1,10 @@
 %%%% Clues
-clue(alice,not_next_to,carpet).
-clue(alice,in_top_row).
-clue(bernard,in_row,4).
-clue(carol,object_in_col,box).
+clue(alice,in_corner).
+clue(bernard,n_north_of,edward,1).
+clue(bernard,in_same_room,carol).
+clue(bernard,in_column,1).
+clue(carol,no_object_in_col,statue).
 clue(daniel,next_to,statue).
-clue(daniel,someone_else_in_room_on,carpet).
+clue(edward,n_west_of,alice,3).
 clue(edward,next_to,closet).
-clue(edward,north_of,carol).
-clue(edward,in_column,3).
-clue(florence,in,bedroom).
+clue(florence,on,carpet).

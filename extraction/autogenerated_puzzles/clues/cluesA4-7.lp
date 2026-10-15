@@ -1,7 +1,7 @@
 %%%% Clues
-clue(alphonse,in_top_row).
-clue(alphonse,east_of,charlie).
-clue(bernard,alone).
-clue(bernard,in_left_column).
+clue(n_persons_on,chair,0).
+clue(alphonse,not_in_same_room,charlie).
 clue(bernard,not_in_corner).
-clue(charlie,not_in_same_room,alphonse).
+clue(bernard,next_to,statue).
+clue(charlie,in_room_with_male).
+clue(charlie,in_column,1).

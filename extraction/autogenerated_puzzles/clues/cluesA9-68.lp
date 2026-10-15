@@ -1,14 +1,13 @@
 %%%% Clues
-clue(alice,next_to,sofa).
-clue(alice,in_corner).
-clue(bonnie,not_in_corner).
+clue(alice,n_north_of,hannah,3).
+clue(alice,in,kitchen).
 clue(bonnie,on,sofa).
-clue(charlie,in_same_room,daisy).
 clue(charlie,on,sofa).
-clue(daisy,in_column,3).
-clue(edward,next_to,carpet).
-clue(edward,alone).
+clue(charlie,n_east_of,george,2).
+clue(daisy,in_corner).
+clue(daisy,next_to,bed).
+clue(edward,in_left_column).
 clue(frank,in,bathroom).
+clue(george,in,livingroom).
 clue(george,not_in_corner).
-clue(george,west_of,bonnie).
-clue(hannah,in_column,1).
+clue(hannah,not_next_to,sofa).

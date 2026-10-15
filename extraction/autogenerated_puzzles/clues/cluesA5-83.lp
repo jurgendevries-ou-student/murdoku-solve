@@ -1,7 +1,7 @@
 %%%% Clues
-clue(n_persons_on,bed,1).
-clue(alice,not_in_corner).
-clue(bonnie,in_column,1).
-clue(carol,in_row,1).
-clue(daniel,not_alone).
-clue(daniel,in_top_row).
+clue(alice,next_to,box).
+clue(bonnie,in,hallway).
+clue(bonnie,n_south_of,daniel,2).
+clue(carol,in,kitchen).
+clue(daniel,in_corner).
+clue(daniel,not_next_to,statue).

@@ -1,6 +1,7 @@
 %%%% Clues
+clue(alice,in_top_row).
 clue(alice,on,chair).
-clue(bernard,not_next_to,statue).
-clue(charlie,in_same_room,daniel).
-clue(charlie,in_bottom_row).
-clue(daniel,on,chair).
+clue(bernard,next_to,chair).
+clue(bernard,north_of,charlie).
+clue(charlie,in_right_column).
+clue(daniel,next_to,sofa).

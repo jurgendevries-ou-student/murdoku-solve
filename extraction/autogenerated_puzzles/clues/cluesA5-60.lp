@@ -1,8 +1,8 @@
 %%%% Clues
-clue(n_persons_on,carpet,1).
-clue(alice,not_next_to,chair).
-clue(alice,in,bathroom).
-clue(bernard,object_in_col,box).
+clue(alice,only_one_on,chair).
+clue(bernard,in_left_column).
+clue(bernard,in_bottom_row).
 clue(carol,in_same_room,daniel).
-clue(carol,in_right_column).
+clue(daniel,not_next_to,chair).
+clue(daniel,not_in_corner).
 clue(daniel,in_row,2).
