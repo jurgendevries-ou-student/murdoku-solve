@@ -78,3 +78,17 @@ suspect(emily).
 female(emily).
 victim(victor).
 male(victor).
+
+% persons with time steps assigned
+suspect(1, alphonse).
+male(alphonse).
+suspect(2, bonnie).
+female(bonnie).
+suspect(3, carol).
+female(carol).
+suspect(4, daniel).
+male(daniel).
+suspect(5,emily).
+female(emily).
+victim(6,victor).
+male(victor).

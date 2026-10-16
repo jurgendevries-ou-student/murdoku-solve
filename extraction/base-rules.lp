@@ -1,10 +1,8 @@
-%% beetje ordenen en soortgelijke dingen bij elkaar zetten
-
 person(X) :- suspect(X).
 person(X) :- victim(X).
 person(X) :- male(X).
 person(X) :- female(X).
-% achieved: every suspect and victim is also a person.
+% achieved: every suspect/victim/male/female is also a person.
 
 can_not_be_occupied(tv).
 can_not_be_occupied(plant).
@@ -13,16 +11,15 @@ can_not_be_occupied(register).
 can_not_be_occupied(box).
 can_not_be_occupied(shelf).
 can_not_be_occupied(bookshelf).
+can_not_be_occupied(locker).
+can_not_be_occupied(punchbag).
 % achieved: objects that cannot be occupied
 
-%% Uitgezet!
-% wij geven zelf al op dat cellen maar in een kamer zijn, dit maakt geen verschil voor de resultaten. 
-% Dus de aanname is dat we de puzzles goed invoeren/genereren waardoor elke cel al maar in een kamer is.
-% -in_room(R,C,RR) :- room(RR), R=0..n, C=0..n, not in_room(R,C,RR).
-% achieved: every cell is in only one room
-
-{at(P,R,C) : can_occupy(R,C)}=1 :- person(P).
+{assign(P,R,C) : can_occupy(R,C)}=1 :- person(P).
+at(P,R,C) :- assign(P,R,C).
 % achieved: every person is on a cell in the grid.
+
+%% TODO work with time steps to select 1 person per time step and don't choose rows/columns already occupied at earlier time steps.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %      definitions      %
@@ -152,7 +149,7 @@ satisfies(P1,someone_else_in_room_on,O):- at(P2,R2,C2), with_person(P1,P2), cont
 % Versimpeld: door gebruik te maken van with_person wordt al gekeken of P1 en P2 verschillende personen zijn,
 % en zich in dezelfde kamer bevinden, vervolgens moet alleen nog gekeken worden of persoon P2 op een object O is.
 
-satisfies(P1,object_in_same_room,O) :- at(P1,R1,C2), contains(R2,C2,O), cell_same_room((R1,C1),(R2,C2)).
+satisfies(P1,object_in_same_room,O) :- at(P1,R1,C1), contains(R2,C2,O), cell_same_room((R1,C1),(R2,C2)).
 % achieved: there is an object O in the same room as the person.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -165,7 +162,6 @@ satisfies(no_empty_room) :- #count{RR : empty_room(RR)} = 0.
 
 satisfies(n_persons_on, O, N) :- object(O), #count{P : at(P,R,C), contains(R,C,O)} = N.
 %% exactly N persons on object (example: "there is exactly one person on a chair") 
-%% TODO: test this general clue in a puzzle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %      constraints      %

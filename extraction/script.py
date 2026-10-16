@@ -82,4 +82,4 @@ def convert_to_asp(puzzle_num):
     with open(f'./extraction/puzzles/puzzleM{cols}-{puzzle_num}.lp', 'w') as f:
         f.write("\n".join(lp))
 
-convert_to_asp(30)
+convert_to_asp(55)

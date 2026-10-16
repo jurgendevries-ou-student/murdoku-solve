@@ -1,0 +1,14 @@
+clue(alice,on,carpet).
+clue(alice,in_same_room,bonnie).
+clue(alice,in_room_with_multiple_females,1).
+clue(alice,in_room_with_multiple_males,0).
+clue(bonnie,in_corner).
+clue(charlie,in,bar).
+clue(charlie,south_of,alice).
+clue(daniel,next_to,tv).
+clue(daniel,east_of,alice).
+clue(emily,on,chair).
+clue(frank,in,vip_section).
+clue(george,in_column,2).
+clue(hannah,next_to,plant).
+clue(n_persons_on,chair,2).
