@@ -1,0 +1,24 @@
+%%%% Clues
+clue(alice,in,office).
+clue(bonnie,in_same_room,charlie).
+clue(bonnie,not_in_corner).
+clue(charlie,n_west_of,alice,4).
+clue(daisy,someone_else_in_room_next_to,carpet).
+clue(daisy,next_to,closet).
+clue(emily,on,carpet).
+clue(emily,not_in_corner).
+clue(frank,in,diningroom).
+clue(grace,in,bedroom).
+clue(grace,in_row,12).
+clue(henry,in,guestroom).
+clue(henry,east_of,jane).
+clue(henry,in_row,10).
+clue(isla,next_to,box).
+clue(isla,n_south_of,louis,2).
+clue(jane,not_next_to,carpet).
+clue(jane,in_top_row).
+clue(keith,next_to,bed).
+clue(keith,not_in_same_room,grace).
+clue(keith,next_to,carpet).
+clue(louis,next_to,closet).
+clue(louis,west_of,daisy).

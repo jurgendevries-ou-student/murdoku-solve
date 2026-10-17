@@ -1,0 +1,20 @@
+%%%% Clues
+clue(alice,in_right_column).
+clue(bernard,in,outside).
+clue(bernard,in_same_room,alice).
+clue(carol,in_same_room,henry).
+clue(daisy,on,carpet).
+clue(daisy,n_south_of,isla,2).
+clue(edward,not_alone).
+clue(edward,next_to,statue).
+clue(frank,in,diningroom).
+clue(frank,in_row,4).
+clue(george,n_west_of,louis,5).
+clue(henry,west_of,frank).
+clue(henry,not_in_corner).
+clue(isla,in_top_row).
+clue(jane,alone).
+clue(jane,in,office).
+clue(jane,next_to,chair).
+clue(keith,next_to,statue).
+clue(louis,next_to,statue).

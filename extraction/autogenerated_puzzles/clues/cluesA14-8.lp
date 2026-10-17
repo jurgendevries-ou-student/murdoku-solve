@@ -1,0 +1,27 @@
+%%%% Clues
+clue(alphonse,in_corner).
+clue(alphonse,in,guestroom).
+clue(alphonse,n_west_of,mike,1).
+clue(bonnie,in,diningroom).
+clue(bonnie,in_left_column).
+clue(charlie,in,garderobe).
+clue(charlie,in_bottom_row).
+clue(daisy,in,attic).
+clue(daisy,not_next_to,closet).
+clue(emily,object_in_same_room,chair).
+clue(emily,not_alone).
+clue(emily,in_column,5).
+clue(florence,in,diningroom).
+clue(grace,in,diningroom).
+clue(grace,n_south_of,emily,1).
+clue(henry,in,diningroom).
+clue(henry,next_to,box).
+clue(ivan,not_in_corner).
+clue(ivan,in_right_column).
+clue(jane,next_to_with_someone_else,carpet).
+clue(kate,in,outside).
+clue(kate,n_east_of,florence,2).
+clue(lily,n_north_of,grace,9).
+clue(lily,n_west_of,ivan,3).
+clue(mike,in_same_room,jane).
+clue(mike,object_in_row,closet).

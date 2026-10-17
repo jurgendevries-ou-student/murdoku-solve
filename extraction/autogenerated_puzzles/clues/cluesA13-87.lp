@@ -1,0 +1,24 @@
+%%%% Clues
+clue(alphonse,on,carpet).
+clue(alphonse,in_column,4).
+clue(bernard,next_to,carpet).
+clue(charlie,n_east_of,keith,11).
+clue(charlie,not_in_corner).
+clue(charlie,someone_else_in_room_next_to,closet).
+clue(charlie,in_same_room,henry).
+clue(daniel,no_object_in_row,box).
+clue(daniel,not_in_corner).
+clue(daniel,in_room_with_male).
+clue(emily,next_to,box).
+clue(florence,next_to,closet).
+clue(grace,in_same_room,emily).
+clue(grace,in_top_row).
+clue(henry,not_in,bathroom).
+clue(isla,alone).
+clue(isla,next_to,box).
+clue(jane,not_alone).
+clue(jane,on,bed).
+clue(keith,next_to,statue).
+clue(keith,n_west_of,grace,2).
+clue(lily,in,bathroom).
+clue(lily,in_corner).

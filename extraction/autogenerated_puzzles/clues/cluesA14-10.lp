@@ -1,0 +1,23 @@
+%%%% Clues
+clue(alphonse,next_to,sofa).
+clue(bonnie,in,diningroom).
+clue(charlie,in,garage).
+clue(daisy,in_room_with_male).
+clue(daisy,next_to,statue).
+clue(emily,not_next_to,closet).
+clue(florence,on,chair).
+clue(grace,n_west_of,emily,3).
+clue(grace,next_to,statue).
+clue(henry,next_to,sofa).
+clue(ivan,next_to,carpet).
+clue(ivan,in_corner).
+clue(ivan,in_room_with_multiple_females,2).
+clue(jesse,in_left_column).
+clue(jesse,south_of,henry).
+clue(jesse,in_row,8).
+clue(keith,in_corner).
+clue(keith,in,guestroom).
+clue(lily,in_corner).
+clue(lily,in,office).
+clue(mary,next_to,closet).
+clue(mary,in_column,3).

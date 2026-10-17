@@ -1,0 +1,21 @@
+%%%% Clues
+clue(n_persons_on,carpet,1).
+clue(alphonse,next_to,bed).
+clue(bonnie,next_to,carpet).
+clue(bonnie,in_same_room,daisy).
+clue(carol,someone_else_in_room_on,carpet).
+clue(carol,next_to,box).
+clue(daisy,in,office).
+clue(emily,on,bed).
+clue(emily,in_column,1).
+clue(frank,not_in_corner).
+clue(george,next_to,carpet).
+clue(george,in,outside).
+clue(george,not_alone).
+clue(henry,next_to,carpet).
+clue(isla,n_north_of,louis,4).
+clue(jane,next_to,carpet).
+clue(jane,on,sofa).
+clue(keith,not_in_corner).
+clue(keith,in,bedroom).
+clue(louis,in_row,11).

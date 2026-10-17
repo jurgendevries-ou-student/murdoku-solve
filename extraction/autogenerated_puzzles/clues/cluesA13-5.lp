@@ -1,0 +1,20 @@
+%%%% Clues
+clue(n_persons_on,bed,0).
+clue(alphonse,not_in_corner).
+clue(bernard,n_north_of,jane,5).
+clue(charlie,in,kitchen).
+clue(daniel,in,garderobe).
+clue(daniel,next_to,carpet).
+clue(edward,in,bathroom).
+clue(florence,next_to,chair).
+clue(grace,next_to,statue).
+clue(henry,in,hallway).
+clue(henry,n_north_of,grace,3).
+clue(isla,next_to,box).
+clue(jane,in,livingroom).
+clue(jane,n_east_of,bernard,1).
+clue(jane,n_west_of,isla,8).
+clue(kate,next_to,carpet).
+clue(kate,in_room_with_female).
+clue(lily,n_east_of,alphonse,4).
+clue(lily,in,diningroom).

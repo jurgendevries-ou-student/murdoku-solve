@@ -1,0 +1,22 @@
+%%%% Clues
+clue(alphonse,n_east_of,ivan,7).
+clue(alphonse,next_to,bed).
+clue(bonnie,not_in_corner).
+clue(bonnie,n_south_of,henry,3).
+clue(charlie,on,bed).
+clue(charlie,in_same_room,bonnie).
+clue(daniel,in,garage).
+clue(edward,next_to,bed).
+clue(frank,next_to,bed).
+clue(frank,in,livingroom).
+clue(grace,not_next_to,sofa).
+clue(grace,object_in_row,box).
+clue(grace,not_next_to,box).
+clue(henry,next_to,closet).
+clue(ivan,in_corner).
+clue(jane,in_same_room,edward).
+clue(jane,in_corner).
+clue(kate,in_top_row).
+clue(kate,in_right_column).
+clue(louis,next_to,closet).
+clue(louis,n_east_of,jane,3).

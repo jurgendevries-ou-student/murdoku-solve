@@ -1,0 +1,20 @@
+%%%% Clues
+clue(alice,next_to,bed).
+clue(bonnie,on,sofa).
+clue(bonnie,next_to,bed).
+clue(charlie,in_corner).
+clue(charlie,no_object_in_row,closet).
+clue(daniel,on,carpet).
+clue(edward,next_to_with_someone_else,bed).
+clue(florence,n_west_of,charlie,2).
+clue(florence,n_south_of,alice,1).
+clue(george,next_to,carpet).
+clue(george,on,sofa).
+clue(henry,in_same_room,bonnie).
+clue(henry,next_to,bed).
+clue(ivan,object_in_row,statue).
+clue(ivan,in_column,2).
+clue(jane,in,hallway).
+clue(keith,next_to,chair).
+clue(louis,not_next_to,sofa).
+clue(louis,in,bathroom).

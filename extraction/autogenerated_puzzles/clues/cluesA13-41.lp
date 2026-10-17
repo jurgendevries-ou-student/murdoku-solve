@@ -1,0 +1,26 @@
+%%%% Clues
+clue(n_persons_on,carpet,2).
+clue(alphonse,not_in,bathroom).
+clue(bonnie,in,garage).
+clue(bonnie,on,carpet).
+clue(charlie,not_next_to,sofa).
+clue(charlie,in_same_room,isla).
+clue(charlie,object_in_col,box).
+clue(daisy,in,attic).
+clue(daisy,not_next_to,closet).
+clue(daisy,not_in_corner).
+clue(edward,in_same_room,jesse).
+clue(frank,on,sofa).
+clue(frank,in,bedroom).
+clue(grace,in,guestroom).
+clue(grace,no_object_in_row,box).
+clue(hannah,in_left_column).
+clue(hannah,next_to,sofa).
+clue(hannah,in_same_room,charlie).
+clue(hannah,someone_else_in_room_next_to,chair).
+clue(isla,no_object_in_row,box).
+clue(jesse,next_to,bed).
+clue(keith,next_to,carpet).
+clue(louis,next_to,statue).
+clue(louis,not_alone).
+clue(louis,west_of,grace).

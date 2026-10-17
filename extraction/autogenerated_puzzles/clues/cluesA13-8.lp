@@ -1,0 +1,21 @@
+%%%% Clues
+clue(alphonse,in,livingroom).
+clue(alphonse,on,carpet).
+clue(bonnie,in,outside).
+clue(carol,in,garage).
+clue(carol,in_corner).
+clue(daisy,next_to,chair).
+clue(edward,not_in_room_with_female).
+clue(frank,next_to,bed).
+clue(george,in_corner).
+clue(george,next_to,carpet).
+clue(henry,someone_else_in_room_next_to,chair).
+clue(ivan,in_same_room,edward).
+clue(ivan,no_object_in_col,statue).
+clue(ivan,next_to,closet).
+clue(jesse,on,chair).
+clue(kate,next_to,box).
+clue(kate,in,outside).
+clue(kate,north_of,bonnie).
+clue(louis,in_top_row).
+clue(louis,in,garage).
