@@ -125,3 +125,21 @@ suspect(george).
 male(george).
 victim(victor).
 male(victor).
+
+% persons with time steps assigned
+suspect(1,alphonse).
+male(alphonse).
+suspect(2,bernard).
+male(bernard).
+suspect(3,carol).
+female(carol).
+suspect(4,daniel).
+male(daniel).
+suspect(5,edward).
+male(edward).
+suspect(6,frank).
+male(frank).
+suspect(7,george).
+male(george).
+victim(8,victor).
+male(victor).

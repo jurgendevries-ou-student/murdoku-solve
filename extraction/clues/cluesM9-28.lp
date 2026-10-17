@@ -1,0 +1,12 @@
+clue(alice,only_one_on,chair).
+clue(bernard,someone_else_in_room_next_to,locker).
+clue(charlie,north_of,daisy).
+clue(charlie,south_of,alice).
+clue(daisy,east_of,alice).
+clue(daisy,west_of,grace).
+clue(edward,in,boxring).
+clue(edward,on,carpet).
+clue(frank,in_corner).
+clue(grace,object_in_same_room,tv).
+clue(grace,alone).
+clue(henry,in_room_with_female).
