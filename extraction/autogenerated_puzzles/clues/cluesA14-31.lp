@@ -1,0 +1,23 @@
+%%%% Clues
+clue(alphonse,next_to,box).
+clue(bernard,in_top_row).
+clue(charlie,n_east_of,kate,3).
+clue(charlie,in_corner).
+clue(daisy,in,attic).
+clue(daisy,not_next_to,box).
+clue(edward,n_west_of,lily,13).
+clue(edward,next_to,bed).
+clue(florence,next_to,chair).
+clue(george,in_corner).
+clue(henry,in,bathroom).
+clue(henry,in_corner).
+clue(isla,in_same_room,charlie).
+clue(isla,in,diningroom).
+clue(isla,n_east_of,bernard,1).
+clue(isla,next_to,carpet).
+clue(jesse,in,bedroom).
+clue(kate,in_row,13).
+clue(lily,in,livingroom).
+clue(mary,next_to,chair).
+clue(mary,in,garderobe).
+clue(mary,not_in_corner).

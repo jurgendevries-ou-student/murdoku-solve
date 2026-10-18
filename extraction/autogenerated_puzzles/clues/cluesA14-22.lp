@@ -1,0 +1,24 @@
+%%%% Clues
+clue(alphonse,in,bathroom).
+clue(bernard,in,livingroom).
+clue(bernard,n_south_of,emily,5).
+clue(charlie,next_to,closet).
+clue(daniel,n_east_of,mike,9).
+clue(daniel,in_room_with_male).
+clue(emily,in_same_room,keith).
+clue(frank,no_object_in_row,statue).
+clue(frank,in,bedroom).
+clue(frank,n_east_of,jane,3).
+clue(grace,in_column,9).
+clue(henry,n_north_of,grace,11).
+clue(henry,in_room_with_male).
+clue(henry,next_to,statue).
+clue(ivan,not_in_same_room,charlie).
+clue(jane,on,sofa).
+clue(keith,not_in_room_with_male).
+clue(keith,in_corner).
+clue(louis,in,garage).
+clue(louis,no_object_in_row,statue).
+clue(mike,next_to,sofa).
+clue(mike,not_in_same_room,charlie).
+clue(mike,n_south_of,henry,7).
