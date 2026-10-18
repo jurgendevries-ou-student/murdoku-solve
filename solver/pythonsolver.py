@@ -635,7 +635,18 @@ def find_solutions(pfile, cfile):
     start_solve = time.time()
     n, solutions = check_solutions(size, rooms, object_positions, person_genders, clues)
     solve_time = time.time() - start_solve
-    return n, interpret_time, solve_time, solutions, len(clues)
+
+    #extract the types of clues:
+    all_clue_types = ['in_same_room', 'not_in_same_room', 'next_to', 'not_next_to', 'on', 'in', \
+                'in_top_row', 'in_bottom_row', 'in_left_column', 'in_right_column', 'alone', 'not_alone', 'not_in',  'in_corner', 'not_in_corner', 'no_empty_room', \
+                'in_room_with_female', 'not_in_room_with_female', 'in_room_with_male', 'not_in_room_with_male', 'not_on', 'only_one_on',  'n_persons_on', 'in_room_with_multiple_females', 'in_room_with_multiple_males', \
+                'east_of', 'west_of', 'north_of', 'south_of', 'next_to_with_someone_else', 'object_in_col', 'no_object_in_col', 'object_in_row', 'no_object_in_row', \
+                'in_column', 'in_row', 'n_east_of', 'n_west_of', 'n_north_of', 'n_south_of', 'someone_else_in_room_on', 'someone_else_in_room_next_to', 'object_in_same_room']
+    clue_type_counts = {}
+    for clue in clues:
+        clue_type_counts[clue['type']] = clue_type_counts.setdefault(clue['type'], 0) + 1
+
+    return n, interpret_time, solve_time, solutions, len(clues), clue_type_counts
 
 
 def print_puzzle(size, rooms, object_positions, person_genders, clues):
