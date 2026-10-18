@@ -629,14 +629,13 @@ def interpret_puzzle(puzzle_file, clue_file):
     return size, rooms, object_positions, person_genders, clues
 
 def find_solutions(pfile, cfile):
+    start_interpret = time.time()
     size, rooms, object_positions, person_genders, clues = interpret_puzzle(pfile, cfile)
-    start = time.time()
+    interpret_time = time.time() - start_interpret 
+    start_solve = time.time()
     n, solutions = check_solutions(size, rooms, object_positions, person_genders, clues)
-
-    end = time.time()
-    time_lapsed = end - start
-
-    return n, time_lapsed, solutions
+    solve_time = time.time() - start_solve
+    return n, interpret_time, solve_time, solutions, len(clues)
 
 
 def print_puzzle(size, rooms, object_positions, person_genders, clues):

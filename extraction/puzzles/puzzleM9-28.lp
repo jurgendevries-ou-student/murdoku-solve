@@ -102,6 +102,12 @@ object(table).
 object(locker).
 object(carpet).
 
+can_not_be_occupied(table).
+can_not_be_occupied(tv).
+can_not_be_occupied(plant).
+can_not_be_occupied(locker).
+can_not_be_occupied(punchbag).
+
 %% object locations
 contains(0,0,chair).
 contains(8,2,chair).
@@ -150,24 +156,4 @@ female(grace).
 suspect(henry).
 male(henry).
 victim(victor).
-male(victor).
-
-% persons with time steps assigned
-suspect(1,alice).
-female(alice).
-suspect(2,bernard).
-male(bernard).
-suspect(3,charlie).
-male(charlie).
-suspect(4,daisy).
-female(daisy).
-suspect(5,edward).
-male(edward).
-suspect(6,frank).
-male(frank).
-suspect(7,grace).
-female(grace).
-suspect(8,henry).
-male(henry).
-victim(9,victor).
 male(victor).

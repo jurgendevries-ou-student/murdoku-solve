@@ -99,6 +99,10 @@ object(tv).
 object(table).
 object(window).
 
+can_not_be_occupied(table).
+can_not_be_occupied(tv).
+can_not_be_occupied(plant).
+
 %% object locations
 contains(0,0,plant).
 contains(0,7,plant).
@@ -155,24 +159,4 @@ male(george).
 suspect(henry).
 male(henry).
 victim(victor).
-male(victor).
-
-% persons with time steps assigned
-suspect(1,alphonse).
-male(alphonse).
-suspect(2,bernard).
-male(bernard).
-suspect(3,carol).
-female(carol).
-suspect(4,daisy).
-female(daisy).
-suspect(5,emily).
-female(emily).
-suspect(6,frank).
-male(frank).
-suspect(7,george).
-male(george).
-suspect(8,henry).
-male(henry).
-victim(9,victor).
 male(victor).

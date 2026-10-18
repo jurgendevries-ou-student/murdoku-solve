@@ -53,6 +53,10 @@ object(table).
 object(plant).
 object(tv).
 
+can_not_be_occupied(table).
+can_not_be_occupied(tv).
+can_not_be_occupied(plant).
+
 %% object locations
 contains(1,0,chair).
 contains(2,0,bed).
@@ -78,18 +82,4 @@ male(daniel).
 suspect(edward).
 male(edward).
 victim(victor).
-male(victor).
-
-% persons with time steps assigned
-suspect(1,alice).
-female(alice).
-suspect(2,bernard).
-male(bernard).
-suspect(3,carol).
-female(carol).
-suspect(4,daniel).
-male(daniel).
-suspect(5,edward).
-male(edward).
-victim(6,victor).
 male(victor).

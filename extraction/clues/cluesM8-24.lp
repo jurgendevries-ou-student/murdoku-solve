@@ -5,6 +5,6 @@ clue(bernard,next_to,tv).
 clue(carol,in_column,7).
 clue(daniel,next_to,table).
 clue(daniel,north_of,bernard).
-clue(edward,no_object_in_col,box). %TODO: implement it
-clue(frank,someone_else_in_room_on,chair). % TODO: implement it
+clue(edward,no_object_in_col,box).
+clue(frank,someone_else_in_room_on,chair).
 clue(george,next_to,box).

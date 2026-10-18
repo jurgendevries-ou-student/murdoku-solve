@@ -102,6 +102,11 @@ object(chair).
 object(shelf).
 object(carpet).
 
+can_not_be_occupied(table).
+can_not_be_occupied(tv).
+can_not_be_occupied(plant).
+can_not_be_occupied(shelf).
+
 %% object locations
 contains(0,0,table).
 contains(0,1,table).
@@ -144,41 +149,21 @@ contains(4,8,carpet).
 contains(5,8,carpet).
 
 %% persons
-suspect(1,alphonse).
+suspect(alphonse).
 male(alphonse).
-suspect(2,bonnie).
+suspect(bonnie).
 female(bonnie).
-suspect(3,charlie).
+suspect(charlie).
 male(charlie).
-suspect(4,daisy).
+suspect(daisy).
 female(daisy).
-suspect(5,emily).
+suspect(emily).
 female(emily).
-suspect(6,frank).
+suspect(frank).
 male(frank).
-suspect(7,george).
+suspect(george).
 male(george).
-suspect(8,hannah).
+suspect(hannah).
 female(hannah).
-victim(9,victor).
-male(victor).
-
-% persons with time steps assigned
-suspect(1,alphonse).
-male(alphonse).
-suspect(2,bonnie).
-female(bonnie).
-suspect(3,charlie).
-male(charlie).
-suspect(4,daisy).
-female(daisy).
-suspect(5,emily).
-female(emily).
-suspect(6,frank).
-male(frank).
-suspect(7,george).
-male(george).
-suspect(8,hannah).
-female(hannah).
-victim(9,victor).
+victim(victor).
 male(victor).
