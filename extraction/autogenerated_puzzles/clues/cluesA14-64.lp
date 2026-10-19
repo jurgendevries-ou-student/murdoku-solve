@@ -1,0 +1,23 @@
+%%%% Clues
+clue(alphonse,in,diningroom).
+clue(bernard,in_corner).
+clue(bernard,north_of,louis).
+clue(bernard,in_column,0).
+clue(carol,in,guestroom).
+clue(carol,n_east_of,mary,9).
+clue(daisy,on,sofa).
+clue(daisy,in,hallway).
+clue(edward,only_one_on,chair).
+clue(frank,in,gameroom).
+clue(frank,not_next_to,chair).
+clue(george,next_to,chair).
+clue(hannah,next_to,sofa).
+clue(hannah,in_same_room,george).
+clue(ivan,not_next_to,carpet).
+clue(ivan,not_in_room_with_male).
+clue(jesse,on,bed).
+clue(jesse,in,attic).
+clue(keith,in,outside).
+clue(louis,next_to,carpet).
+clue(mary,in_row,5).
+clue(mary,west_of,louis).
