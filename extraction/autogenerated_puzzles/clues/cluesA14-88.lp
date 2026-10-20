@@ -1,0 +1,24 @@
+%%%% Clues
+clue(alphonse,south_of,louis).
+clue(alphonse,not_next_to,box).
+clue(bonnie,object_in_col,closet).
+clue(bonnie,east_of,kate).
+clue(bonnie,alone).
+clue(carol,next_to,closet).
+clue(carol,next_to,bed).
+clue(daisy,on,carpet).
+clue(edward,not_in_room_with_female).
+clue(edward,in_column,2).
+clue(florence,not_in,livingroom).
+clue(grace,next_to,closet).
+clue(grace,in_same_room,alphonse).
+clue(hannah,on,sofa).
+clue(ivan,east_of,grace).
+clue(ivan,n_north_of,mike,4).
+clue(jane,in,outside).
+clue(jane,in_right_column).
+clue(kate,only_one_on,bed).
+clue(louis,not_in_room_with_male).
+clue(mike,on,chair).
+clue(mike,in,kitchen).
+clue(mike,in_same_room,florence).
