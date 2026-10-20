@@ -1,0 +1,23 @@
+%%%% Clues
+clue(n_persons_on,carpet,5).
+clue(alphonse,not_in_corner).
+clue(alphonse,not_in_room_with_male).
+clue(bonnie,n_north_of,florence,1).
+clue(bonnie,in_column,0).
+clue(carol,in,attic).
+clue(daniel,no_object_in_col,statue).
+clue(daniel,on,carpet).
+clue(daniel,in_same_room,florence).
+clue(edward,in_same_room,ivan).
+clue(florence,next_to,chair).
+clue(florence,n_south_of,alphonse,7).
+clue(grace,n_west_of,edward,6).
+clue(hannah,in,hallway).
+clue(hannah,on,chair).
+clue(ivan,in_row,8).
+clue(jane,in,gameroom).
+clue(keith,in_room_with_multiple_males,2).
+clue(keith,not_next_to,box).
+clue(keith,in,diningroom).
+clue(louis,n_south_of,carol,2).
+clue(mary,on,carpet).
