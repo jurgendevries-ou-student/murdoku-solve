@@ -1,0 +1,25 @@
+%%%% Clues
+clue(n_persons_on,sofa,1).
+clue(alice,in,garage).
+clue(alice,alone).
+clue(alice,next_to,chair).
+clue(bernard,in_top_row).
+clue(charlie,on,sofa).
+clue(charlie,south_of,kate).
+clue(daisy,in_room_with_male).
+clue(daisy,next_to,carpet).
+clue(emily,in,bedroom).
+clue(emily,in_corner).
+clue(florence,in,livingroom).
+clue(florence,south_of,louis).
+clue(grace,in_corner).
+clue(hannah,only_one_on,bed).
+clue(isla,in,bathroom).
+clue(isla,next_to,bed).
+clue(jesse,alone).
+clue(jesse,next_to,bed).
+clue(kate,not_in_corner).
+clue(kate,in,office).
+clue(louis,on,chair).
+clue(mary,in_row,5).
+clue(mary,not_next_to,sofa).

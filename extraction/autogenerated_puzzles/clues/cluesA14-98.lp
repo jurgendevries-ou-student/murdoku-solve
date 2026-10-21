@@ -1,0 +1,26 @@
+%%%% Clues
+clue(n_persons_on,carpet,2).
+clue(n_persons_on,bed,1).
+clue(alice,in,gameroom).
+clue(alice,in_corner).
+clue(bonnie,in,garage).
+clue(bonnie,object_in_col,statue).
+clue(charlie,south_of,grace).
+clue(daniel,on,chair).
+clue(daniel,n_west_of,ivan,6).
+clue(edward,next_to,carpet).
+clue(edward,someone_else_in_room_next_to,sofa).
+clue(florence,in_same_room,alice).
+clue(grace,on,sofa).
+clue(henry,not_next_to,sofa).
+clue(henry,in_same_room,mike).
+clue(ivan,on,carpet).
+clue(ivan,not_in_same_room,edward).
+clue(jesse,next_to,box).
+clue(jesse,not_in_room_with_male).
+clue(keith,in_left_column).
+clue(lily,in_row,13).
+clue(lily,object_in_col,box).
+clue(lily,n_south_of,charlie,6).
+clue(mike,east_of,florence).
+clue(mike,west_of,jesse).
