@@ -167,8 +167,8 @@ satisfies(n_persons_on, O, N) :- object(O), #count{P : at(P,R,C), contains(R,C,O
 %      constraints      %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
-:- person(P1), person(P2), at(P1,R1,C1), at(P2,R2,C2), R1=R2, P1!=P2.
-:- person(P1), person(P2), at(P1,R1,C1), at(P2,R2,C2), C1=C2, P1!=P2.
+:- person(P1), person(P2), at(P1,R,C1), at(P2,R,C2), P1!=P2.
+:- person(P1), person(P2), at(P1,R1,C), at(P2,R2,C), P1!=P2.
 % achieved: no two persons may be in the same row or col.
 
 :- clue(P,T,O,N), not satisfies(P,T,O,N).
